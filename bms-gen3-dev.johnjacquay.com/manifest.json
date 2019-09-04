@@ -16,7 +16,7 @@
     "jupyterhub": "quay.io/occ_data/jupyterhub:master",
     "peregrine": "quay.io/cdis/peregrine:master",
     "pidgin": "quay.io/cdis/pidgin:master",
-    "portal": "index.docker.io/jacquayj/data-portal:1.0.12",
+    "portal": "index.docker.io/jacquayj/data-portal:1.0.13",
     "revproxy": "quay.io/cdis/nginx:1.15.5-ctds",
     "sheepdog": "quay.io/cdis/sheepdog:master",
     "spark": "quay.io/cdis/gen3-spark:master",
