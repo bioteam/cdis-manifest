@@ -37,13 +37,6 @@
   ],
   "auth_filter_field": "auth_resource_path"
   },
-  "arranger": {
-    "project_id": "dev",
-    "auth_filter_field": "auth_resource_path",
-    "auth_filter_node_types": [
-      "case"
-    ]
-  },
   "arborist": {
     "deployment_version": "2"
   },
