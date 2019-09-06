@@ -6,9 +6,6 @@
   "versions": {
     "guppy": "quay.io/cdis/guppy:master",
     "arborist": "quay.io/cdis/arborist:master",
-    "arranger": "quay.io/cdis/arranger:master",
-    "arranger-adminapi": "quay.io/cdis/arranger-server:master",
-    "arranger-dashboard": "quay.io/cdis/arranger-dashboard:master",
     "aws-es-proxy": "abutaha/aws-es-proxy:0.8",
     "fence": "quay.io/cdis/fence:master",
     "fluentd": "fluent/fluentd-kubernetes-daemonset:v1.2-debian-cloudwatch",
@@ -31,7 +28,7 @@
   "indices": [
     {
       "index": "dcp_etl",
-      "type": "subject"
+      "type": "case"
     },
     {
       "index": "dcp_file",
@@ -44,7 +41,7 @@
     "project_id": "dev",
     "auth_filter_field": "auth_resource_path",
     "auth_filter_node_types": [
-      "subject"
+      "case"
     ]
   },
   "arborist": {
