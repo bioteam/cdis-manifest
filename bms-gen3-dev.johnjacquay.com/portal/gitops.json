@@ -8,14 +8,9 @@
         "plural": "Cases"
       },
       {
-        "graphql": "_experiment_count",
-        "name": "Experiment",
-        "plural": "Experiments"
-      },
-      {
-        "graphql": "_aliquot_count",
-        "name": "Aliquot",
-        "plural": "Aliquots"
+        "graphql": "_sample_count",
+        "name": "Sample",
+        "plural": "Samples"
       }
     ],
     "chartCounts": [
@@ -24,12 +19,8 @@
         "name": "Case"
       },
       {
-        "graphql": "_experiment_count",
-        "name": "Experiment"
-      },
-      {
-        "graphql": "_aliquot_count",
-        "name": "Aliquot"
+        "graphql": "_sample_count",
+        "name": "Sample"
       }
     ],
     "projectDetails": "boardCounts"
@@ -200,131 +191,82 @@
     "analysis": false
   },
   "dataExplorerConfig": {
-    "arrangerConfig": {
-      "projectId": "search",
-      "graphqlField": "subject",
-      "index": "",
-      "nodeCountField": "node_id"
-    },
     "charts": {
       "project": {
         "chartType": "count",
         "title": "Projects"
-      },
-      "study": {
-        "chartType": "count",
-        "title": "Studies"
-      },
-      "file_type": {
-        "chartType": "count",
-        "title": "File Types"
-      },
-      "ethnicity": {
-        "chartType": "stackedBar",
-        "title": "Ethnicity"
-      },
-      "gender": {
-        "chartType": "pie",
-        "title": "Gender"
-      },
-      "race": {
-        "chartType": "pie",
-        "title": "Race"
-      },
-      "vital_status": {
-        "chartType": "bar",
-        "title": "Vital Status"
       }
     },
     "filters": {
       "tabs": [
         {
-          "title": "Project",
-          "fields": [
-            "project",
-            "study"
-          ]
-        },
-        {
-          "title": "Subject",
-          "fields": [
-            "race",
-            "ethnicity",
+          "title": "Case",
+          "fields":[
+            "project_id",
             "gender",
-            "vital_status"
-          ]
-        },
-        {
-          "title": "File",
-          "fields": [
-            "file_type"
+            "race",
+            "jewish",
+            "hispanic",
+            "ibd_affection_status",
+            "diagnosis",
+            "population_control"
           ]
         }
+      ]
+    },
+    "table": {
+      "enabled": true,
+      "fields": [
+        "project_id",
+        "gender",
+        "race",
+        "jewish",
+        "hispanic",
+        "ibd_affection_status",
+        "diagnosis",
+        "population_control",
+        "_samples_count"
       ]
     },
     "buttons": [
       {
         "enabled": true,
-        "type": "data",
-        "title": "Download All Data",
-        "leftIcon": "user",
-        "rightIcon": "download",
-        "fileName": "data.json"
-      },
-      {
-        "enabled": true,
-        "type": "manifest",
-        "title": "Download Manifest",
+        "type": "export-to-workspace",
+        "title": "Export to Workspace",
         "leftIcon": "datafile",
-        "rightIcon": "download",
-        "fileName": "manifest.json"
+        "rightIcon": "external-link"
       }
     ],
     "table": {
       "enabled": true,
       "fields": [
-        "project",
-        "study",
-        "race",
-        "ethnicity",
+        "project_id",
         "gender",
-        "vital_status",
-        "whatever_lab_result_value",
-        "file_count",
-        "file_type",
-        "file_format"
+        "race",
+        "jewish",
+        "hispanic",
+        "ibd_affection_status",
+        "diagnosis",
+        "population_control",
+        "_samples_count"
       ]
     },
     "guppyConfig": {
-      "dataType": "subject",
-      "nodeCountTitle": "Subjects",
+      "dataType": "file",
       "fieldMapping": [
-        { "field": "frstdthd", "name": "Year of Death" },
-        { "field": "arthxbase", "name": "ART Use Prior to Baseline"},
-        { "field": "bshbvstat", "name": "Baseline HBV Sero-status"},
-        { "field": "bshcvstat", "name": "Baseline HCV Sero-status"},
-        { "field": "cd4nadir", "name": "CD4 Nadir Prior to HAART"},
-        { "field": "status", "name": "Summarized HIV Sero-status"},
-        { "field": "hiv_status", "name": "HIV Status"},
-        { "field": "amikacin_res_phenotype", "name": "Amikacin Phenotype"},
-        { "field": "capreomycin_res_phenotype", "name": "Capreomycin Phenotype"},
-        { "field": "isoniazid_res_phenotype", "name": "Isoniazid Phenotype"},
-        { "field": "kanamycin_res_phenotype", "name": "Kanamycin Phenotype"},
-        { "field": "ofloxacin_res_phenotype", "name": "Ofloxacin Phenotype"},
-        { "field": "pyrazinamide_res_phenotype", "name": "Pyrazinamide Phenotype"},
-        { "field": "rifampicin_res_phenotype", "name": "Rifampicin Phenotype"},
-        { "field": "rifampin_res_phenotype", "name": "Rifampin Phenotype"},
-        { "field": "streptomycin_res_phenotype", "name": "Streptomycin Phenotype"}
+        { "field": "object_id", "name": "GUID" }
       ],
+      "nodeCountTitle": "Files",
       "manifestMapping": {
-        "resourceIndexType": "file",
-        "resourceIdField": "object_id",
-        "referenceIdFieldInResourceIndex": "subject_id",
-        "referenceIdFieldInDataIndex": "node_id"
+        "resourceIndexType": "case",
+        "resourceIdField": "case_id",
+        "referenceIdFieldInResourceIndex": "object_id",
+        "referenceIdFieldInDataIndex": "object_id"
       },
-      "accessibleFieldCheckList": ["subject_id"],
-      "accessibleValidationField": "subject_id"
-    }    
+      "accessibleFieldCheckList": ["project_id"],
+      "accessibleValidationField": "project_id",
+      "downloadAccessor": "object_id"
+    }
   },
   "componentToResourceMapping": {}
 }
