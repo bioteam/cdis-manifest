@@ -218,6 +218,7 @@
       "enabled": true,
       "fields": [
         "project_id",
+        "gender",
         "race",
         "jewish",
         "hispanic",
