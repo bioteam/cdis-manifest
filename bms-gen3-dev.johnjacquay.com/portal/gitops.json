@@ -192,24 +192,36 @@
   },
   "dataExplorerConfig": {
     "charts": {
-      "project": {
+      "project_id": {
         "chartType": "count",
         "title": "Projects"
+      },
+      "node_id": {
+        "chartType": "count",
+        "title": "Cases"
+      },
+      "gender": {
+        "chartType": "pie",
+        "title": "Gender"
+      },
+      "race": {
+        "chartType": "bar",
+        "title": "Race"
+      },
+      "ethnicity": {
+        "chartType": "bar",
+        "title": "Ethnicity"
       }
     },
     "filters": {
       "tabs": [
         {
           "title": "Case",
-          "fields":[
-            "project_id",
-            "gender",
+          "fields": [
             "race",
-            "jewish",
-            "hispanic",
-            "ibd_affection_status",
-            "diagnosis",
-            "population_control"
+            "ethnicity",
+            "gender",
+            "project_id"
           ]
         }
       ]
@@ -218,14 +230,11 @@
       "enabled": true,
       "fields": [
         "project_id",
-        "gender",
+        "submitter_id",
         "race",
-        "jewish",
-        "hispanic",
-        "ibd_affection_status",
-        "diagnosis",
-        "population_control",
-        "_samples_count"
+        "ethnicity",
+        "gender",
+        "experimental_group"
       ]
     },
     "buttons": [
