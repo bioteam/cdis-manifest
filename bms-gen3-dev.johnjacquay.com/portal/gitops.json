@@ -218,7 +218,6 @@
       "enabled": true,
       "fields": [
         "project_id",
-        "gender",
         "race",
         "jewish",
         "hispanic",
@@ -237,20 +236,6 @@
         "rightIcon": "external-link"
       }
     ],
-    "table": {
-      "enabled": true,
-      "fields": [
-        "project_id",
-        "gender",
-        "race",
-        "jewish",
-        "hispanic",
-        "ibd_affection_status",
-        "diagnosis",
-        "population_control",
-        "_samples_count"
-      ]
-    },
     "guppyConfig": {
       "dataType": "file",
       "fieldMapping": [
