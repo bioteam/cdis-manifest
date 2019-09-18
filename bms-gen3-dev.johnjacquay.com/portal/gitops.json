@@ -3,24 +3,33 @@
   "graphql": {
     "boardCounts": [
       {
-        "graphql": "_case_count",
-        "name": "Case",
-        "plural": "Cases"
+        "graphql": "_subject_count",
+        "name": "Subject",
+        "plural": "Subjects"
       },
       {
-        "graphql": "_sample_count",
-        "name": "Sample",
-        "plural": "Samples"
+        "graphql": "_study_count",
+        "name": "Study",
+        "plural": "Studies"
+      },
+      {
+        "graphql": "_aliquot_count",
+        "name": "Aliquot",
+        "plural": "Aliquots"
       }
     ],
     "chartCounts": [
       {
-        "graphql": "_case_count",
-        "name": "Case"
+        "graphql": "_subject_count",
+        "name": "Subject"
       },
       {
-        "graphql": "_sample_count",
-        "name": "Sample"
+        "graphql": "_study_count",
+        "name": "Study"
+      },
+      {
+        "graphql": "_aliquot_count",
+        "name": "Aliquot"
       }
     ],
     "projectDetails": "boardCounts"
@@ -190,6 +199,9 @@
     "explorer": true,
     "analysis": false
   },
+  "featureFlags": {
+    "explorer": true
+  },
   "dataExplorerConfig": {
     "charts": {
       "project_id": {
@@ -198,7 +210,7 @@
       },
       "node_id": {
         "chartType": "count",
-        "title": "Cases"
+        "title": "Subjects"
       },
       "gender": {
         "chartType": "pie",
@@ -208,20 +220,88 @@
         "chartType": "bar",
         "title": "Race"
       },
-      "ethnicity": {
+      "primary_site": {
         "chartType": "bar",
-        "title": "Ethnicity"
+        "title": "Tissue Type"
       }
     },
     "filters": {
       "tabs": [
         {
-          "title": "Case",
-          "fields": [
-            "race",
-            "ethnicity",
+          "title": "Subject",
+          "fields":[
+            "project_id",
+            "primary_site",
             "gender",
-            "project_id"
+            "race",
+            "ethnicity"
+          ]
+        }
+      ]
+    },
+    "table": {
+      "enabled": true
+    },
+    "buttons": [
+      {
+        "enabled": true,
+        "type": "data",
+        "title": "Download All Clinical",
+        "leftIcon": "user",
+        "rightIcon": "download",
+        "fileName": "clinical.json"
+      },
+      {
+        "enabled": true,
+        "type": "manifest",
+        "title": "Download Manifest",
+        "leftIcon": "datafile",
+        "rightIcon": "download",
+        "fileName": "manifest.json"
+      },
+      {
+        "enabled": true,
+        "type": "export-to-workspace",
+        "title": "Export to Workspace",
+        "leftIcon": "datafile",
+        "rightIcon": "download"
+      }
+    ],
+    "guppyConfig": {
+      "dataType": "subject",
+      "nodeCountTitle": "Subjects",
+      "fieldMapping": [
+      ],
+      "manifestMapping": {
+        "resourceIndexType": "file",
+        "resourceIdField": "object_id",
+        "referenceIdFieldInResourceIndex": "subject_id",
+        "referenceIdFieldInDataIndex": "subject_id"
+      },
+      "accessibleFieldCheckList": ["project_id"],
+      "accessibleValidationField": "project_id"
+    }
+  },
+  "fileExplorerConfig": {
+    "charts": {
+      "data_type": {
+        "chartType": "stackedBar",
+        "title": "File Type"
+      },
+      "data_format": {
+        "chartType": "stackedBar",
+        "title": "File Format"
+      }
+    },
+    "filters": {
+      "tabs": [
+        {
+          "title": "File",
+          "fields": [
+            "project_id",
+            "data_type",
+            "data_format",
+            "data_category"
           ]
         }
       ]
@@ -230,35 +310,45 @@
       "enabled": true,
       "fields": [
         "project_id",
-        "submitter_id",
-        "race",
-        "ethnicity",
-        "gender",
-        "experimental_group"
+        "file_name",
+        "file_size",
+        "object_id"
       ]
     },
-  "guppyConfig": {
-      "dataType": "case",
-      "nodeCountTitle": "Cases",
-      "fieldMapping": [],
-      "manifestMapping": {
-        "resourceIndexType": "file",
-        "resourceIdField": "object_id",
-        "referenceIdFieldInResourceIndex": "case_id",
-        "referenceIdFieldInDataIndex": "case_id"
-      },
-      "accessibleFieldCheckList": ["project_id"],
-      "accessibleValidationField": "project_id"
-    },
+    "dropdowns": {},
     "buttons": [
       {
         "enabled": true,
-        "type": "export-to-workspace",
+        "type": "file-manifest",
+        "title": "Download Manifest",
+        "leftIcon": "datafile",
+        "rightIcon": "download",
+        "fileName": "file-manifest.json",
+        "dropdownId": "download"
+      },
+      {
+        "enabled": true,
+        "type": "export-files-to-workspace",
         "title": "Export to Workspace",
         "leftIcon": "datafile",
-        "rightIcon": "external-link"
+        "rightIcon": "download"
       }
-    ]
-  },
-  "componentToResourceMapping": {}
+    ],
+    "guppyConfig": {
+      "dataType": "file",
+      "fieldMapping": [
+        { "field": "object_id", "name": "GUID" }
+      ],
+      "nodeCountTitle": "Files",
+      "manifestMapping": {
+        "resourceIndexType": "subject",
+        "resourceIdField": "subject_id",
+        "referenceIdFieldInResourceIndex": "object_id",
+        "referenceIdFieldInDataIndex": "object_id"
+      },
+      "accessibleFieldCheckList": ["subject_id"],
+      "accessibleValidationField": "subject_id",
+      "downloadAccessor": "object_id"
+    }
+  }
 }
