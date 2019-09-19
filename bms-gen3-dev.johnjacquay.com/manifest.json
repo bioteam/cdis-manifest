@@ -4,24 +4,24 @@
     "That's all I have to say"
   ],
   "versions": {
-    "guppy": "quay.io/cdis/guppy:master",
-    "arborist": "quay.io/cdis/arborist:master",
+    "guppy": "quay.io/cdis/guppy:0.3.5",
+    "arborist": "quay.io/cdis/arborist:2.2.0",
     "aws-es-proxy": "abutaha/aws-es-proxy:0.8",
-    "fence": "quay.io/cdis/fence:master",
+    "fence": "quay.io/cdis/fence:4.4.2",
     "fluentd": "fluent/fluentd-kubernetes-daemonset:v1.2-debian-cloudwatch",
-    "indexd": "quay.io/cdis/indexd:master",
+    "indexd": "quay.io/cdis/indexd:2.0.1",
     "peregrine": "quay.io/cdis/peregrine:2.0.1",
-    "pidgin": "quay.io/cdis/pidgin:master",
+    "pidgin": "quay.io/cdis/pidgin:1.2.0",
     "portal": "index.docker.io/jacquayj/data-portal:1.0.20",
     "revproxy": "quay.io/cdis/nginx:1.15.5-ctds",
-    "sheepdog": "quay.io/cdis/sheepdog:master",
-    "spark": "quay.io/cdis/gen3-spark:master",
-    "manifestservice": "quay.io/cdis/manifestservice:master",
+    "sheepdog": "quay.io/cdis/sheepdog:2.0.0",
+    "spark": "quay.io/cdis/gen3-spark:1.0.0",
+    "manifestservice": "quay.io/cdis/manifestservice:0.2.0",
     "hatchery": "quay.io/cdis/hatchery:0.1.0",
     "ambassador": "quay.io/datawire/ambassador:0.60.3",
-    "wts": "quay.io/cdis/workspace-token-service:master",
-    "tube": "quay.io/cdis/tube:master",
-    "ssjdispatcher": "quay.io/cdis/ssjdispatcher:master"
+    "wts": "quay.io/cdis/workspace-token-service:0.2.0",
+    "tube": "quay.io/cdis/tube:0.3.13",
+    "ssjdispatcher": "quay.io/cdis/ssjdispatcher:0.0.7"
   },
   "guppy": {
   "indices": [
