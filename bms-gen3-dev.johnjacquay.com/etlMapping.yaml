@@ -1,5 +1,5 @@
 mappings:
-  - name: dcf_etl_2
+  - name: dcf_etl
     doc_type: subject
     type: aggregator
     root: subject
@@ -69,7 +69,7 @@ mappings:
           - name: file_id
             src: file_id
             fn: set
-  - name: dcf_file_2
+  - name: dcf_file
     doc_type: file
     type: collector
     root: None
