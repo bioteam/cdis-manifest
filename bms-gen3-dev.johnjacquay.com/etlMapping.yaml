@@ -1,5 +1,5 @@
 mappings:
-  - name: dcf_2
+  - name: dcf_etl
     doc_type: subject
     type: aggregator
     root: subject
