@@ -27,7 +27,7 @@
   "indices": [
     {
       "index": "dcp_etl",
-      "type": "case"
+      "type": "subject"
     },
     {
       "index": "dcp_file",
