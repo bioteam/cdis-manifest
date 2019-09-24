@@ -26,11 +26,11 @@
   "guppy": {
   "indices": [
     {
-      "index": "dcp_etl",
+      "index": "dcf_etl",
       "type": "subject"
     },
     {
-      "index": "dcp_file",
+      "index": "dcf_file",
       "type": "file"
     }
   ],
