@@ -10,7 +10,7 @@
     "fence": "quay.io/cdis/fence:4.4.2",
     "fluentd": "fluent/fluentd-kubernetes-daemonset:v1.2-debian-cloudwatch",
     "indexd": "quay.io/cdis/indexd:2.0.1",
-    "peregrine": "quay.io/cdis/peregrine:2.0.1",
+    "peregrine": "quay.io/cdis/peregrine:2.1.0",
     "pidgin": "quay.io/cdis/pidgin:1.2.0",
     "portal": "index.docker.io/jacquayj/data-portal:1.0.22",
     "revproxy": "quay.io/cdis/nginx:1.15.5-ctds",
