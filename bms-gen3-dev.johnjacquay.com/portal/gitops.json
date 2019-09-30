@@ -113,10 +113,10 @@
           "name": "Workspace"
         },
         {
-          "icon": "tools",
-          "link": "http://bioinformatics.bms.com:8081/#/",
+          "icon": "apps",
+          "link": "/bms-apps",
           "color": "#a2a2a2",
-          "name": "Tools"
+          "name": "Apps"
         },
         {
           "icon": "profile",
