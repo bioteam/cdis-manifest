@@ -12,7 +12,7 @@
     "indexd": "quay.io/cdis/indexd:2.0.1",
     "peregrine": "index.docker.io/jacquayj/peregrine:1.0.1",
     "pidgin": "quay.io/cdis/pidgin:1.2.0",
-    "portal": "index.docker.io/jacquayj/data-portal:1.0.23",
+    "portal": "index.docker.io/jacquayj/data-portal:1.0.24",
     "revproxy": "quay.io/cdis/nginx:1.15.5-ctds",
     "sheepdog": "quay.io/cdis/sheepdog:2.0.0",
     "spark": "quay.io/cdis/gen3-spark:1.0.0",
