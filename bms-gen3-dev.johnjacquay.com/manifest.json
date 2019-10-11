@@ -141,7 +141,8 @@
   },
   "ssjdispatcher": {
     "job_images": {
-      "indexing": "index.docker.io/jacquayj/indexs3client:1.0.1"
+      "indexing": "quay.io/cdis/indexs3client:latest",
+      "indexing_extramural": "index.docker.io/jacquayj/indexs3client:1.0.1"
     }
   },
   "canary": {
