@@ -4,7 +4,7 @@
     "That's all I have to say"
   ],
   "versions": {
-    "guppy": "quay.io/cdis/guppy:0.3.5",
+    "guppy": "quay.io/cdis/guppy:0.3.7",
     "arborist": "quay.io/cdis/arborist:2.2.0",
     "aws-es-proxy": "abutaha/aws-es-proxy:0.8",
     "fence": "quay.io/cdis/fence:4.4.2",
@@ -20,7 +20,7 @@
     "hatchery": "quay.io/cdis/hatchery:0.1.0",
     "ambassador": "quay.io/datawire/ambassador:0.60.3",
     "wts": "quay.io/cdis/workspace-token-service:0.2.0",
-    "tube": "quay.io/cdis/tube:0.3.13",
+    "tube": "quay.io/cdis/tube:0.3.18",
     "ssjdispatcher": "quay.io/cdis/ssjdispatcher:0.0.7"
   },
   "guppy": {
