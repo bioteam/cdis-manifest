@@ -1,5 +1,5 @@
 {
-  "useArboristUI": true,
+  "useArboristUI": false,
   "gaTrackingId": "undefined",
   "graphql": {
     "boardCounts": [
