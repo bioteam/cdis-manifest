@@ -66,11 +66,11 @@
           "label": "Query data"
         },
         {
-          "name": "Submit Data",
+          "name": "Submit Metadata",
           "icon": "data-submit",
           "body": "Submit Data based on the dictionary.",
           "link": "/submission",
-          "label": "Submit data"
+          "label": "Submit Metadata"
         }
       ]
     },
@@ -132,7 +132,7 @@
         {
           "icon": "upload",
           "link": "/submission",
-          "name": "Submit Data"
+          "name": "Submit Metadata"
         },
         {
           "link": "https://gen3.org/resources/user/",
