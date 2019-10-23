@@ -200,9 +200,6 @@
     "explorer": true,
     "analysis": false
   },
-  "featureFlags": {
-    "explorer": true
-  },
   "dataExplorerConfig": {
     "charts": {
       "project_id": {
