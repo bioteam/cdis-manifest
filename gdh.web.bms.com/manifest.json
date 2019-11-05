@@ -14,7 +14,7 @@
     "pidgin": "quay.io/cdis/pidgin:1.2.0",
     "portal": "index.docker.io/jacquayj/data-portal:1.0.48",
     "revproxy": "quay.io/cdis/nginx:1.15.5-ctds",
-    "sheepdog": "index.docker.io/jacquayj/sheepdog:1.0.13",
+    "sheepdog": "index.docker.io/jacquayj/sheepdog:1.0.14",
     "spark": "quay.io/cdis/gen3-spark:1.0.0",
     "manifestservice": "quay.io/cdis/manifestservice:0.2.0",
     "hatchery": "quay.io/cdis/hatchery:0.1.0",
