@@ -29,9 +29,6 @@ mappings:
       - name: _submitted_genomic_profiles_count
         path: samples.aliquots.read_groups.submitted_genomic_profiles
         fn: count
-      - name: _submitted_methylations_count
-        path: samples.aliquots.submitted_methylation_files
-        fn: count
       - name: _submitted_unaligned_reads_count
         path: samples.aliquots.read_groups.submitted_unaligned_reads_files
         fn: count
