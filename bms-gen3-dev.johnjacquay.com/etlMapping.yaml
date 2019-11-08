@@ -26,9 +26,6 @@ mappings:
       - name: _copy_number_segments_count
         path: samples.aliquots.tangent_copy_numbers.copy_number_segments
         fn: count
-      - name: _genotyping_arrays_count
-        path: samples.aliquots.genotyping_arrays
-        fn: count
       - name: _read_groups_count
         path: samples.aliquots.read_groups
         fn: count
