@@ -7,7 +7,7 @@
     "guppy": "quay.io/cdis/guppy:0.3.7",
     "arborist": "index.docker.io/jacquayj/arborist:1.0.8",
     "aws-es-proxy": "abutaha/aws-es-proxy:0.8",
-    "fence": "index.docker.io/jacquayj/fence:1.0.5",
+    "fence": "index.docker.io/jacquayj/fence:1.0.6",
     "fluentd": "fluent/fluentd-kubernetes-daemonset:v1.2-debian-cloudwatch",
     "indexd": "quay.io/cdis/indexd:2.0.1",
     "peregrine": "index.docker.io/jacquayj/peregrine:1.0.8",
