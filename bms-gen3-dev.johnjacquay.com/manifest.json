@@ -12,7 +12,7 @@
     "indexd": "quay.io/cdis/indexd:2.0.1",
     "peregrine": "501351204723.dkr.ecr.us-east-1.amazonaws.com/peregrine:1.0.8",
     "pidgin": "quay.io/cdis/pidgin:1.2.0",
-    "portal": "501351204723.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.55",
+    "portal": "501351204723.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.56",
     "revproxy": "quay.io/cdis/nginx:1.15.5-ctds",
     "sheepdog": "501351204723.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.19",
     "spark": "quay.io/cdis/gen3-spark:1.0.0",
