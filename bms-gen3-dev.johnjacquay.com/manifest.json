@@ -14,7 +14,7 @@
     "pidgin": "quay.io/cdis/pidgin:1.2.0",
     "portal": "501351204723.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.56",
     "revproxy": "quay.io/cdis/nginx:1.15.5-ctds",
-    "sheepdog": "501351204723.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.21",
+    "sheepdog": "501351204723.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.22",
     "spark": "quay.io/cdis/gen3-spark:1.0.0",
     "manifestservice": "quay.io/cdis/manifestservice:0.2.0",
     "hatchery": "quay.io/cdis/hatchery:0.1.0",
