@@ -3,10 +3,35 @@
   "gaTrackingId": "undefined",
   "graphql": {
     "boardCounts": [
-      
+      {
+        "graphql": "_subject_count",
+        "name": "Subject",
+        "plural": "Subjects"
+      },
+      {
+        "graphql": "_study_count",
+        "name": "Study",
+        "plural": "Studies"
+      },
+      {
+        "graphql": "_aliquot_count",
+        "name": "Aliquot",
+        "plural": "Aliquots"
+      }
     ],
     "chartCounts": [
-      
+      {
+        "graphql": "_subject_count",
+        "name": "Subject"
+      },
+      {
+        "graphql": "_study_count",
+        "name": "Study"
+      },
+      {
+        "graphql": "_aliquot_count",
+        "name": "Aliquot"
+      }
     ],
     "projectDetails": "boardCounts"
   },
@@ -177,11 +202,39 @@
   },
   "dataExplorerConfig": {
     "charts": {
-     
+      "project_id": {
+        "chartType": "count",
+        "title": "Projects"
+      },
+      "node_id": {
+        "chartType": "count",
+        "title": "Subjects"
+      },
+      "gender": {
+        "chartType": "pie",
+        "title": "Gender"
+      },
+      "race": {
+        "chartType": "bar",
+        "title": "Race"
+      },
+      "primary_site": {
+        "chartType": "bar",
+        "title": "Tissue Type"
+      }
     },
     "filters": {
       "tabs": [
-        
+        {
+          "title": "Subject",
+          "fields":[
+            "project_id",
+            "primary_site",
+            "gender",
+            "race",
+            "ethnicity"
+          ]
+        }
       ]
     },
     "table": {
@@ -213,15 +266,15 @@
       }
     ],
     "guppyConfig": {
-      "dataType": "case",
-      "nodeCountTitle": "Cases",
+      "dataType": "subject",
+      "nodeCountTitle": "Subjects",
       "fieldMapping": [
       ],
       "manifestMapping": {
         "resourceIndexType": "file",
         "resourceIdField": "object_id",
-        "referenceIdFieldInResourceIndex": "case_id",
-        "referenceIdFieldInDataIndex": "case_id"
+        "referenceIdFieldInResourceIndex": "subject_id",
+        "referenceIdFieldInDataIndex": "subject_id"
       },
       "accessibleFieldCheckList": ["project_id"],
       "accessibleValidationField": "project_id"
@@ -286,13 +339,13 @@
       ],
       "nodeCountTitle": "Files",
       "manifestMapping": {
-        "resourceIndexType": "case",
-        "resourceIdField": "case_id",
+        "resourceIndexType": "subject",
+        "resourceIdField": "subject_id",
         "referenceIdFieldInResourceIndex": "object_id",
         "referenceIdFieldInDataIndex": "object_id"
       },
-      "accessibleFieldCheckList": ["case_id"],
-      "accessibleValidationField": "case_id",
+      "accessibleFieldCheckList": ["subject_id"],
+      "accessibleValidationField": "subject_id",
       "downloadAccessor": "object_id"
     }
   }
