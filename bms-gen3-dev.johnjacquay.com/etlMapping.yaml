@@ -24,7 +24,7 @@ mappings:
         path: samples.aliquots.read_groups
         fn: count
       - name: _submitted_aligned_reads_count
-        path: samples.aliquots.read_groups.submitted_aligned_reads_files
+        path: samples.aliquots.read_groups.aligned_reads_files
         fn: count
       - name: _submitted_unaligned_reads_count
         path: samples.aliquots.read_groups.submitted_unaligned_reads_files
