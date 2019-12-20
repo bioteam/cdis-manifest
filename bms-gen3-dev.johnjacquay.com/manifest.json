@@ -23,9 +23,6 @@
     "tube": "quay.io/cdis/tube:0.3.18",
     "ssjdispatcher": "quay.io/cdis/ssjdispatcher:0.0.7"
   },
-  "jupyterhub": {
-    "enabled": "yes"
-  },
   "guppy": {
   "indices": [
     {
