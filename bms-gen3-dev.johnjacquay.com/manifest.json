@@ -10,7 +10,7 @@
     "fence": "501351204723.dkr.ecr.us-east-1.amazonaws.com/fence:1.0.6",
     "fluentd": "fluent/fluentd-kubernetes-daemonset:v1.2-debian-cloudwatch",
     "indexd": "501351204723.dkr.ecr.us-east-1.amazonaws.com/indexd:1.0.0",
-    "peregrine": "501351204723.dkr.ecr.us-east-1.amazonaws.com/peregrine:1.0.13",
+    "peregrine": "501351204723.dkr.ecr.us-east-1.amazonaws.com/peregrine:1.0.14",
     "pidgin": "quay.io/cdis/pidgin:1.2.0",
     "portal": "501351204723.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.61",
     "revproxy": "quay.io/cdis/nginx:1.15.5-ctds",
