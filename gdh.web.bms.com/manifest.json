@@ -21,8 +21,7 @@
     "ambassador": "quay.io/datawire/ambassador:0.60.3",
     "wts": "082619190404.dkr.ecr.us-east-1.amazonaws.com/wts:1.0.0",
     "tube": "quay.io/cdis/tube:0.3.18",
-    "ssjdispatcher": "quay.io/cdis/ssjdispatcher:0.0.7",
-    "jupyterhub": "quay.io/occ_data/jupyterhub:master"
+    "ssjdispatcher": "quay.io/cdis/ssjdispatcher:0.0.7"
   },
   "guppy": {
   "indices": [
