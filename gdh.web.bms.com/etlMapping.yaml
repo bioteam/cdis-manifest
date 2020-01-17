@@ -61,8 +61,3 @@ mappings:
             src: id
             fn: set
           - name: project_id
-      project:
-        props:
-          - name: project_code
-            src: code
-            fn: set
