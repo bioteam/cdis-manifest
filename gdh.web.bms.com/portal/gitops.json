@@ -9,6 +9,11 @@
         "plural": "Subjects"
       },
       {
+        "graphql": "_samples_count",
+        "name": "Sample",
+        "plural": "Samples"
+      },
+      {
         "graphql": "_study_count",
         "name": "Study",
         "plural": "Studies"
@@ -23,6 +28,10 @@
       {
         "graphql": "_subject_count",
         "name": "Subject"
+      },
+      {
+        "graphql": "_sample_count",
+        "name": "Sample"
       },
       {
         "graphql": "_study_count",
@@ -209,6 +218,10 @@
       "node_id": {
         "chartType": "count",
         "title": "Subjects"
+      },
+      "sample_id": {
+        "chartType": "count",
+        "title": "Samples"
       },
       "gender": {
         "chartType": "pie",
