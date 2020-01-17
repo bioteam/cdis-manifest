@@ -1,6 +1,5 @@
 {
   "useArboristUI": false,
-  "homepageHref": "https://gdh.web.bms.com/",
   "gaTrackingId": "undefined",
   "graphql": {
     "boardCounts": [
@@ -156,36 +155,21 @@
           {
             "name": "Things you can do after registration",
             "question": "As a registered user, I can do the following things without any problem. Is it true or not:",
-            "options": [
-              "Browse public Project",
-              "Upload file",
-              "Download file",
-              "Invite people"
-            ],
+            "options": ["Browse public Project", "Upload file", "Download file", "Invite people"],
             "answer": 0,
             "hint": "Some information about this question"
           },
           {
             "name": "Things you need to do to become the registered user",
             "question": "In order to be a register user, I must do the following things otherwise:",
-            "options": [
-              "Agree the user agreement",
-              "Accept a consent",
-              "None of them",
-              "Both of them"
-            ],
+            "options": ["Agree the user agreement", "Accept a consent", "None of them", "Both of them"],
             "answer": 2,
             "hint": "Some information about this question"
           },
           {
             "name": "Things you can do with data",
             "question": "How can I share data with other people according to the policy of the commons",
-            "options": [
-              "I can not share data",
-              "I can only share data with BPA memebers",
-              "I can share data with family",
-              "I can share data with my wife"
-            ],
+            "options": ["I can not share data", "I can only share data with BPA memebers", "I can share data with family", "I can share data with my wife"],
             "answer": 1,
             "hint": "Some information about this question"
           }
@@ -243,7 +227,7 @@
       "tabs": [
         {
           "title": "Subject",
-          "fields": [
+          "fields":[
             "project_id",
             "primary_site",
             "gender",
@@ -284,7 +268,8 @@
     "guppyConfig": {
       "dataType": "subject",
       "nodeCountTitle": "Subjects",
-      "fieldMapping": [],
+      "fieldMapping": [
+      ],
       "manifestMapping": {
         "resourceIndexType": "file",
         "resourceIdField": "object_id",
@@ -297,17 +282,13 @@
   },
   "fileExplorerConfig": {
     "charts": {
-      "project_id": {
-        "chartType": "count",
-        "title": "Projects"
-      },
       "data_type": {
-        "chartType": "pie",
+        "chartType": "stackedBar",
         "title": "File Type"
       },
-      "experimental_strategy": {
+      "data_format": {
         "chartType": "stackedBar",
-        "title": "Experimental Strategy"
+        "title": "File Format"
       }
     },
     "filters": {
@@ -317,7 +298,8 @@
           "fields": [
             "project_id",
             "data_type",
-            "experimental_strategy"
+            "data_format",
+            "data_category"
           ]
         }
       ]
