@@ -286,6 +286,10 @@
         "chartType": "stackedBar",
         "title": "File Type"
       },
+      "experimental_strategy": {
+        "chartType": "stackedBar",
+        "title": "Strategy"
+      },
       "data_format": {
         "chartType": "stackedBar",
         "title": "File Format"
@@ -335,7 +339,8 @@
     "guppyConfig": {
       "dataType": "file",
       "fieldMapping": [
-        { "field": "object_id", "name": "GUID" }
+        { "field": "object_id", "name": "GUID" },
+        { "field": "project_id", "name": "Project" }
       ],
       "nodeCountTitle": "Files",
       "manifestMapping": {
@@ -344,8 +349,10 @@
         "referenceIdFieldInResourceIndex": "object_id",
         "referenceIdFieldInDataIndex": "object_id"
       },
-      "accessibleFieldCheckList": ["subject_id"],
-      "accessibleValidationField": "subject_id",
+      "accessibleFieldCheckList": ["project_id"],
+      "accessibleValidationField": "project_id",
+      "accessibleFieldCheckList": ["experimental_strategy"],
+      "accessibleValidationField": "experimental_strategy",
       "downloadAccessor": "object_id"
     }
   }
