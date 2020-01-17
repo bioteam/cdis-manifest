@@ -282,21 +282,28 @@
   },
   "fileExplorerConfig": {
     "charts": {
-      "data_type": {
-        "chartType": "bar",
-        "title": "File Type"
-      },
       "experimental_strategy": {
-        "chartType": "bar",
-        "title": "Experimental Stratgey"
+        "chartType": "pie",
+        "title": "Experimental Strategy"
       }
     },
     "filters": {
       "tabs": [
         {
-          "title": "File",
+          "title": "Strategies",
           "fields": [
-            "project_id",
+            "experimental_strategy"
+          ]
+        },
+        {
+          "title": "Projects",
+          "fields": [
+            "project_id"
+          ]
+        },
+        {
+          "title": "Files",
+          "fields": [
             "data_type",
             "data_format",
             "data_category"
