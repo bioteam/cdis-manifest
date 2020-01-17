@@ -155,21 +155,36 @@
           {
             "name": "Things you can do after registration",
             "question": "As a registered user, I can do the following things without any problem. Is it true or not:",
-            "options": ["Browse public Project", "Upload file", "Download file", "Invite people"],
+            "options": [
+              "Browse public Project",
+              "Upload file",
+              "Download file",
+              "Invite people"
+            ],
             "answer": 0,
             "hint": "Some information about this question"
           },
           {
             "name": "Things you need to do to become the registered user",
             "question": "In order to be a register user, I must do the following things otherwise:",
-            "options": ["Agree the user agreement", "Accept a consent", "None of them", "Both of them"],
+            "options": [
+              "Agree the user agreement",
+              "Accept a consent",
+              "None of them",
+              "Both of them"
+            ],
             "answer": 2,
             "hint": "Some information about this question"
           },
           {
             "name": "Things you can do with data",
             "question": "How can I share data with other people according to the policy of the commons",
-            "options": ["I can not share data", "I can only share data with BPA memebers", "I can share data with family", "I can share data with my wife"],
+            "options": [
+              "I can not share data",
+              "I can only share data with BPA memebers",
+              "I can share data with family",
+              "I can share data with my wife"
+            ],
             "answer": 1,
             "hint": "Some information about this question"
           }
@@ -227,7 +242,7 @@
       "tabs": [
         {
           "title": "Subject",
-          "fields":[
+          "fields": [
             "project_id",
             "primary_site",
             "gender",
@@ -268,8 +283,7 @@
     "guppyConfig": {
       "dataType": "subject",
       "nodeCountTitle": "Subjects",
-      "fieldMapping": [
-      ],
+      "fieldMapping": [],
       "manifestMapping": {
         "resourceIndexType": "file",
         "resourceIdField": "object_id",
@@ -282,36 +296,22 @@
   },
   "fileExplorerConfig": {
     "charts": {
-      "data_type": {
+      "experimental_strategy": {
         "chartType": "stackedBar",
-        "title": "File Type"
-      },
-      "data_format": {
-        "chartType": "stackedBar",
-        "title": "File Format"
+        "title": "Experimental Strategy"
       }
     },
     "filters": {
       "tabs": [
         {
           "title": "File",
-          "fields": [
-            "project_id",
-            "data_type",
-            "data_format",
-            "data_category"
-          ]
+          "fields": ["experimental_strategy", "project_id", "data_type", "data_format", "data_category"]
         }
       ]
     },
     "table": {
       "enabled": true,
-      "fields": [
-        "project_id",
-        "file_name",
-        "file_size",
-        "object_id"
-      ]
+      "fields": ["project_code", "file_name", "file_size", "object_id"]
     },
     "dropdowns": {},
     "buttons": [
@@ -334,9 +334,7 @@
     ],
     "guppyConfig": {
       "dataType": "file",
-      "fieldMapping": [
-        { "field": "object_id", "name": "GUID" }
-      ],
+      "fieldMapping": [{ "field": "object_id", "name": "GUID" }],
       "nodeCountTitle": "Files",
       "manifestMapping": {
         "resourceIndexType": "subject",
