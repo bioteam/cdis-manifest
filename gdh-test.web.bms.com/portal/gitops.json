@@ -283,16 +283,12 @@
   "fileExplorerConfig": {
     "charts": {
       "data_type": {
-        "chartType": "stackedBar",
+        "chartType": "bar",
         "title": "File Type"
       },
       "experimental_strategy": {
-        "chartType": "stackedBar",
-        "title": "Strategy"
-      },
-      "data_format": {
-        "chartType": "stackedBar",
-        "title": "File Format"
+        "chartType": "bar",
+        "title": "Experimental Stratgey"
       }
     },
     "filters": {
