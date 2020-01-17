@@ -53,6 +53,7 @@ mappings:
       - name: data_type
       - name: state
       - name: data_category
+      - name: experimental_strategy
     injecting_props:
       subject:
         props:
@@ -60,3 +61,8 @@ mappings:
             src: id
             fn: set
           - name: project_id
+      project:
+        props:
+          - name: project_code
+            src: code
+            fn: set
