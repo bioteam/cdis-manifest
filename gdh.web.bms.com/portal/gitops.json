@@ -283,12 +283,12 @@
   "fileExplorerConfig": {
     "charts": {
       "data_type": {
-        "chartType": "stackedBar",
+        "chartType": "bar",
         "title": "File Type"
       },
-      "data_format": {
-        "chartType": "stackedBar",
-        "title": "File Format"
+      "experimental_strategy": {
+        "chartType": "bar",
+        "title": "Experimental Stratgey"
       }
     },
     "filters": {
@@ -335,7 +335,8 @@
     "guppyConfig": {
       "dataType": "file",
       "fieldMapping": [
-        { "field": "object_id", "name": "GUID" }
+        { "field": "object_id", "name": "GUID" },
+        { "field": "project_id", "name": "Project" }
       ],
       "nodeCountTitle": "Files",
       "manifestMapping": {
@@ -346,6 +347,8 @@
       },
       "accessibleFieldCheckList": ["project_id"],
       "accessibleValidationField": "project_id",
+      "accessibleFieldCheckList": ["experimental_strategy"],
+      "accessibleValidationField": "experimental_strategy",
       "downloadAccessor": "object_id"
     }
   }
