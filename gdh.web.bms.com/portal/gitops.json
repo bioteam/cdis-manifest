@@ -14,7 +14,7 @@
         "plural": "Studies"
       },
       {
-        "graphql": "_read_groups_count",
+        "graphql": "_read_group_count",
         "name": "Result",
         "plural": "Results"
       },
@@ -34,7 +34,7 @@
         "name": "Study"
       },
       {
-        "graphql": "_read_groups_count",
+        "graphql": "_read_group_count",
         "name": "Result"
       },
       {
