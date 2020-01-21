@@ -9,11 +9,6 @@
         "plural": "Subjects"
       },
       {
-        "graphql": "_samples_count",
-        "name": "Sample",
-        "plural": "Samples"
-      },
-      {
         "graphql": "_study_count",
         "name": "Study",
         "plural": "Studies"
@@ -28,10 +23,6 @@
       {
         "graphql": "_subject_count",
         "name": "Subject"
-      },
-      {
-        "graphql": "_sample_count",
-        "name": "Sample"
       },
       {
         "graphql": "_study_count",
@@ -211,17 +202,25 @@
   },
   "dataExplorerConfig": {
     "charts": {
+      "project_id": {
+        "chartType": "count",
+        "title": "Projects"
+      },
       "node_id": {
         "chartType": "count",
         "title": "Subjects"
       },
-      "sample_id": {
-        "chartType": "count",
-        "title": "Samples"
-      },
       "gender": {
         "chartType": "pie",
         "title": "Gender"
+      },
+      "race": {
+        "chartType": "bar",
+        "title": "Race"
+      },
+      "primary_site": {
+        "chartType": "bar",
+        "title": "Tissue Type"
       }
     },
     "filters": {
@@ -230,7 +229,10 @@
           "title": "Subject",
           "fields":[
             "project_id",
-            "gender"
+            "primary_site",
+            "gender",
+            "race",
+            "ethnicity"
           ]
         }
       ]
@@ -280,21 +282,28 @@
   },
   "fileExplorerConfig": {
     "charts": {
-      "data_type": {
-        "chartType": "bar",
-        "title": "File Type"
-      },
       "experimental_strategy": {
-        "chartType": "bar",
-        "title": "Experimental Stratgey"
+        "chartType": "pie",
+        "title": "Experimental Strategy"
       }
     },
     "filters": {
       "tabs": [
         {
-          "title": "File",
+          "title": "Strategies",
           "fields": [
-            "project_id",
+            "experimental_strategy"
+          ]
+        },
+        {
+          "title": "Projects",
+          "fields": [
+            "project_id"
+          ]
+        },
+        {
+          "title": "Files",
+          "fields": [
             "data_type",
             "data_format",
             "data_category"
