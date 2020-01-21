@@ -233,7 +233,6 @@
         {
           "title": "Subject",
           "fields":[
-            "study_submitter_id",
             "project_id",
             "gender"
           ]
