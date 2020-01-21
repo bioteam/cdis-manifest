@@ -54,6 +54,7 @@ mappings:
       - name: state
       - name: data_category
       - name: experimental_strategy
+      - name: library_strategy
     injecting_props:
       subject:
         props:
