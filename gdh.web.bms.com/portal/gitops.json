@@ -211,6 +211,10 @@
   },
   "dataExplorerConfig": {
     "charts": {
+      "study_submitter_id": {
+        "chartType": "count",
+        "title": "Studies"
+      },
       "node_id": {
         "chartType": "count",
         "title": "Subjects"
