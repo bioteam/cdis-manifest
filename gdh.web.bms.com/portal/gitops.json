@@ -215,7 +215,7 @@
         "chartType": "count",
         "title": "Subjects"
       },
-      "read_groups": {
+      "read_group": {
         "chartType": "count",
         "title": "Results"
       },
