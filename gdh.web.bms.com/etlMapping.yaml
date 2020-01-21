@@ -53,6 +53,7 @@ mappings:
       - name: data_type
       - name: state
       - name: data_category
+      - name: experimental_strategy
     injecting_props:
       subject:
         props:
