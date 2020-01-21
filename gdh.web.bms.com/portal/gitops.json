@@ -213,14 +213,6 @@
       "gender": {
         "chartType": "pie",
         "title": "Gender"
-      },
-      "race": {
-        "chartType": "bar",
-        "title": "Race"
-      },
-      "primary_site": {
-        "chartType": "bar",
-        "title": "Tissue Type"
       }
     },
     "filters": {
@@ -229,10 +221,7 @@
           "title": "Subject",
           "fields":[
             "project_id",
-            "primary_site",
-            "gender",
-            "race",
-            "ethnicity"
+            "gender"
           ]
         }
       ]
