@@ -26,7 +26,15 @@ mappings:
       - name: _submitted_unaligned_reads_count
         path: samples.aliquots.read_groups.submitted_unaligned_reads_files
         fn: count
-    joining_props:
+      - name: library_strategy
+        src: library_strategy
+        path: samples.aliquots.read_groups
+        fn: list
+        - name: experimental_strategies
+        src: experimental_strategy
+        path: samples.aliquots.read_groups.submitted_unaligned_reads_files
+        fn: list
+  joining_props:
       - index: file
         join_on: subject_id
         props:
@@ -35,9 +43,6 @@ mappings:
             fn: set
           - name: data_type
             src: data_type
-            fn: set
-          - name: library_strategy
-            src: library_strategy
             fn: set
           - name: file_id
             src: file_id
@@ -57,7 +62,6 @@ mappings:
       - name: state
       - name: data_category
       - name: experimental_strategy
-      - name: library_strategy
     injecting_props:
       subject:
         props:
