@@ -236,15 +236,6 @@
             "project_id",
             "gender"
           ]
-        },
-        {
-          "title": "Experiment",
-          "fields": [
-            "library_strategy",
-            "platform",
-            "data_format",
-            "experimental_strategies"
-          ]
         }
       ]
     },
