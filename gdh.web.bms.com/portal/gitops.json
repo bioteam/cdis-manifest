@@ -280,13 +280,20 @@
       "dataType": "subject",
       "nodeCountTitle": "Subjects",
       "fieldMapping": [
+        { "field": "study_submitter_id", "name": "Study" },
+        { "field": "library_strategy", "name": "Library Preparation" },
+        { "field": "platform", "name": "Sequencing Platform" },
+        { "field": "data_format", "name": "Sequencing Data Format" },
+        { "field": "experimental_strategy", "name": "Experimental Stategy" }
       ],
       "manifestMapping": {
         "resourceIndexType": "file",
         "resourceIdField": "object_id",
         "referenceIdFieldInResourceIndex": "subject_id",
-        "referenceIdFieldInDataIndex": "subject_id"
+        "referenceIdFieldInDataIndex": "node_id"
       },
+      "accessibleFieldCheckList": ["subject_id"],
+      "accessibleValidationField": "subject_id",
       "accessibleFieldCheckList": ["project_id"],
       "accessibleValidationField": "project_id"
     }
