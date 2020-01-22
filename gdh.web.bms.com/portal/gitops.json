@@ -272,7 +272,7 @@
       "dataType": "subject",
       "nodeCountTitle": "Subjects",
       "fieldMapping": [
-        { "field": "study_submitter_id", "name": "Study" },
+        { "field": "study_submitter_id", "name": "Study" }
       ],
       "manifestMapping": {
         "resourceIndexType": "file",
