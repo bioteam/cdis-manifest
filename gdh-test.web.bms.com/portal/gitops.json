@@ -9,6 +9,11 @@
         "plural": "Subjects"
       },
       {
+        "graphql": "_sample_count",
+        "name": "Sample",
+        "plural": "Samples"
+      },
+      {
         "graphql": "_study_count",
         "name": "Study",
         "plural": "Studies"
@@ -28,6 +33,11 @@
       {
         "graphql": "_subject_count",
         "name": "Subject"
+      },
+      {
+        "graphql": "_sample_count",
+        "name": "Sample",
+        "plural": "Samples"
       },
       {
         "graphql": "_study_count",
@@ -227,6 +237,10 @@
         "chartType": "pie",
         "title": "Gender"
       },
+      "sample_type": {
+        "chartType": "bar",
+        "title": "Sample Type"
+      },
       "library_strategy": {
         "chartType": "bar",
         "title": "Library Strategy"
@@ -237,8 +251,8 @@
         {
           "title": "Projects",
           "fields": [
-            "project_id",
-            "study_submitter_id"
+            "study_submitter_id",
+            "project_id"
           ]
         },
         {
@@ -288,6 +302,7 @@
       "nodeCountTitle": "Subjects",
       "fieldMapping": [
         { "field": "study_submitter_id", "name": "Study" },
+        { "field": "sample_type", "name": "Sample Type" },
         { "field": "library_strategy", "name": "Library Strategy" }
       ],
       "manifestMapping": {
