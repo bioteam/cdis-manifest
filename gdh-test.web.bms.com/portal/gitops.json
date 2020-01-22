@@ -292,6 +292,10 @@
   },
   "fileExplorerConfig": {
     "charts": {
+      "library_strategy": {
+        "chartType": "pie",
+        "title": "Library Strategy"
+      },
       "experimental_strategy": {
         "chartType": "pie",
         "title": "Experimental Strategy"
@@ -302,6 +306,7 @@
         {
           "title": "Strategies",
           "fields": [
+            "library_strategy",
             "experimental_strategy"
           ]
         },
@@ -364,6 +369,8 @@
       },
       "accessibleFieldCheckList": ["project_id"],
       "accessibleValidationField": "project_id",
+      "accessibleFieldCheckList": ["library_strategy"],
+      "accessibleValidationField": "library_strategy",
       "accessibleFieldCheckList": ["experimental_strategy"],
       "accessibleValidationField": "experimental_strategy",
       "downloadAccessor": "object_id"

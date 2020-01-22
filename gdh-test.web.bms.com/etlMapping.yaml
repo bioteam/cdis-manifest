@@ -27,10 +27,6 @@ mappings:
       - name: _results_count
         path: samples.aliquots.read_groups
         fn: sum
-      - name: library_strategy
-        src: library_strategy
-        path: samples.aliquots.read_groups
-        fn: list
       - name: _submitted_unaligned_reads_count
         path: samples.aliquots.read_groups.submitted_unaligned_reads_files
         fn: count
@@ -61,6 +57,7 @@ mappings:
       - name: data_type
       - name: state
       - name: data_category
+      - name: library_strategy
       - name: experimental_strategy
     injecting_props:
       subject:
