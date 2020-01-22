@@ -288,8 +288,6 @@
       },
       "accessibleFieldCheckList": ["subject_id"],
       "accessibleValidationField": "subject_id",
-      "accessibleFieldCheckList": ["library_strategy"],
-      "accessibleValidationField": "library_strategy",
       "accessibleFieldCheckList": ["project_id"],
       "accessibleValidationField": "project_id"
     }
