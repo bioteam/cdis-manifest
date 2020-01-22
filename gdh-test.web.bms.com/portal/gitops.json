@@ -223,6 +223,10 @@
         "chartType": "count",
         "title": "Results"
       },
+      "library_strategy": {
+        "chartType": "bar",
+        "title": "Library Strategy"
+      },
       "gender": {
         "chartType": "pie",
         "title": "Gender"
