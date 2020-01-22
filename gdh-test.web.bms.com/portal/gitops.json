@@ -14,6 +14,11 @@
         "plural": "Studies"
       },
       {
+        "graphql": "_read_group_count",
+        "name": "Result",
+        "plural": "Results"
+      },
+      {
         "graphql": "_aliquot_count",
         "name": "Aliquot",
         "plural": "Aliquots"
@@ -27,6 +32,10 @@
       {
         "graphql": "_study_count",
         "name": "Study"
+      },
+      {
+        "graphql": "_read_group_count",
+        "name": "Result"
       },
       {
         "graphql": "_aliquot_count",
@@ -202,25 +211,21 @@
   },
   "dataExplorerConfig": {
     "charts": {
-      "project_id": {
+      "study_submitter_id": {
         "chartType": "count",
-        "title": "Projects"
+        "title": "Studies"
       },
       "node_id": {
         "chartType": "count",
         "title": "Subjects"
       },
+      "read_group": {
+        "chartType": "count",
+        "title": "Results"
+      },
       "gender": {
         "chartType": "pie",
         "title": "Gender"
-      },
-      "race": {
-        "chartType": "bar",
-        "title": "Race"
-      },
-      "primary_site": {
-        "chartType": "bar",
-        "title": "Tissue Type"
       }
     },
     "filters": {
@@ -229,10 +234,7 @@
           "title": "Subject",
           "fields":[
             "project_id",
-            "primary_site",
-            "gender",
-            "race",
-            "ethnicity"
+            "gender"
           ]
         }
       ]
@@ -274,29 +276,38 @@
         "resourceIndexType": "file",
         "resourceIdField": "object_id",
         "referenceIdFieldInResourceIndex": "subject_id",
-        "referenceIdFieldInDataIndex": "subject_id"
+        "referenceIdFieldInDataIndex": "node_id"
       },
+      "accessibleFieldCheckList": ["subject_id"],
+      "accessibleValidationField": "subject_id",
       "accessibleFieldCheckList": ["project_id"],
       "accessibleValidationField": "project_id"
     }
   },
   "fileExplorerConfig": {
     "charts": {
-      "data_type": {
-        "chartType": "bar",
-        "title": "File Type"
-      },
       "experimental_strategy": {
-        "chartType": "bar",
-        "title": "Experimental Stratgey"
+        "chartType": "pie",
+        "title": "Experimental Strategy"
       }
     },
     "filters": {
       "tabs": [
         {
-          "title": "File",
+          "title": "Strategies",
           "fields": [
-            "project_id",
+            "experimental_strategy"
+          ]
+        },
+        {
+          "title": "Projects",
+          "fields": [
+            "project_id"
+          ]
+        },
+        {
+          "title": "Files",
+          "fields": [
             "data_type",
             "data_format",
             "data_category"
