@@ -6,7 +6,6 @@ mappings:
     props:
       - name: submitter_id
       - name: project_id
-      - name: primary_site
     parent_props:
       - path: studies[study_submitter_id:submitter_id]
     flatten_props:
@@ -25,6 +24,13 @@ mappings:
       - name: _read_groups_count
         path: samples.aliquots.read_groups
         fn: count
+      - name: _results_count
+        path: samples.aliquots.read_groups
+        fn: sum
+      - name: library_strategy
+        src: library_strategy
+        path: samples.aliquots.read_groups
+        fn: list
       - name: _submitted_unaligned_reads_count
         path: samples.aliquots.read_groups.submitted_unaligned_reads_files
         fn: count
