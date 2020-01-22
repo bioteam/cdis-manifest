@@ -223,23 +223,33 @@
         "chartType": "count",
         "title": "Results"
       },
-      "library_strategy": {
-        "chartType": "bar",
-        "title": "Library Strategy"
-      },
       "gender": {
         "chartType": "pie",
         "title": "Gender"
+      },
+      "library_strategy": {
+        "chartType": "bar",
+        "title": "Library Strategy"
       }
     },
     "filters": {
       "tabs": [
         {
-          "title": "Subject",
-          "fields":[
-            "study_submitter_id",
+          "title": "Projects",
+          "fields": [
             "project_id",
-            "library_strategy",
+            "study_submitter_id"
+          ]
+        },
+        {
+          "title": "Strategies",
+          "fields": [
+            "library_strategy"
+          ]
+        },
+        {
+          "title": "Subjects",
+          "fields":[
             "gender"
           ]
         }
@@ -302,15 +312,15 @@
     "filters": {
       "tabs": [
         {
-          "title": "Strategies",
-          "fields": [
-            "experimental_strategy"
-          ]
-        },
-        {
           "title": "Projects",
           "fields": [
             "project_id"
+          ]
+        },
+        {
+          "title": "Strategies",
+          "fields": [
+            "experimental_strategy"
           ]
         },
         {
