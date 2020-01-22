@@ -239,6 +239,7 @@
           "fields":[
             "study_submitter_id",
             "project_id",
+            "library_strategy",
             "gender"
           ]
         }
@@ -295,10 +296,6 @@
   },
   "fileExplorerConfig": {
     "charts": {
-      "library_strategy": {
-        "chartType": "pie",
-        "title": "Library Strategy"
-      },
       "experimental_strategy": {
         "chartType": "pie",
         "title": "Experimental Strategy"
@@ -309,7 +306,6 @@
         {
           "title": "Strategies",
           "fields": [
-            "library_strategy",
             "experimental_strategy"
           ]
         },
