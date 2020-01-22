@@ -6,6 +6,7 @@ mappings:
     props:
       - name: submitter_id
       - name: project_id
+      - name: library_strategy
     parent_props:
       - path: studies[study_submitter_id:submitter_id]
     flatten_props:
@@ -57,7 +58,6 @@ mappings:
       - name: data_type
       - name: state
       - name: data_category
-      - name: library_strategy
       - name: experimental_strategy
     injecting_props:
       subject:

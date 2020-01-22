@@ -276,7 +276,8 @@
       "dataType": "subject",
       "nodeCountTitle": "Subjects",
       "fieldMapping": [
-        { "field": "study_submitter_id", "name": "Study" }
+        { "field": "study_submitter_id", "name": "Study" },
+        { "field": "library_strategy", "name": "Library Strategy" }
       ],
       "manifestMapping": {
         "resourceIndexType": "file",
@@ -286,6 +287,8 @@
       },
       "accessibleFieldCheckList": ["subject_id"],
       "accessibleValidationField": "subject_id",
+      "accessibleFieldCheckList": ["library_strategy"],
+      "accessibleValidationField": "library_strategy",
       "accessibleFieldCheckList": ["project_id"],
       "accessibleValidationField": "project_id"
     }
@@ -369,8 +372,6 @@
       },
       "accessibleFieldCheckList": ["project_id"],
       "accessibleValidationField": "project_id",
-      "accessibleFieldCheckList": ["library_strategy"],
-      "accessibleValidationField": "library_strategy",
       "accessibleFieldCheckList": ["experimental_strategy"],
       "accessibleValidationField": "experimental_strategy",
       "downloadAccessor": "object_id"
