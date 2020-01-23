@@ -14,7 +14,6 @@ mappings:
           - name: gender
           - name: race
           - name: ethnicity
-      - path: samples[sample_submitter_id:submitter_id]
     aggregated_props:
       - name: _samples_count
         path: samples
@@ -35,6 +34,10 @@ mappings:
       - name: sample_type
         path: samples
         src: sample_type
+        fn: set
+      - name: sample_submitter_id
+        path: samples
+        src: submitter_id
         fn: set
     joining_props:
       - index: file
