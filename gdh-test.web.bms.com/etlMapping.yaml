@@ -8,6 +8,7 @@ mappings:
       - name: project_id
     parent_props:
       - path: studies[study_submitter_id:submitter_id]
+      - path: projects[project_code:code]
     flatten_props:
       - path: demographics
         props:
@@ -63,8 +64,6 @@ mappings:
       - name: state
       - name: data_category
       - name: experimental_strategy
-    parent_props:
-      - path: projects[project_code:code]
     injecting_props:
       subject:
         props:
