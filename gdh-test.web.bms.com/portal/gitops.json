@@ -229,7 +229,7 @@
         "chartType": "count",
         "title": "Subjects"
       },
-      "_sample_count": {
+      "sample_submitter_id": {
         "chartType": "count",
         "title": "Samples"
       },
