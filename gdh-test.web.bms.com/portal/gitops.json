@@ -229,7 +229,11 @@
         "chartType": "count",
         "title": "Subjects"
       },
-      "read_group": {
+      "_sample_count": {
+        "chartType": "count",
+        "title": "Samples"
+      },
+      "_read_group_count": {
         "chartType": "count",
         "title": "Results"
       },
