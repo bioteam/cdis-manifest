@@ -9,6 +9,11 @@
         "plural": "Subjects"
       },
       {
+        "graphql": "_sample_count",
+        "name": "Sample",
+        "plural": "Samples"
+      },
+      {
         "graphql": "_study_count",
         "name": "Study",
         "plural": "Studies"
@@ -28,6 +33,11 @@
       {
         "graphql": "_subject_count",
         "name": "Subject"
+      },
+      {
+        "graphql": "_sample_count",
+        "name": "Sample",
+        "plural": "Samples"
       },
       {
         "graphql": "_study_count",
@@ -226,14 +236,35 @@
       "gender": {
         "chartType": "pie",
         "title": "Gender"
+      },
+      "sample_type": {
+        "chartType": "bar",
+        "title": "Sample Type"
+      },
+      "library_strategy": {
+        "chartType": "bar",
+        "title": "Library Strateg"
       }
     },
     "filters": {
       "tabs": [
         {
-          "title": "Subject",
+          "title": "Projects",
+          "fields": [
+            "study_submitter_id",
+            "project_id"
+          ]
+        },
+        {
+          "title": "Strategies",
+          "fields": [
+            "library_strategy"
+          ]
+        },
+        {
+          "title": "Subjects",
           "fields":[
-            "project_id",
+            "sample_type",
             "gender"
           ]
         }
@@ -271,6 +302,9 @@
       "dataType": "subject",
       "nodeCountTitle": "Subjects",
       "fieldMapping": [
+        { "field": "study_submitter_id", "name": "Study" },
+        { "field": "sample_type", "name": "Sample Type" },
+        { "field": "library_strategy", "name": "Library Strategy" }
       ],
       "manifestMapping": {
         "resourceIndexType": "file",
@@ -294,15 +328,15 @@
     "filters": {
       "tabs": [
         {
-          "title": "Strategies",
-          "fields": [
-            "experimental_strategy"
-          ]
-        },
-        {
           "title": "Projects",
           "fields": [
             "project_id"
+          ]
+        },
+        {
+          "title": "Strategies",
+          "fields": [
+            "experimental_strategy"
           ]
         },
         {
