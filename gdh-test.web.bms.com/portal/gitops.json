@@ -264,6 +264,7 @@
         {
           "title": "Subjects",
           "fields":[
+            "sample_type",
             "gender"
           ]
         }

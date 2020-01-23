@@ -32,9 +32,9 @@ mappings:
         path: samples.aliquots.read_groups
         fn: list
       - name: sample_type
-        src: sample_type
         path: samples
-        fn: list
+        src: sample_type
+        fn: set
     joining_props:
       - index: file
         join_on: subject_id
