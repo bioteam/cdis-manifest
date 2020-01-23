@@ -63,6 +63,8 @@ mappings:
       - name: state
       - name: data_category
       - name: experimental_strategy
+    parent_props:
+      - path: projects[project_code:code]
     injecting_props:
       subject:
         props:
