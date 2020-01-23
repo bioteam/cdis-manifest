@@ -8,15 +8,13 @@ mappings:
       - name: project_id
     parent_props:
       - path: studies[study_submitter_id:submitter_id]
-      - path: studies.projects
-        props:
-          - name: code
     flatten_props:
       - path: demographics
         props:
           - name: gender
           - name: race
           - name: ethnicity
+      - path: samples[sample_submitter_id:submitter_id]
     aggregated_props:
       - name: _samples_count
         path: samples
