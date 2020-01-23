@@ -7,7 +7,7 @@
     "guppy": "quay.io/cdis/guppy:0.3.7",
     "arborist": "082619190404.dkr.ecr.us-east-1.amazonaws.com/arborist:1.0.8",
     "aws-es-proxy": "abutaha/aws-es-proxy:0.8",
-    "fence": "082619190404.dkr.ecr.us-east-1.amazonaws.com/fence:1.0.6",
+    "fence": "082619190404.dkr.ecr.us-east-1.amazonaws.com/fence:1.0.7",
     "fluentd": "fluent/fluentd-kubernetes-daemonset:v1.2-debian-cloudwatch",
     "indexd": "082619190404.dkr.ecr.us-east-1.amazonaws.com/indexd:1.0.0",
     "peregrine": "082619190404.dkr.ecr.us-east-1.amazonaws.com/peregrine:1.0.16",
