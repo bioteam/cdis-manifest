@@ -74,3 +74,4 @@ mappings:
             src: id
             fn: set
           - name: project_id
+          - name: project_code
