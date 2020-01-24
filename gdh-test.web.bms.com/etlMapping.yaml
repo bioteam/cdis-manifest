@@ -7,7 +7,7 @@ mappings:
       - name: submitter_id
       - name: project_id
     parent_props:
-      - path: studies[study_submitter_id:submitter_id]
+      - path: studies[study_submitter_id:submitter_id].projects[project_code:code]
     flatten_props:
       - path: demographics
         props:
