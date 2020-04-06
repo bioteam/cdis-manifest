@@ -11,7 +11,7 @@
     "fluentd": "fluent/fluentd-kubernetes-daemonset:v1.2-debian-cloudwatch",
     "indexd": "098381893833.dkr.ecr.us-east-1.amazonaws.com/indexd:1.0.0",
     "peregrine": "098381893833.dkr.ecr.us-east-1.amazonaws.com/peregrine:1.0.16",
-    "pidgin": "quay.io/cdis/pidgin:1.2.0",
+    "pidgin": "quay.io/cdis/pidgin:09fac83f9957",
     "portal": "098381893833.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.63",
     "revproxy": "quay.io/cdis/nginx:1.15.5-ctds",
     "sheepdog": "098381893833.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.28",
