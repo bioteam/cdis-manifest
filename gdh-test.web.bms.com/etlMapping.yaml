@@ -7,7 +7,7 @@ mappings:
       - name: submitter_id
       - name: project_id
     parent_props:
-      - path: studies[study_submitter_id:submitter_id]
+      - path: studies[study_submitter_id:submitter_id].projects[project_code:code]
     flatten_props:
       - path: demographics
         props:
@@ -34,6 +34,10 @@ mappings:
       - name: sample_type
         path: samples
         src: sample_type
+        fn: set
+      - name: sample_submitter_id
+        path: samples
+        src: submitter_id
         fn: set
     joining_props:
       - index: file
@@ -70,3 +74,4 @@ mappings:
             src: id
             fn: set
           - name: project_id
+          - name: project_code

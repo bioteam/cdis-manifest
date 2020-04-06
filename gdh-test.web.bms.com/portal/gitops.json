@@ -229,7 +229,7 @@
         "chartType": "count",
         "title": "Subjects"
       },
-      "_sample_count": {
+      "sample_submitter_id": {
         "chartType": "count",
         "title": "Samples"
       },
@@ -307,6 +307,7 @@
       "nodeCountTitle": "Subjects",
       "fieldMapping": [
         { "field": "study_submitter_id", "name": "Study" },
+        { "field": "sample_submitter_id", "name": "Sample" },
         { "field": "sample_type", "name": "Sample Type" },
         { "field": "library_strategy", "name": "Library Strategy" }
       ],
