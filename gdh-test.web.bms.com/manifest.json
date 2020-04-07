@@ -4,24 +4,24 @@
     "That's all I have to say"
   ],
   "versions": {
-    "guppy": "quay.io/cdis/guppy:0.3.7",
-    "arborist": "098381893833.dkr.ecr.us-east-1.amazonaws.com/arborist:1.0.8",
+    "guppy": "quay.io/cdis/guppy:2020.04",
+    "arborist": "quay.io/cdis/arborist:2020.04",
     "aws-es-proxy": "abutaha/aws-es-proxy:0.8",
     "fence": "098381893833.dkr.ecr.us-east-1.amazonaws.com/fence:1.0.7",
     "fluentd": "fluent/fluentd-kubernetes-daemonset:v1.2-debian-cloudwatch",
-    "indexd": "098381893833.dkr.ecr.us-east-1.amazonaws.com/indexd:1.0.0",
-    "peregrine": "098381893833.dkr.ecr.us-east-1.amazonaws.com/peregrine:1.0.16",
-    "pidgin": "quay.io/cdis/pidgin@sha256:09fac83f9957019cb01699ffd36aa85d6d96abe1e08fff328f3c3103e9ce7946",
-    "portal": "098381893833.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.63",
-    "revproxy": "quay.io/cdis/nginx:1.15.5-ctds",
-    "sheepdog": "098381893833.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.28",
-    "spark": "quay.io/cdis/gen3-spark:1.0.0",
-    "manifestservice": "quay.io/cdis/manifestservice:0.2.0",
-    "hatchery": "quay.io/cdis/hatchery:0.1.0",
+    "indexd": "098381893833.dkr.ecr.us-east-1.amazonaws.com/indexd:1.0.1",
+    "peregrine": "098381893833.dkr.ecr.us-east-1.amazonaws.com/peregrine:1.0.17",
+    "pidgin": "quay.io/cdis/pidgin:2020.04",
+    "portal": "098381893833.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.64",
+    "revproxy": "quay.io/cdis/nginx:2020.04",
+    "sheepdog": "098381893833.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.29",
+    "spark": "quay.io/cdis/gen3-spark:2020.04",
+    "manifestservice": "quay.io/cdis/manifestservice:2020.04",
+    "hatchery": "quay.io/cdis/hatchery:2020.04",
     "ambassador": "quay.io/datawire/ambassador:0.60.3",
-    "wts": "quay.io/cdis/workspace-token-service:0.2.0",
-    "tube": "quay.io/cdis/tube:0.3.23",
-    "ssjdispatcher": "quay.io/cdis/ssjdispatcher:0.0.7"
+    "wts": "quay.io/cdis/workspace-token-service:2020.04",
+    "tube": "quay.io/cdis/tube:2020.04",
+    "ssjdispatcher": "quay.io/cdis/ssjdispatcher:2020.04"
   },
   "guppy": {
   "indices": [
