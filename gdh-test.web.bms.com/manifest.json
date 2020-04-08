@@ -14,7 +14,7 @@
     "pidgin": "quay.io/cdis/pidgin:2020.04",
     "portal": "098381893833.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.64",
     "revproxy": "quay.io/cdis/nginx:2020.04",
-    "sheepdog": "098381893833.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.29",
+    "sheepdog": "098381893833.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.31",
     "spark": "quay.io/cdis/gen3-spark:2020.04",
     "manifestservice": "quay.io/cdis/manifestservice:2020.04",
     "hatchery": "quay.io/cdis/hatchery:2020.04",
