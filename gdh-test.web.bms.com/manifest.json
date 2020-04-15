@@ -20,7 +20,7 @@
     "hatchery": "quay.io/cdis/hatchery:2020.04",
     "ambassador": "quay.io/datawire/ambassador:0.60.3",
     "wts": "quay.io/cdis/workspace-token-service:2020.04",
-    "tube": "quay.io/cdis/tube:stable",
+    "tube": "quay.io/cdis/tube:2020.04",
     "ssjdispatcher": "quay.io/cdis/ssjdispatcher:2020.04"
   },
   "guppy": {
