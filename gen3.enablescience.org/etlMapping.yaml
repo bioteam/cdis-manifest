@@ -1,0 +1,77 @@
+mappings:
+  - name: dcf_etl
+    doc_type: subject
+    type: aggregator
+    root: subject
+    props:
+      - name: submitter_id
+      - name: project_id
+    parent_props:
+      - path: studies[study_submitter_id:submitter_id].projects[project_code:code]
+    flatten_props:
+      - path: demographics
+        props:
+          - name: gender
+          - name: race
+          - name: ethnicity
+    aggregated_props:
+      - name: _samples_count
+        path: samples
+        fn: count
+      - name: _aliquots_count
+        path: samples.aliquots
+        fn: count
+      - name: _read_groups_count
+        path: samples.aliquots.read_groups
+        fn: count
+      - name: _submitted_unaligned_reads_count
+        path: samples.aliquots.read_groups.submitted_unaligned_reads_files
+        fn: count
+      - name: library_strategy
+        src: library_strategy
+        path: samples.aliquots.read_groups
+        fn: list
+      - name: sample_type
+        path: samples
+        src: sample_type
+        fn: set
+      - name: sample_submitter_id
+        path: samples
+        src: submitter_id
+        fn: set
+    joining_props:
+      - index: file
+        join_on: subject_id
+        props:
+          - name: data_format
+            src: data_format
+            fn: set
+          - name: data_type
+            src: data_type
+            fn: set
+          - name: file_id
+            src: file_id
+            fn: set
+  - name: dcf_file
+    doc_type: file
+    type: collector
+    root: None
+    category: data_file
+    props:
+      - name: object_id
+      - name: md5sum
+      - name: file_name
+      - name: file_size
+      - name: data_format
+      - name: data_type
+      - name: state
+      - name: data_category
+      - name: experimental_strategy
+    injecting_props:
+      subject:
+        props:
+          - name: subject_id
+            src: id
+            fn: set
+          - name: project_id
+          #- name: project_code
