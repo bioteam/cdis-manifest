@@ -19,7 +19,7 @@
     "manifestservice": "quay.io/cdis/manifestservice:2020.04",
     "hatchery": "quay.io/cdis/hatchery:2020.04",
     "ambassador": "quay.io/datawire/ambassador:0.60.3",
-    "wts": "quay.io/cdis/workspace-token-service:2020.04",
+    "wts": "098381893833.dkr.ecr.us-east-1.amazonaws.com/wts:1.0.0",
     "tube": "quay.io/cdis/tube:2020.04",
     "ssjdispatcher": "quay.io/cdis/ssjdispatcher:2020.04"
   },
