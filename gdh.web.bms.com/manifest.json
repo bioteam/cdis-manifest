@@ -12,7 +12,7 @@
     "indexd": "082619190404.dkr.ecr.us-east-1.amazonaws.com/indexd:1.0.0",
     "peregrine": "082619190404.dkr.ecr.us-east-1.amazonaws.com/peregrine:1.0.16",
     "pidgin": "quay.io/cdis/pidgin:1.2.0",
-    "portal": "082619190404.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.64",
+    "portal": "098381893833.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.64",
     "revproxy": "quay.io/cdis/nginx:1.15.5-ctds",
     "sheepdog": "082619190404.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.28",
     "spark": "quay.io/cdis/gen3-spark:1.0.0",
@@ -33,8 +33,7 @@
         "index": "dcf_file",
         "type": "file"
       }
-    ],
-    "auth_filter_field": "auth_resource_path"
+    ]
   },
   "arborist": {
     "deployment_version": "2"
