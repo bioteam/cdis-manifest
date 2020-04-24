@@ -45,7 +45,7 @@
     "sidecar": {
       "cpu-limit": "1.0",
       "memory-limit": "256Mi",
-      "image": "098381893833.dkr.ecr.us-east-1.amazonaws.com/gen3fuse-sidecar:1.0.1",
+      "image": "098381893833.dkr.ecr.us-east-1.amazonaws.com/gen3fuse-sidecar:1.0.2",
       "env": {"NAMESPACE":"default", "HOSTNAME": "gdh-test.web.bms.com"},
       "args": [],
       "command": ["/bin/bash", "/sidecarDockerrun.sh"],
