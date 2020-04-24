@@ -33,8 +33,7 @@
       "index": "dcf_file",
       "type": "file"
     }
-  ],
-  "auth_filter_field": "auth_resource_path"
+  ]
   },
   "arborist": {
     "deployment_version": "2"
