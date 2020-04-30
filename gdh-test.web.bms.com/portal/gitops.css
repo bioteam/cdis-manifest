@@ -4,6 +4,11 @@
     --g3-primary-btn__bg-color--hover: #731b7a;
     --g3-default-btn__color--active: #b42abe;
     --g3-default-btn__border-color--active: #b42abe;
+    --g3-secondary-btn__bg-color--hover: #731b7a;
+}
+
+div div .data-dictionary__switch-button:hover {
+    background-color: #731b7a;
 }
 
 div div .footer__logo-area {
