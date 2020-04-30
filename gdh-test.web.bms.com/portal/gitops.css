@@ -46,3 +46,11 @@ div div .footer__link-area {
 div div .project-pagination .selected, div div .project-pagination li:hover {
     color: #b42abe;
 }
+
+div div .nav-bar__link--home:hover {
+    border-bottom-color: #b42abe;
+}
+
+div div .popup__title {
+    background-color: #611767;
+}
