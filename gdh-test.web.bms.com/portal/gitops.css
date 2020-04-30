@@ -1,6 +1,6 @@
 :root {
     --g3-color__base-blue: #731b7a;
-    /* --g3-primary-btn__bg-color: #3283c8; */
+    --g3-primary-btn__bg-color: #731b7a;
 }
 
 div div .footer__logo-area {
@@ -12,6 +12,10 @@ div div .footer__logo-area {
     width: 530px;
 }
 
-/* div a .nav-button:hover {
-    border-bottom-color: var(--g3-primary-btn__bg-color);
-} */
+div div .top-bar, div div .top-bar__header {
+    background-color: #A69F9F;
+}
+
+div a .nav-button:hover, div a .button-active {
+    border-bottom-color: #731b7a;
+}
