@@ -109,7 +109,8 @@
     "sync_from_dbgap": "False",
     "useryaml_s3path": "s3://gdh-test-config/config/user.yaml",
     "dispatcher_job_num": "10",
-    "netpolicy": "on"
+    "netpolicy": "on",
+    "tier_access_level": "libre"
   },
   "ssjdispatcher": {
     "job_images": {
