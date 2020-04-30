@@ -2,6 +2,8 @@
     --g3-color__base-blue: #b42abe;
     --g3-primary-btn__bg-color: #b42abe;
     --g3-primary-btn__bg-color--hover: #731b7a;
+    --g3-default-btn__color--active: #b42abe;
+    --g3-default-btn__border-color--active: #b42abe;
 }
 
 div div .footer__logo-area {
@@ -18,7 +20,7 @@ div div .top-bar, div div .top-bar__header {
 }
 
 div a .nav-button:hover, div a .button-active {
-    border-bottom-color: #731b7a;
+    border-bottom-color: #b42abe;
 }
 
 div div .top-icon-button.body-typo {
@@ -35,4 +37,12 @@ div div .project-list-subsets .selected {
 
 div div .project-list-subsets li:hover {
     border-bottom-color: #731b7a;
+}
+
+div div .footer__link-area {
+    display: none;
+}
+
+div div .project-pagination .selected, div div .project-pagination li:hover {
+    color: #b42abe;
 }
