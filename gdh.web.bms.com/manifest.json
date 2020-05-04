@@ -46,7 +46,7 @@
     "sidecar": {
       "cpu-limit": "1.0",
       "memory-limit": "256Mi",
-      "image": "quay.io/cdis/gen3fuse-sidecar:chore_sidecar",
+      "image": "082619190404.dkr.ecr.us-east-1.amazonaws.com/gen3fuse-sidecar:1.0.4",
       "env": {"NAMESPACE":"default", "HOSTNAME": "gdh-test.web.bms.com"},
       "args": [],
       "command": ["/bin/bash", "/sidecarDockerrun.sh"],
@@ -139,7 +139,8 @@
     "sync_from_dbgap": "False",
     "useryaml_s3path": "s3://gdh-prod-config/config/user.yaml",
     "dispatcher_job_num": "10",
-    "netpolicy": "on"
+    "netpolicy": "on",
+    "tier_access_level": "libre"
   },
   "ssjdispatcher": {
     "job_images": {

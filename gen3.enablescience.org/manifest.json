@@ -12,14 +12,14 @@
     "indexd": "501351204723.dkr.ecr.us-east-1.amazonaws.com/indexd:1.0.1",
     "peregrine": "501351204723.dkr.ecr.us-east-1.amazonaws.com/peregrine:1.0.19",
     "pidgin": "quay.io/cdis/pidgin:2020.04",
-    "portal": "501351204723.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.64",
+    "portal": "501351204723.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.67",
     "revproxy": "quay.io/cdis/nginx:2020.04",
     "sheepdog": "501351204723.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.31",
     "spark": "quay.io/cdis/gen3-spark:2020.04",
     "manifestservice": "quay.io/cdis/manifestservice:2020.04",
     "hatchery": "quay.io/cdis/hatchery:2020.04",
     "ambassador": "quay.io/datawire/ambassador:0.60.3",
-    "wts": "quay.io/cdis/workspace-token-service:2020.04",
+    "wts": "501351204723.dkr.ecr.us-east-1.amazonaws.com/wts:1.0.0",
     "tube": "quay.io/cdis/tube:2020.04",
     "ssjdispatcher": "quay.io/cdis/ssjdispatcher:2020.04"
   },
@@ -46,7 +46,7 @@
     "sidecar": {
       "cpu-limit": "1.0",
       "memory-limit": "256Mi",
-      "image": "quay.io/cdis/gen3fuse-sidecar:chore_sidecar",
+      "image": "501351204723.dkr.ecr.us-east-1.amazonaws.com/gen3fuse-sidecar:1.0.4",
       "env": {"NAMESPACE":"default", "HOSTNAME": "gdh-test.web.bms.com"},
       "args": [],
       "command": ["/bin/bash", "/sidecarDockerrun.sh"],
@@ -139,7 +139,8 @@
     "sync_from_dbgap": "False",
     "useryaml_s3path": "s3://gdh-test-config/config/user.yaml",
     "dispatcher_job_num": "10",
-    "netpolicy": "on"
+    "netpolicy": "on",
+    "tier_access_level": "libre"
   },
   "ssjdispatcher": {
     "job_images": {
