@@ -1,0 +1,61 @@
+:root {
+    --g3-color__base-blue: #b42abe;
+    --g3-primary-btn__bg-color: #b42abe;
+    --g3-primary-btn__bg-color--hover: #731b7a;
+    --g3-default-btn__color--active: #b42abe;
+    --g3-default-btn__border-color--active: #b42abe;
+    --g3-secondary-btn__bg-color--hover: #731b7a;
+}
+
+div div .data-dictionary__switch-button:hover {
+    background-color: #731b7a;
+}
+
+div div .footer__logo-area {
+    background: #4a4a4a;
+    background: linear-gradient(90deg, #4a4a4a 0%, #b1b1b1 17%, #ebebeb 100%);
+    display: inline-flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    width: 530px;
+}
+
+div div .top-bar, div div .top-bar__header {
+    background-color: #A69F9F;
+}
+
+div a .nav-button:hover, div a .button-active {
+    border-bottom-color: #b42abe;
+}
+
+div div .top-icon-button.body-typo {
+    background-color: transparent;
+}
+
+div div .top-bar__link {
+    border-right-color: #FFF;
+}
+
+div div .project-list-subsets .selected {
+    border-bottom-color: #b42abe;
+}
+
+div div .project-list-subsets li:hover {
+    border-bottom-color: #731b7a;
+}
+
+div div .footer__link-area {
+    display: none;
+}
+
+div div .project-pagination .selected, div div .project-pagination li:hover {
+    color: #b42abe;
+}
+
+div div .nav-bar__link--home:hover {
+    border-bottom-color: #b42abe;
+}
+
+div div .popup__title {
+    background-color: #611767;
+}
