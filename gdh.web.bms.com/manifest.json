@@ -5,7 +5,7 @@
   ],
   "versions": {
     "guppy": "quay.io/cdis/guppy:2020.04",
-    "arborist": "quay.io/cdis/arborist:2020.048",
+    "arborist": "082619190404.dkr.ecr.us-east-1.amazonaws.com/arborist:1.0.1",
     "aws-es-proxy": "abutaha/aws-es-proxy:0.8",
     "fence": "082619190404.dkr.ecr.us-east-1.amazonaws.com/fence:1.0.11",
     "fluentd": "fluent/fluentd-kubernetes-daemonset:v1.2-debian-cloudwatch",
