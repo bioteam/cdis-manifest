@@ -24,8 +24,8 @@
     "ssjdispatcher": "quay.io/cdis/ssjdispatcher:2020.04"
   },
   "global": {
-    "environment": "gdh-test",
-    "hostname": "gdh-test.web.bms.com",
+    "environment": "gdh-dev",
+    "hostname": "gen3.enablescience.org",
     "revproxy_arn": "arn:aws:acm:us-east-1:098381893833:certificate/4b21d947-d829-43fa-944e-ba8c953ba2c3",
     "dictionary_url": "https://bms-gen3-dev.s3.amazonaws.com/datadictionary/philip/schema.json",
     "portal_app": "gitops",
