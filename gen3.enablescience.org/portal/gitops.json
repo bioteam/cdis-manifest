@@ -131,7 +131,8 @@
         },
         {
           "icon": "kr",
-          "link": "/bms-kr",
+          "link": "https://knowledge-repo.enablescience.org/auth/login",
+          "newTab": true,
           "color": "#a2a2a2",
           "name": "Knowledge"
         },
