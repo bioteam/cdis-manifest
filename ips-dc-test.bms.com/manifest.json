@@ -107,7 +107,7 @@
     "kube_bucket": "kube-commons-test-gen3",
     "logs_bucket": "logs-commons-test-gen3",
     "sync_from_dbgap": "False",
-    "useryaml_s3path": "s3://gdh-test-config/config/user.yaml",
+    "useryaml_s3path": "s3://bms-gen3-dev/config/user.yaml",
     "dispatcher_job_num": "10",
     "netpolicy": "on",
     "tier_access_level": "libre"
