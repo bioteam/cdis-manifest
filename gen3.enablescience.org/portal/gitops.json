@@ -48,11 +48,7 @@
   "components": {
     "appName": "IPS Data Ecosystem for R&ED",
     "index": {
-      "introduction": {
-        "heading": "IPS Data Ecosystem for R&ED",
-        "text": "The IPS Data Ecosystem for R&ED supports the management, analysis and sharing of data for the research community.",
-        "link": "/submission"
-      },
+      "introduction": null,
       "buttons": [
         {
           "name": "Model Data",
