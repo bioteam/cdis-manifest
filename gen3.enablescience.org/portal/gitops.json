@@ -53,7 +53,7 @@
         {
           "name": "Model Data",
           "icon": "data-field-define",
-          "body": "The IPS Data Ecosystem for R&ED data model and schema. Please study the dictionary before you start browsing.",
+          "body": "The IPS Data Ecosystem for R&ED data model and schema.",
           "link": "/DD",
           "label": "Learn more"
         },
