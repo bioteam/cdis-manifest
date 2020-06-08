@@ -55,9 +55,9 @@
       },
       "buttons": [
         {
-          "name": "Define Data Field",
+          "name": "Model Data",
           "icon": "data-field-define",
-          "body": "The IPS Data Ecosystem for R&ED define the data in a general way. Please study the dictionary before you start browsing.",
+          "body": "The IPS Data Ecosystem for R&ED data model and schema. Please study the dictionary before you start browsing.",
           "link": "/DD",
           "label": "Learn more"
         },
