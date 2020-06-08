@@ -58,6 +58,13 @@
           "label": "Learn more"
         },
         {
+          "name": "Register Dataset",
+          "icon": "data-access",
+          "body": "Register dataset.",
+          "link": "/bms-projects",
+          "label": "Register Dataset"
+        },
+        {
           "name": "Find Cohorts",
           "icon": "data-explore",
           "body": "The Exploration Page gives you insights and a clear overview under selected factors.",
