@@ -81,14 +81,14 @@
         {
           "name": "Perform Analysis",
           "icon": "data-access",
-          "body": "Perform analysis on data in Gen3.",
+          "body": "Perform analysis on data.",
           "link": "/workspace",
           "label": "Perform Analysis"
         },
         {
           "name": "Find Apps",
           "icon": "data-access",
-          "body": "Find applications registered in Gen3 app catalog.",
+          "body": "Find applications registered in app catalog.",
           "link": "/bms-apps",
           "label": "Find Apps"
         },
