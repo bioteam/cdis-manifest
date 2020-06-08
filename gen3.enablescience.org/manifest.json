@@ -37,6 +37,24 @@
     "netpolicy": "on",
     "tier_access_level": "libre"
   },
+  "scaling": {
+    "fence": {
+      "strategy": "pin",
+      "num": 1 
+    },
+    "indexd": {
+      "strategy": "pin",
+      "num": 1 
+    },
+    "revproxy": {
+      "strategy": "pin",
+      "num": 1 
+    },
+    "sheepdog": {
+      "strategy": "pin",
+      "num": 1 
+    }
+  },
   "guppy": {
     "indices": [
       {
