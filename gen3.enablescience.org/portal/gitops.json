@@ -84,21 +84,21 @@
         },
         {
           "name": "Perform Analysis",
-          "icon": "",
+          "icon": "data-access",
           "body": "Perform analysis on data in Gen3.",
           "link": "/workspace",
           "label": "Perform Analysis"
         },
         {
           "name": "Find Apps",
-          "icon": "",
+          "icon": "data-access",
           "body": "Find applications registered in Gen3 app catalog.",
           "link": "/bms-apps",
           "label": "Find Apps"
         },
         {
           "name": "Find Knowledge Posts",
-          "icon": "",
+          "icon": "data-access",
           "body": "Find knowledge posts registered in Knowledge Repository app.",
           "link": "/bms-kr",
           "label": "Find Knowledge Posts"
