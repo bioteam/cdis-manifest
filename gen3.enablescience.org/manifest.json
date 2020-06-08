@@ -53,6 +53,22 @@
     "sheepdog": {
       "strategy": "pin",
       "num": 1 
+    },
+    "peregrine": {
+      "strategy": "pin",
+      "num": 1 
+    },
+    "portal": {
+      "strategy": "pin",
+      "num": 1 
+    },
+    "arborist": {
+      "strategy": "pin",
+      "num": 1 
+    },
+    "presigned-url-fence": {
+      "strategy": "pin",
+      "num": 1 
     }
   },
   "guppy": {
