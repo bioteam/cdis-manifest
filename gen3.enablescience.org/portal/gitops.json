@@ -51,18 +51,18 @@
       
       "buttons": [
         {
-          "name": "Model Data",
-          "icon": "data-field-define",
-          "body": "The IPS Data Ecosystem for R&ED data model and schema.",
-          "link": "/DD",
-          "label": "Learn more"
-        },
-        {
           "name": "Register Dataset",
           "icon": "data-access",
           "body": "Register dataset.",
           "link": "/bms-projects",
           "label": "Register Dataset"
+        },
+        {
+          "name": "Model Data",
+          "icon": "data-field-define",
+          "body": "The IPS Data Ecosystem for R&ED data model and schema.",
+          "link": "/DD",
+          "label": "Learn more"
         },
         {
           "name": "Find Cohorts",
