@@ -48,7 +48,7 @@
   "components": {
     "appName": "IPS Data Ecosystem for R&ED",
     "index": {
-      "introduction": null,
+      
       "buttons": [
         {
           "name": "Model Data",
