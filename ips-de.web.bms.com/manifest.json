@@ -47,7 +47,7 @@
       "cpu-limit": "1.0",
       "memory-limit": "256Mi",
       "image": "082619190404.dkr.ecr.us-east-1.amazonaws.com/gen3fuse-sidecar:1.0.5",
-      "env": {"NAMESPACE":"default", "HOSTNAME": "gdh-test.web.bms.com"},
+      "env": {"NAMESPACE":"default", "HOSTNAME": "ips-de.web.bms.com"},
       "args": [],
       "command": ["/bin/bash", "/sidecarDockerrun.sh"],
       "lifecycle-pre-stop": ["su", "-c", "echo test", "-s", "/bin/sh", "root"]
@@ -130,7 +130,7 @@
   },
   "global": {
     "environment": "gdh-prod",
-    "hostname": "gdh.web.bms.com",
+    "hostname": "ips-de.web.bms.com",
     "revproxy_arn": "arn:aws:acm:us-east-1:098381893833:certificate/4b21d947-d829-43fa-944e-ba8c953ba2c3",
     "dictionary_url": "https://bms-gen3-dev.s3.amazonaws.com/datadictionary/develop/schema.json",
     "portal_app": "gitops",
