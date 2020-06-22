@@ -4,24 +4,24 @@
     "That's all I have to say"
   ],
   "versions": {
-    "guppy": "quay.io/cdis/guppy:2020.04",
+    "guppy": "quay.io/cdis/guppy:2020.06",
     "arborist": "082619190404.dkr.ecr.us-east-1.amazonaws.com/arborist:1.0.1",
     "aws-es-proxy": "abutaha/aws-es-proxy:0.8",
     "fence": "082619190404.dkr.ecr.us-east-1.amazonaws.com/fence:1.0.11",
     "fluentd": "fluent/fluentd-kubernetes-daemonset:v1.2-debian-cloudwatch",
-    "indexd": "082619190404.dkr.ecr.us-east-1.amazonaws.com/indexd:1.0.1",
-    "peregrine": "082619190404.dkr.ecr.us-east-1.amazonaws.com/peregrine:1.0.19",
-    "pidgin": "quay.io/cdis/pidgin:2020.04",
+    "indexd": "082619190404.dkr.ecr.us-east-1.amazonaws.com/indexd:1.0.2",
+    "peregrine": "082619190404.dkr.ecr.us-east-1.amazonaws.com/peregrine:1.0.20",
+    "pidgin": "quay.io/cdis/pidgin:2020.06",
     "portal": "082619190404.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.67",
-    "revproxy": "quay.io/cdis/nginx:2020.04",
-    "sheepdog": "082619190404.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.33",
-    "spark": "quay.io/cdis/gen3-spark:2020.04",
-    "manifestservice": "quay.io/cdis/manifestservice:2020.04",
-    "hatchery": "quay.io/cdis/hatchery:2020.04",
+    "revproxy": "quay.io/cdis/nginx:2020.06",
+    "sheepdog": "082619190404.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.34",
+    "spark": "quay.io/cdis/gen3-spark:2020.06",
+    "manifestservice": "quay.io/cdis/manifestservice:2020.06",
+    "hatchery": "quay.io/cdis/hatchery:2020.06",
     "ambassador": "quay.io/datawire/ambassador:0.60.3",
-    "wts": "082619190404.dkr.ecr.us-east-1.amazonaws.com/wts:1.0.1",
-    "tube": "quay.io/cdis/tube:2020.04",
-    "ssjdispatcher": "quay.io/cdis/ssjdispatcher:2020.04"
+    "wts": "082619190404.dkr.ecr.us-east-1.amazonaws.com/wts:1.0.2",
+    "tube": "quay.io/cdis/tube:2020.06",
+    "ssjdispatcher": "quay.io/cdis/ssjdispatcher:2020.06"
   },
   "guppy": {
     "indices": [
