@@ -21,15 +21,18 @@ mappings:
       - name: _aliquots_count
         path: samples.aliquots
         fn: count
+      - name: _analytes_count
+        path: samples.aliquots.analytes
+        fn: count
       - name: _read_groups_count
-        path: samples.aliquots.read_groups
+        path: samples.aliquots.analytes.read_groups
         fn: count
       - name: _submitted_unaligned_reads_count
-        path: samples.aliquots.read_groups.submitted_unaligned_reads_files
+        path: samples.aliquots.analytes.read_groups.submitted_unaligned_reads_files
         fn: count
       - name: library_strategy
         src: library_strategy
-        path: samples.aliquots.read_groups
+        path: samples.aliquots.analytes.read_groups
         fn: list
       - name: sample_type
         path: samples
