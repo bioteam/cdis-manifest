@@ -14,6 +14,10 @@ mappings:
           - name: gender
           - name: race
           - name: ethnicity
+      - path: diagnoses
+        props:
+          - name: primary_diagnosis
+          - name: best_overall_response
     aggregated_props:
       - name: _samples_count
         path: samples
