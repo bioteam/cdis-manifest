@@ -25,16 +25,6 @@ mappings:
       - name: _aliquots_count
         path: samples.aliquots
         fn: count
-      - name: _read_groups_count
-        path: samples.aliquots.read_groups
-        fn: count
-      - name: _unaligned_reads_count
-        path: samples.aliquots.read_groups.unaligned_reads_files
-        fn: count
-      - name: library_strategy
-        src: library_strategy
-        path: samples.aliquots.read_groups
-        fn: list
       - name: sample_type
         path: samples
         src: sample_type
