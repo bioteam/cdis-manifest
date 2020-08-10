@@ -14,10 +14,11 @@ mappings:
           - name: gender
           - name: race
           - name: ethnicity
-      - path: diagnoses
-        props:
-          - name: primary_diagnosis
     aggregated_props:
+      - name: primary_diagnosis
+        path: diagnoses
+        src: primary_diagnosis
+        fn: list
       - name: _samples_count
         path: samples
         fn: count
