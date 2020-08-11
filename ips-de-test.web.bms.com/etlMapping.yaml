@@ -19,6 +19,10 @@ mappings:
         path: diagnoses
         src: primary_diagnosis
         fn: list
+      - name: best_overall_response
+        path: diagnoses
+        src: best_overall_response
+        fn: list
       - name: _samples_count
         path: samples
         fn: count
