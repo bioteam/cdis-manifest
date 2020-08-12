@@ -1,4 +1,14 @@
 mappings:
+  - name: dcf_analysis
+    doc_type: analysis
+    type: aggregator
+    root: analysis
+    props:
+      - name: web_browser_url
+      - name: client_url
+      - name: category
+    parent_props:
+      - path: studies[study_submitter_id:submitter_id].projects[project_code:code]
   - name: dcf_etl
     doc_type: subject
     type: aggregator
