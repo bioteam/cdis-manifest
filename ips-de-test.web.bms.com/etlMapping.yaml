@@ -1,4 +1,16 @@
 mappings:
+  - name: dcf_analysis
+    doc_type: analysis
+    type: aggregator
+    root: analysis
+    props:
+      - name: submitter_id
+      - name: project_id
+      - name: web_browser_url
+      - name: client_url
+      - name: category
+    parent_props:
+      - path: studies[study_submitter_id:submitter_id].projects[project_code:code]
   - name: dcf_etl
     doc_type: subject
     type: aggregator
@@ -77,14 +89,4 @@ mappings:
             fn: set
           - name: project_id
           #- name: project_code
-  - name: dcf_analysis
-    doc_type: analysis
-    type: collector
-    root: analysis
-    props:
-      - name: web_browser_url
-      - name: client_url
-      - name: category
-    parent_props:
-      - path: studies[study_submitter_id:submitter_id].projects[project_code:code]
 
