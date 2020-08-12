@@ -1,14 +1,4 @@
 mappings:
-  - name: dcf_analysis
-    doc_type: analysis
-    type: aggregator
-    root: analysis
-    props:
-      - name: web_browser_url
-      - name: client_url
-      - name: category
-    parent_props:
-      - path: studies[study_submitter_id:submitter_id].projects[project_code:code]
   - name: dcf_etl
     doc_type: subject
     type: aggregator
@@ -64,6 +54,18 @@ mappings:
           - name: file_id
             src: file_id
             fn: set
+      - index: analysis
+        join_on: study_submitter_id
+        props:
+          - name: web_browser_url
+            src: web_browser_url
+            fn: set
+          - name: client_url
+            src: client_url
+            fn: set
+          - name: category
+            src: category
+            fn: set
   - name: dcf_file
     doc_type: file
     type: collector
@@ -87,3 +89,14 @@ mappings:
             fn: set
           - name: project_id
           #- name: project_code
+  - name: dcf_analysis
+    doc_type: analysis
+    type: collector
+    root: analysis
+    props:
+      - name: web_browser_url
+      - name: client_url
+      - name: category
+    parent_props:
+      - path: studies[study_submitter_id:submitter_id].projects[project_code:code]
+
