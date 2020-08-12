@@ -14,6 +14,11 @@ mappings:
           - name: gender
           - name: race
           - name: ethnicity
+      - path: analyses
+        props:
+          - name: web_browser_url
+          - name: client_url
+          - name: category
     aggregated_props:
       - name: primary_diagnosis
         path: diagnoses
