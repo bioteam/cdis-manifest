@@ -79,7 +79,7 @@ mappings:
           #- name: project_code
   - name: dcf_analysis
     doc_type: analysis
-    type: aggregator
+    type: collector
     root: analysis
     props:
       - name: web_browser_url
