@@ -14,11 +14,6 @@ mappings:
           - name: gender
           - name: race
           - name: ethnicity
-      - path: analyses
-        props:
-          - name: web_browser_url
-          - name: client_url
-          - name: category
     aggregated_props:
       - name: primary_diagnosis
         path: diagnoses
@@ -55,6 +50,16 @@ mappings:
           - name: file_id
             src: file_id
             fn: set
+  - name: analysis
+    doc_type: analysis
+    type: aggregator
+    root: analysis
+    parent_props:
+      - path: studies[study_objective,study_submitter_id:submitter_id]
+    props:
+      - name: web_browser_url
+      - name: client_url
+      - name: category
   - name: dcf_file
     doc_type: file
     type: collector
