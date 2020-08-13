@@ -7,7 +7,26 @@ mappings:
       - name: submitter_id
       - name: project_id
     parent_props:
-      - path: studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code]
+      - name: study_submitter_id
+        path: studies
+        src: submitter_id
+        fn: set
+      - name: study_id
+        path: studies
+        src: id
+        fn: set
+      - name: study_design
+        path: studies
+        src: study_design
+        fn: set
+      - name: drug
+        path: studies
+        src: drug
+        fn: set
+      - name: project_code
+        path: studies.projects
+        src: code
+        fn: set
     flatten_props:
       - path: demographics
         props:
@@ -59,26 +78,6 @@ mappings:
             fn: set
           - name: file_id
             src: file_id
-            fn: set
-  - name: dcf_analysis
-    doc_type: analysis
-    type: aggregator
-    root: analysis
-    props:
-      - name: analysis_id
-        src: submitter_id
-        fn: set
-      - name: web_browser_url
-      - name: client_url
-      - name: category
-    parent_props:
-      - path: studies[study_id:id]
-    joining:
-      - index: etl
-        join_on: study_id
-        props:
-          - name:  study_design
-            src: study_design
             fn: set
   - name: dcf_file
     doc_type: file
