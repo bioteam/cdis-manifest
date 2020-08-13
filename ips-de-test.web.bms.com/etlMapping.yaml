@@ -75,7 +75,11 @@ mappings:
       - path: studies[study_submitter_id:submitter_id]
     joining_props:
       - index: etl
-        join_on: study_subnmitter_id
+        join_on: study_submitter_id
+        props:
+          - name:  study_design
+            src: study_design
+            fn: set
   - name: dcf_file
     doc_type: file
     type: collector
