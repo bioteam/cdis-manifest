@@ -74,7 +74,7 @@ mappings:
     parent_props:
       - path: studies[study_submitter_id:submitter_id]
     joining_props:
-      - index: dcf_etl
+      - index: etl
         join_on: study_subnmitter_id
   - name: dcf_file
     doc_type: file
