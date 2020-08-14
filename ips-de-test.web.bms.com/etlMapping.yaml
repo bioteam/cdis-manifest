@@ -69,7 +69,7 @@ mappings:
       - name: client_url
       - name: category
     parent_props:
-      - path: studies[study_id:id]
+      - path: studies[study_id:id].projects[project_code:code].programs[program_name:name]
     joining_props:
       - index: subject
         join_on: study_id
