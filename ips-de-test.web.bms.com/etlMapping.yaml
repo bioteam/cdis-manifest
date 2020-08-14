@@ -72,7 +72,7 @@ mappings:
       - path: studies[study_id:id]
     joining_props:
       - index: subject
-        join_on: subject_id
+        join_on: study_id
         props:
           - name: subject_submitter_id
             src: submitter_id
