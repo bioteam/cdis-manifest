@@ -60,16 +60,6 @@ mappings:
           - name: file_id
             src: file_id
             fn: set
-  - name: dcf_analysis
-    doc_type: analysis
-    type: collector
-    root: analysis
-    props:
-      - name: web_browser_url
-      - name: client_url
-      - name: category
-    parent_props:
-      - path: studies[study_id:id]
   - name: dcf_file
     doc_type: file
     type: collector
