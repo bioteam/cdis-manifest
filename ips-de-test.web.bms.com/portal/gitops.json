@@ -244,10 +244,6 @@
       "sample_type": {
         "chartType": "bar",
         "title": "Sample Type"
-      },
-      "library_strategy": {
-        "chartType": "bar",
-        "title": "Library Strategy"
       }
     },
     "filters": {
@@ -257,12 +253,6 @@
           "fields": [
             "study_submitter_id",
             "project_id"
-          ]
-        },
-        {
-          "title": "Strategies",
-          "fields": [
-            "library_strategy"
           ]
         },
         {
@@ -308,8 +298,7 @@
       "fieldMapping": [
         { "field": "study_submitter_id", "name": "Study" },
         { "field": "sample_submitter_id", "name": "Sample" },
-        { "field": "sample_type", "name": "Sample Type" },
-        { "field": "library_strategy", "name": "Library Strategy" }
+        { "field": "sample_type", "name": "Sample Type" }
       ],
       "manifestMapping": {
         "resourceIndexType": "file",
