@@ -34,7 +34,7 @@
       "type": "file"
     }
   ],
-  "configIndex": "dcf_array-config"
+  "config_index": "dcf_array-config"
   },
   "arborist": {
     "deployment_version": "2"
