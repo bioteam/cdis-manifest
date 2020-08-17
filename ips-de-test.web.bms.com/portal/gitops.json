@@ -203,7 +203,9 @@
           "submitter_id",
           "drug",
           "race",
-          "gender"      
+          "gender",
+          "primary_diagnosis",
+          "best_overall_response"
         ]
       },
       "buttons": [
@@ -235,9 +237,10 @@
         "dataType": "subject",
         "nodeCountTitle": "Subjects",
         "fieldMapping": [
+          { "field": "project_code", "name": "Project" },
           { "field": "study_submitter_id", "name": "Study" },
-          { "field": "sample_submitter_id", "name": "Sample" },
-          { "field": "sample_type", "name": "Sample Type" }
+          { "field": "submitter_id", "name": "Subject" }
+          { "field": "sample_submitter_id", "name": "Sample" }
         ],
         "manifestMapping": {
           "resourceIndexType": "file",
