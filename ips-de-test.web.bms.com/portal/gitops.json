@@ -374,8 +374,7 @@
     "guppyConfig": {
       "dataType": "file",
       "fieldMapping": [
-        { "field": "object_id", "name": "GUID" },
-        { "field": "project_id", "name": "Project" }
+        { "field": "object_id", "name": "GUID" }
       ],
       "nodeCountTitle": "Files",
       "manifestMapping": {
@@ -386,8 +385,6 @@
       },
       "accessibleFieldCheckList": ["project_id"],
       "accessibleValidationField": "project_id",
-      "accessibleFieldCheckList": ["experimental_strategy"],
-      "accessibleValidationField": "experimental_strategy",
       "downloadAccessor": "object_id"
     }
   }
