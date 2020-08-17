@@ -313,24 +313,12 @@
     }
   },
   "fileExplorerConfig": {
-    "charts": {
-      "experimental_strategy": {
-        "chartType": "pie",
-        "title": "Experimental Strategy"
-      }
-    },
     "filters": {
       "tabs": [
         {
           "title": "Projects",
           "fields": [
             "project_id"
-          ]
-        },
-        {
-          "title": "Strategies",
-          "fields": [
-            "experimental_strategy"
           ]
         },
         {
