@@ -1,8 +1,12 @@
 {
-  "useArboristUI": false,
   "gaTrackingId": "UA-175551911-1",
   "graphql": {
     "boardCounts": [
+      {
+        "graphql": "_study_count",
+        "name": "Study",
+        "plural": "Studies"
+      },
       {
         "graphql": "_subject_count",
         "name": "Subject",
@@ -12,26 +16,23 @@
         "graphql": "_sample_count",
         "name": "Sample",
         "plural": "Samples"
-      },
-      {
-        "graphql": "_study_count",
-        "name": "Study",
-        "plural": "Studies"
       }
     ],
     "chartCounts": [
       {
+        "graphql": "_study_count",
+        "name": "Study",
+        "plural": "Studies"
+      },
+      {
         "graphql": "_subject_count",
-        "name": "Subject"
+        "name": "Subject",
+        "plural": "Subjects"
       },
       {
         "graphql": "_sample_count",
         "name": "Sample",
         "plural": "Samples"
-      },
-      {
-        "graphql": "_study_count",
-        "name": "Study"
       }
     ],
     "projectDetails": "boardCounts"
@@ -79,52 +80,46 @@
       "title": "IPS Data Commons for R&ED",
       "items": [
         {
+          "name": "Projects",
           "icon": "projects",
           "link": "/bms-projects",
-          "color": "#a2a2a2",
-          "name": "Projects"
+          "color": "#a2a2a2"
         },
         {
+          "name": "Dictionary",
           "icon": "dictionary",
           "link": "/DD",
-          "color": "#a2a2a2",
-          "name": "Dictionary"
+          "color": "#a2a2a2"
         },
         {
+          "name": "Exploration",
           "icon": "exploration",
           "link": "/explorer",
-          "color": "#a2a2a2",
-          "name": "Exploration"
+          "color": "#a2a2a2"
         },
         {
-          "icon": "files",
-          "link": "/files",
-          "color": "#a2a2a2",
-          "name": "Files"
-        },
-        {
+          "name": "Query",
           "icon": "query",
           "link": "/query",
-          "color": "#a2a2a2",
-          "name": "Query"
+          "color": "#a2a2a2"
         },
         {
+          "name": "Workspace",
           "icon": "workspace",
           "link": "#hostname#workspace/",
-          "color": "#a2a2a2",
-          "name": "Workspace"
+          "color": "#a2a2a2"
         },
         {
+          "name": "Apps",
           "icon": "apps",
           "link": "/bms-apps",
-          "color": "#a2a2a2",
-          "name": "Apps"
+          "color": "#a2a2a2"
         },
         {
+          "name": "Profile",
           "icon": "profile",
           "link": "/identity",
-          "color": "#a2a2a2",
-          "name": "Profile"
+          "color": "#a2a2a2"
         }
       ]
     },
@@ -133,7 +128,7 @@
         {
           "icon": "upload",
           "link": "/submission",
-          "name": "Submit Metadata"
+          "name": "Submit Data"
         },
         {
           "link": "https://gen3.org/resources/user/",
@@ -159,19 +154,13 @@
         "href": "https://ctds.uchicago.edu/",
         "alt": "Center for Translational Data Science at the University of Chicago"
       }
-    ],
-    "privacyPolicy": {
-      "text": "",
-      "routeHref": "",
-      "footerHref": "",
-      "file": ""
-    }
+    ]
   },
-  "requiredCerts": [],
   "featureFlags": {
     "explorer": true,
-    "analysis": false
+    "analysis": true
   },
+  "analysisTools": [ ],
   "dataExplorerConfig": {
     "charts": {
       "study_submitter_id": {
