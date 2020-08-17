@@ -161,153 +161,87 @@
     "analysis": true
   },
   "analysisTools": [ ],
-  "dataExplorerConfig": {
-    "charts": {
-      "study_submitter_id": {
-        "chartType": "count",
-        "title": "Studies"
+  "explorerConfig": [
+    {
+      "tabTitle": "Data",
+      "charts": {
+        "study_submitter_id": {
+          "chartType": "count",
+          "title": "Studies"
+        },
+        "node_id": {
+          "chartType": "count",
+          "title": "Subjects"
+        },
+        "gender": {
+          "chartType": "pie",
+          "title": "Gender"
+        },
+        "sample_type": {
+          "chartType": "bar",
+          "title": "Sample Type"
+        }
       },
-      "node_id": {
-        "chartType": "count",
-        "title": "Subjects"
+      "filters": {
+        "tabs": [
+          {
+            "title": "Details",
+            "fields": [
+              "project_id",
+              "study_submitter_id",
+              "sample_type",
+              "gender"
+            ]
+          }
+        ]
       },
-      "gender": {
-        "chartType": "pie",
-        "title": "Gender"
+      "table": {
+        "enabled": true
       },
-      "sample_type": {
-        "chartType": "bar",
-        "title": "Sample Type"
-      }
-    },
-    "filters": {
-      "tabs": [
+      "buttons": [
         {
-          "title": "Projects",
-          "fields": [
-            "study_submitter_id",
-            "project_id"
-          ]
+          "enabled": true,
+          "type": "data",
+          "title": "Download All Clinical",
+          "leftIcon": "user",
+          "rightIcon": "download",
+          "fileName": "clinical.json"
         },
         {
-          "title": "Subjects",
-          "fields":[
-            "sample_type",
-            "gender"
-          ]
-        }
-      ]
-    },
-    "table": {
-      "enabled": true
-    },
-    "buttons": [
-      {
-        "enabled": true,
-        "type": "data",
-        "title": "Download All Clinical",
-        "leftIcon": "user",
-        "rightIcon": "download",
-        "fileName": "clinical.json"
-      },
-      {
-        "enabled": true,
-        "type": "manifest",
-        "title": "Download Manifest",
-        "leftIcon": "datafile",
-        "rightIcon": "download",
-        "fileName": "manifest.json"
-      },
-      {
-        "enabled": true,
-        "type": "export-to-workspace",
-        "title": "Export to Workspace",
-        "leftIcon": "datafile",
-        "rightIcon": "download"
-      }
-    ],
-    "guppyConfig": {
-      "dataType": "subject",
-      "nodeCountTitle": "Subjects",
-      "fieldMapping": [
-        { "field": "study_submitter_id", "name": "Study" },
-        { "field": "sample_submitter_id", "name": "Sample" },
-        { "field": "sample_type", "name": "Sample Type" }
-      ],
-      "manifestMapping": {
-        "resourceIndexType": "file",
-        "resourceIdField": "object_id",
-        "referenceIdFieldInResourceIndex": "subject_id",
-        "referenceIdFieldInDataIndex": "node_id"
-      },
-      "accessibleFieldCheckList": ["subject_id"],
-      "accessibleValidationField": "subject_id",
-      "accessibleFieldCheckList": ["project_id"],
-      "accessibleValidationField": "project_id"
-    }
-  },
-  "fileExplorerConfig": {
-    "filters": {
-      "tabs": [
-        {
-          "title": "Projects",
-          "fields": [
-            "project_id"
-          ]
+          "enabled": true,
+          "type": "manifest",
+          "title": "Download Manifest",
+          "leftIcon": "datafile",
+          "rightIcon": "download",
+          "fileName": "manifest.json"
         },
         {
-          "title": "Files",
-          "fields": [
-            "data_type",
-            "data_format",
-            "data_category"
-          ]
+          "enabled": true,
+          "type": "export-to-workspace",
+          "title": "Export to Workspace",
+          "leftIcon": "datafile",
+          "rightIcon": "download"
         }
-      ]
-    },
-    "table": {
-      "enabled": true,
-      "fields": [
-        "project_id",
-        "file_name",
-        "file_size",
-        "object_id"
-      ]
-    },
-    "dropdowns": {},
-    "buttons": [
-      {
-        "enabled": true,
-        "type": "file-manifest",
-        "title": "Download Manifest",
-        "leftIcon": "datafile",
-        "rightIcon": "download",
-        "fileName": "file-manifest.json",
-        "dropdownId": "download"
-      },
-      {
-        "enabled": true,
-        "type": "export-files-to-workspace",
-        "title": "Export to Workspace",
-        "leftIcon": "datafile",
-        "rightIcon": "download"
-      }
-    ],
-    "guppyConfig": {
-      "dataType": "file",
-      "fieldMapping": [
-        { "field": "object_id", "name": "GUID" }
       ],
-      "nodeCountTitle": "Files",
-      "manifestMapping": {
-        "resourceIndexType": "subject",
-        "resourceIdField": "subject_id",
-        "referenceIdFieldInResourceIndex": "object_id",
-        "referenceIdFieldInDataIndex": "object_id"
-      },
-      "accessibleFieldCheckList": ["project_id"],
-      "accessibleValidationField": "project_id",
-      "downloadAccessor": "object_id"
+      "guppyConfig": {
+        "dataType": "subject",
+        "nodeCountTitle": "Subjects",
+        "fieldMapping": [
+          { "field": "study_submitter_id", "name": "Study" },
+          { "field": "sample_submitter_id", "name": "Sample" },
+          { "field": "sample_type", "name": "Sample Type" }
+        ],
+        "manifestMapping": {
+          "resourceIndexType": "file",
+          "resourceIdField": "object_id",
+          "referenceIdFieldInResourceIndex": "subject_id",
+          "referenceIdFieldInDataIndex": "node_id"
+        },
+        "accessibleFieldCheckList": ["subject_id"],
+        "accessibleValidationField": "subject_id",
+        "accessibleFieldCheckList": ["project_id"],
+        "accessibleValidationField": "project_id"
+      }
     }
-  }
+  ]
 }
