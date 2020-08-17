@@ -1,6 +1,6 @@
 {
   "useArboristUI": false,
-  "gaTrackingId": "undefined",
+  "gaTrackingId": "UA-175551911-1",
   "graphql": {
     "boardCounts": [
       {
@@ -17,16 +17,6 @@
         "graphql": "_study_count",
         "name": "Study",
         "plural": "Studies"
-      },
-      {
-        "graphql": "_read_group_count",
-        "name": "Result",
-        "plural": "Results"
-      },
-      {
-        "graphql": "_aliquot_count",
-        "name": "Aliquot",
-        "plural": "Aliquots"
       }
     ],
     "chartCounts": [
@@ -42,14 +32,6 @@
       {
         "graphql": "_study_count",
         "name": "Study"
-      },
-      {
-        "graphql": "_read_group_count",
-        "name": "Result"
-      },
-      {
-        "graphql": "_aliquot_count",
-        "name": "Aliquot"
       }
     ],
     "projectDetails": "boardCounts"
@@ -166,35 +148,6 @@
       "contact": "",
       "email": ""
     },
-    "certs": {
-      "security_quiz": {
-        "title": "BloodPAC User agreement",
-        "description": "The agreement on what you can and need to do in a Commons.",
-        "questions": [
-          {
-            "name": "Things you can do after registration",
-            "question": "As a registered user, I can do the following things without any problem. Is it true or not:",
-            "options": ["Browse public Project", "Upload file", "Download file", "Invite people"],
-            "answer": 0,
-            "hint": "Some information about this question"
-          },
-          {
-            "name": "Things you need to do to become the registered user",
-            "question": "In order to be a register user, I must do the following things otherwise:",
-            "options": ["Agree the user agreement", "Accept a consent", "None of them", "Both of them"],
-            "answer": 2,
-            "hint": "Some information about this question"
-          },
-          {
-            "name": "Things you can do with data",
-            "question": "How can I share data with other people according to the policy of the commons",
-            "options": ["I can not share data", "I can only share data with BPA memebers", "I can share data with family", "I can share data with my wife"],
-            "answer": 1,
-            "hint": "Some information about this question"
-          }
-        ]
-      }
-    },
     "footerLogos": [
       {
         "src": "/src/img/gen3.png",
@@ -228,14 +181,6 @@
       "node_id": {
         "chartType": "count",
         "title": "Subjects"
-      },
-      "sample_submitter_id": {
-        "chartType": "count",
-        "title": "Samples"
-      },
-      "_read_group_count": {
-        "chartType": "count",
-        "title": "Results"
       },
       "gender": {
         "chartType": "pie",
