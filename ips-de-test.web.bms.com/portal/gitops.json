@@ -173,13 +173,13 @@
           "chartType": "count",
           "title": "Subjects"
         },
-        "gender": {
-          "chartType": "pie",
-          "title": "Gender"
-        },
-        "sample_type": {
+        "race": {
           "chartType": "bar",
-          "title": "Sample Type"
+          "title": "Race"
+        },
+        "gender": {
+          "chartType": "bar",
+          "title": "Gender"
         }
       },
       "filters": {
@@ -187,16 +187,24 @@
           {
             "title": "Details",
             "fields": [
-              "project_id",
+              "project_code",
               "study_submitter_id",
-              "sample_type",
-              "gender"
+              "submitter_id",
+              "drug"
             ]
           }
         ]
       },
       "table": {
-        "enabled": true
+        "enabled": true,
+        "fields": [
+          "project_code",
+          "study_submitter_id",
+          "submitter_id",
+          "drug",
+          "race",
+          "gender"      
+        ]
       },
       "buttons": [
         {
