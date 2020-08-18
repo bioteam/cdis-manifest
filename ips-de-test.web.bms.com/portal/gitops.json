@@ -333,7 +333,11 @@
           "study_submitter_id",
           "category",
           "drug"
-        ]
+        ],
+        "linkFields": [
+          "web_browser_url",
+          "client_url"
+        ],
       },
       "buttons": [
         {
