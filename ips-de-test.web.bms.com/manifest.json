@@ -32,6 +32,10 @@
     {
       "index": "dcf_file",
       "type": "file"
+    },
+    {
+      "index": "dcf_analysis",
+      "type": "analysis"
     }
   ],
   "config_index": "dcf_array-config"
