@@ -287,8 +287,9 @@
         ],
         "nodeCountTitle": "Files",
         "manifestMapping": {
-          "referenceIdFieldInResourceIndex": "node_id"
-        }
+          "referenceIdFieldInResourceIndex": "object_id"
+        },
+        "downloadAccessor": "object_id"
       }
     },
     {
