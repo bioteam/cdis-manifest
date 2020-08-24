@@ -86,8 +86,7 @@
       "type": "analysis"
     }
   ],
-  "config_index": "dcf_array-config",
-  "auth_filter_field": "auth_resource_path"
+  "config_index": "dcf_array-config"
 },
   "arborist": {
     "deployment_version": "2"
