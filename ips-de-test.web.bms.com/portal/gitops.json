@@ -228,8 +228,15 @@
           { "field": "sample_submitter_id", "name": "Sample" }
         ],
         "manifestMapping": {
-          "referenceIdFieldInResourceIndex": "analysis_id"
-        }
+          "resourceIndexType": "file",
+          "resourceIdField": "object_id",
+          "referenceIdFieldInResourceIndex": "subject_id",
+          "referenceIdFieldInDataIndex": "node_id"
+        },
+        "accessibleFieldCheckList": ["subject_id"],
+        "accessibleValidationField": "subject_id",
+        "accessibleFieldCheckList": ["project_id"],
+        "accessibleValidationField": "project_id"
       }
     },
     {
@@ -240,7 +247,7 @@
           {
             "title": "Details",
             "fields": [
-              "project_code",
+              "project_id",
               "data_type",
               "data_format",
               "data_category"
@@ -252,7 +259,6 @@
         "enabled": true,
         "fields": [
           "project_id",
-          "project_code",
           "data_type",
           "data_format",
           "data_category",
@@ -283,12 +289,17 @@
         "dataType": "file",
         "fieldMapping": [
           { "field": "object_id", "name": "GUID" },
-          { "field": "project_code", "name": "Project" }
+          { "field": "project_id", "name": "Project" }
         ],
         "nodeCountTitle": "Files",
         "manifestMapping": {
-          "referenceIdFieldInResourceIndex": "object_id"
+          "resourceIndexType": "subject",
+          "resourceIdField": "subject_id",
+          "referenceIdFieldInResourceIndex": "object_id",
+          "referenceIdFieldInDataIndex": "object_id"
         },
+        "accessibleFieldCheckList": ["project_id"],
+        "accessibleValidationField": "project_id",
         "downloadAccessor": "object_id"
       }
     },

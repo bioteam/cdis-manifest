@@ -98,9 +98,6 @@ mappings:
           - name: subject_id
             src: id
             fn: set
-      project:
-        props:
-          - name: project_code
-            src: code
-            fn: set
+          - name: project_id
+          #- name: project_code
 
