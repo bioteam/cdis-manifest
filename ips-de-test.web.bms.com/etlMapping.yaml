@@ -99,6 +99,7 @@ mappings:
             src: submitter_id
             fn: set
       project:
+        props:
           - name: project_ref_code
             src: code
             fn: set
