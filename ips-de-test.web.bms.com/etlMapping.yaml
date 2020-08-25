@@ -7,7 +7,7 @@ mappings:
       - name: submitter_id
       - name: project_id
     parent_props:
-      - path: studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code]
+      - path: studies[study_submitter_id:submitter_id,drug].projects[project_code:code]
     flatten_props:
       - path: demographics
         props:
@@ -30,15 +30,6 @@ mappings:
       - name: _samples_count
         path: samples
         fn: count
-      - name: _aliquots_count
-        path: samples.aliquots
-        fn: count
-      - name: _read_groups_count
-        path: samples.aliquots.read_groups
-        fn: count
-      - name: _submitted_unaligned_reads_count
-        path: samples.aliquots.read_groups.unaligned_reads_files
-        fn: count
       - name: sample_type
         path: samples
         src: sample_type
@@ -47,19 +38,6 @@ mappings:
         path: samples
         src: submitter_id
         fn: set
-    joining_props:
-      - index: file
-        join_on: subject_id
-        props:
-          - name: data_format
-            src: data_format
-            fn: set
-          - name: data_type
-            src: data_type
-            fn: set
-          - name: file_id
-            src: file_id
-            fn: set
   - name: dcf_analysis
     doc_type: analysis
     type: aggregator
