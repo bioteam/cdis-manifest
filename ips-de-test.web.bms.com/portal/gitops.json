@@ -242,7 +242,8 @@
           {
             "title": "Details",
             "fields": [
-              "project_id",
+              "project_ref_code",
+              "study_submitter_id",
               "data_type",
               "data_format",
               "data_category"
@@ -253,7 +254,8 @@
       "table": {
         "enabled": true,
         "fields": [
-          "project_id",
+          "project_ref_code",
+          "study_submitter_id",
           "data_type",
           "data_format",
           "data_category",
@@ -284,17 +286,13 @@
         "dataType": "file",
         "fieldMapping": [
           { "field": "object_id", "name": "GUID" },
-          { "field": "project_id", "name": "Project" }
+          { "field": "project_ref_code", "name": "Project" },
+          { "field": "study_submitter_id", "name": "Study" }
         ],
         "nodeCountTitle": "Files",
         "manifestMapping": {
-          "resourceIndexType": "subject",
-          "resourceIdField": "subject_id",
-          "referenceIdFieldInResourceIndex": "object_id",
-          "referenceIdFieldInDataIndex": "object_id"
+          "referenceIdFieldInResourceIndex": "object_id"
         },
-        "accessibleFieldCheckList": ["project_id"],
-        "accessibleValidationField": "project_id",
         "downloadAccessor": "object_id"
       }
     },

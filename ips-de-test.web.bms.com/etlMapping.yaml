@@ -48,13 +48,6 @@ mappings:
       - name: category
     parent_props:
       - path: studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code].programs[program_name:name]
-    joining_props:
-      - index: subject
-        join_on: study_id
-        props:
-          - name: subject_submitter_id
-            src: submitter_id
-            fn: set
   - name: dcf_file
     doc_type: file
     type: collector
