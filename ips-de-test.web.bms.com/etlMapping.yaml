@@ -93,11 +93,13 @@ mappings:
       - name: data_category
       - name: experimental_strategy
     injecting_props:
-      subject:
+      study:
         props:
-          - name: subject_id
-            src: id
+          - name: study_submitter_id
+            src: submitter_id
             fn: set
-          - name: project_id
-          #- name: project_code
+      project:
+          - name: project_ref_code
+            src: code
+            fn: set
 
