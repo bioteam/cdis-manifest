@@ -38,6 +38,10 @@ mappings:
         path: samples
         src: submitter_id
         fn: set
+      - name: slide_submitter_id
+        path: samples.slides
+        src: submitter_id
+        fn: set
   - name: dcf_analysis
     doc_type: analysis
     type: aggregator
@@ -48,13 +52,6 @@ mappings:
       - name: category
     parent_props:
       - path: studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code].programs[program_name:name]
-  - name: dcf_histopathology
-    doc_type: histopathology_assay
-    type: aggregator
-    root: histopathology_assay
-    props:
-      - name: assay_method
-      - name: image_location
   - name: dcf_file
     doc_type: file
     type: collector
