@@ -55,8 +55,6 @@ mappings:
     props:
       - name: assay_method
       - name: image_location
-    parent_props:
-      - path: studies[study_id:id,study_submitter_id:submitter_id].projects[project_code:code].programs[program_name:name]
   - name: dcf_file
     doc_type: file
     type: collector
