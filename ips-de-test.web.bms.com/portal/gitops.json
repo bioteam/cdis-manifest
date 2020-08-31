@@ -355,6 +355,72 @@
           "referenceIdFieldInResourceIndex": "analysis_id"
         }
       }
+    },
+    {
+      "tabTitle": "Hisopathology",
+      "charts": {
+        "assay_method": {
+          "chartType": "bar",
+          "title": "Asssay Method"
+        },
+        "marker_antibodies": {
+          "chartType": "bar",
+          "title": "Marker Antibodies"
+        }
+      },
+      "filters": {
+        "tabs": [
+          {
+            "title": "Details",
+            "fields": [
+              "project_code",
+              "study_submitter_id",
+              "subject_submitter_id",
+              "sample_submitter_id",
+              "slide_submitter_id",
+              "assay_method",
+              "marker_antibodies"
+            ]
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "fields": [
+          "project_code",
+          "study_submitter_id",
+          "sample_submitter_id",
+          "subject_submitter_id",
+          "slide_submitter_id",
+          "marker_antibodies",
+          "image_location"
+        ]
+      },
+      "buttons": [
+        {
+          "enabled": true,
+          "type": "data",
+          "title": "Download All Clinical",
+          "leftIcon": "user",
+          "rightIcon": "download",
+          "fileName": "clinical.json"
+        }
+      ],
+      "guppyConfig": {
+        "dataType": "histopathology_assay",
+        "nodeCountTitle": "Histopathology",
+        "fieldMapping": [
+          { "field": "project_code", "name": "Project" },
+          { "field": "study_submitter_id", "name": "Study" },
+          { "field": "sample_submitter_id", "name": "Sample" },
+          { "field": "subject_submitter_id", "name": "Subject" },
+          { "field": "slide_submitter_id", "name": "Slide" },
+          { "field": "marker_antibodies", "name": "Marker Antibodies" }
+        ],
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "histopathology_assay_id"
+        }
+      }
     }
   ]
 }
