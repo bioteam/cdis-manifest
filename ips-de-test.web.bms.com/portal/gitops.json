@@ -389,8 +389,8 @@
         "fields": [
           "project_code",
           "study_submitter_id",
-          "sample_submitter_id",
           "subject_submitter_id",
+          "sample_submitter_id",
           "slide_submitter_id",
           "marker_antibodies",
           "image_location"
