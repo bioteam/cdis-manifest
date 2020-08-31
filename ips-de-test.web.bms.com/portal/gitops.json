@@ -357,7 +357,7 @@
       }
     },
     {
-      "tabTitle": "Hisopathology",
+      "tabTitle": "Histopathology",
       "charts": {
         "assay_method": {
           "chartType": "bar",
