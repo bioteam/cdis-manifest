@@ -47,21 +47,28 @@
       },
       "buttons": [
         {
-          "name": "Define Data Field",
+          "name": "Register Dataset",
+          "icon": "data-access",
+          "body": "Register dataset.",
+          "link": "/bms-projects",
+          "label": "Register Dataset"
+        },
+        {
+          "name": "Model Data",
           "icon": "data-field-define",
-          "body": "The IPS Data Commons for R&ED define the data in a general way. Please study the dictionary before you start browsing.",
+          "body": "The IPS Data Commons for R&ED data model and schema.",
           "link": "/DD",
           "label": "Learn more"
         },
         {
-          "name": "Explore Data",
+          "name": "CDVR Search",
           "icon": "data-explore",
-          "body": "The Exploration Page gives you insights and a clear overview under selected factors.",
+          "body": "The CDVR Search Page gives you insights and a clear overview under selected factors.",
           "link": "/explorer",
-          "label": "Explore data"
+          "label": "Find Cohorts"
         },
         {
-          "name": "Access Data",
+          "name": "Query Data",
           "icon": "data-access",
           "body": "Use our selected tool to filter out the data you need.",
           "link": "/query",
@@ -73,6 +80,27 @@
           "body": "Submit Data based on the dictionary.",
           "link": "/submission",
           "label": "Submit Metadata"
+        },
+        {
+          "name": "Perform Analysis",
+          "icon": "data-access",
+          "body": "Perform analysis on data.",
+          "link": "/workspace",
+          "label": "Perform Analysis"
+        },
+        {
+          "name": "Find Apps",
+          "icon": "data-access",
+          "body": "Find applications registered in app catalog.",
+          "link": "/bms-apps",
+          "label": "Find Apps"
+        },
+        {
+          "name": "Find Knowledge Posts",
+          "icon": "data-access",
+          "body": "Find knowledge posts registered in Knowledge Repository app.",
+          "link": "/bms-kr",
+          "label": "Find Knowledge Posts"
         }
       ]
     },
@@ -80,45 +108,9 @@
       "title": "IPS Data Commons for R&ED",
       "items": [
         {
-          "name": "Projects",
-          "icon": "projects",
-          "link": "/bms-projects",
-          "color": "#a2a2a2"
-        },
-        {
-          "name": "Dictionary",
-          "icon": "dictionary",
-          "link": "/DD",
-          "color": "#a2a2a2"
-        },
-        {
           "name": "Exploration",
           "icon": "exploration",
           "link": "/explorer",
-          "color": "#a2a2a2"
-        },
-        {
-          "name": "Query",
-          "icon": "query",
-          "link": "/query",
-          "color": "#a2a2a2"
-        },
-        {
-          "name": "Workspace",
-          "icon": "workspace",
-          "link": "#hostname#workspace/",
-          "color": "#a2a2a2"
-        },
-        {
-          "name": "Apps",
-          "icon": "apps",
-          "link": "/bms-apps",
-          "color": "#a2a2a2"
-        },
-        {
-          "name": "Profile",
-          "icon": "profile",
-          "link": "/identity",
           "color": "#a2a2a2"
         }
       ]
@@ -160,7 +152,7 @@
     "explorer": true,
     "analysis": true
   },
-  "analysisTools": [ ],
+  "analysisTools": [],
   "explorerConfig": [
     {
       "tabTitle": "Data",
@@ -222,10 +214,22 @@
         "dataType": "subject",
         "nodeCountTitle": "Subjects",
         "fieldMapping": [
-          { "field": "project_code", "name": "Project" },
-          { "field": "study_submitter_id", "name": "Study" },
-          { "field": "submitter_id", "name": "Subject" },
-          { "field": "sample_submitter_id", "name": "Sample" }
+          {
+            "field": "project_code",
+            "name": "Project"
+          },
+          {
+            "field": "study_submitter_id",
+            "name": "Study"
+          },
+          {
+            "field": "submitter_id",
+            "name": "Subject"
+          },
+          {
+            "field": "sample_submitter_id",
+            "name": "Sample"
+          }
         ],
         "manifestMapping": {
           "resourceIndexType": "file",
@@ -233,9 +237,9 @@
           "referenceIdFieldInResourceIndex": "subject_id",
           "referenceIdFieldInDataIndex": "node_id"
         },
-        "accessibleFieldCheckList": ["subject_id"],
-        "accessibleValidationField": "subject_id",
-        "accessibleFieldCheckList": ["project_id"],
+        "accessibleFieldCheckList": [
+          "project_id"
+        ],
         "accessibleValidationField": "project_id"
       }
     },
@@ -288,8 +292,14 @@
       "guppyConfig": {
         "dataType": "file",
         "fieldMapping": [
-          { "field": "object_id", "name": "GUID" },
-          { "field": "project_id", "name": "Project" }
+          {
+            "field": "object_id",
+            "name": "GUID"
+          },
+          {
+            "field": "project_id",
+            "name": "Project"
+          }
         ],
         "nodeCountTitle": "Files",
         "manifestMapping": {
@@ -298,7 +308,9 @@
           "referenceIdFieldInResourceIndex": "object_id",
           "referenceIdFieldInDataIndex": "object_id"
         },
-        "accessibleFieldCheckList": ["project_id"],
+        "accessibleFieldCheckList": [
+          "project_id"
+        ],
         "accessibleValidationField": "project_id",
         "downloadAccessor": "object_id"
       }
@@ -353,10 +365,22 @@
         "dataType": "analysis",
         "nodeCountTitle": "Analyses",
         "fieldMapping": [
-          { "field": "project_code", "name": "Project" },
-          { "field": "study_submitter_id", "name": "Study" },
-          { "field": "web_browser_url", "name": "Web URL" },
-          { "field": "client_url", "name": "Client URL" }
+          {
+            "field": "project_code",
+            "name": "Project"
+          },
+          {
+            "field": "study_submitter_id",
+            "name": "Study"
+          },
+          {
+            "field": "web_browser_url",
+            "name": "Web URL"
+          },
+          {
+            "field": "client_url",
+            "name": "Client URL"
+          }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "analysis_id"
