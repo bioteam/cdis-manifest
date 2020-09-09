@@ -157,14 +157,6 @@
     {
       "tabTitle": "Data",
       "charts": {
-        "study_submitter_id": {
-          "chartType": "count",
-          "title": "Studies"
-        },
-        "node_id": {
-          "chartType": "count",
-          "title": "Subjects"
-        },
         "race": {
           "chartType": "bar",
           "title": "Race"
@@ -172,6 +164,14 @@
         "gender": {
           "chartType": "bar",
           "title": "Gender"
+        },
+        "study_submitter_id": {
+          "chartType": "count",
+          "title": "Studies"
+        },
+        "node_id": {
+          "chartType": "count",
+          "title": "Subjects"
         }
       },
       "filters": {
@@ -182,6 +182,7 @@
               "project_code",
               "study_submitter_id",
               "submitter_id",
+              "sample_submitter_id",
               "drug"
             ]
           }
@@ -193,6 +194,7 @@
           "project_code",
           "study_submitter_id",
           "submitter_id",
+          "sample_submitter_id",
           "drug",
           "race",
           "gender",
@@ -232,15 +234,8 @@
           }
         ],
         "manifestMapping": {
-          "resourceIndexType": "file",
-          "resourceIdField": "object_id",
-          "referenceIdFieldInResourceIndex": "subject_id",
-          "referenceIdFieldInDataIndex": "node_id"
-        },
-        "accessibleFieldCheckList": [
-          "project_id"
-        ],
-        "accessibleValidationField": "project_id"
+          "referenceIdFieldInResourceIndex": "subject_id"
+        }
       }
     },
     {
@@ -251,7 +246,8 @@
           {
             "title": "Details",
             "fields": [
-              "project_id",
+              "project_ref_code",
+              "study_submitter_id",
               "data_type",
               "data_format",
               "data_category"
@@ -262,7 +258,8 @@
       "table": {
         "enabled": true,
         "fields": [
-          "project_id",
+          "project_ref_code",
+          "study_submitter_id",
           "data_type",
           "data_format",
           "data_category",
@@ -292,26 +289,14 @@
       "guppyConfig": {
         "dataType": "file",
         "fieldMapping": [
-          {
-            "field": "object_id",
-            "name": "GUID"
-          },
-          {
-            "field": "project_id",
-            "name": "Project"
-          }
+          { "field": "object_id", "name": "GUID" },
+          { "field": "project_ref_code", "name": "Project" },
+          { "field": "study_submitter_id", "name": "Study" }
         ],
         "nodeCountTitle": "Files",
         "manifestMapping": {
-          "resourceIndexType": "subject",
-          "resourceIdField": "subject_id",
-          "referenceIdFieldInResourceIndex": "object_id",
-          "referenceIdFieldInDataIndex": "object_id"
+          "referenceIdFieldInResourceIndex": "object_id"
         },
-        "accessibleFieldCheckList": [
-          "project_id"
-        ],
-        "accessibleValidationField": "project_id",
         "downloadAccessor": "object_id"
       }
     },
@@ -384,6 +369,72 @@
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "analysis_id"
+        }
+      }
+    },
+    {
+      "tabTitle": "Histopathology",
+      "charts": {
+        "assay_method": {
+          "chartType": "bar",
+          "title": "Asssay Method"
+        },
+        "marker_antibodies": {
+          "chartType": "bar",
+          "title": "Marker Antibodies"
+        }
+      },
+      "filters": {
+        "tabs": [
+          {
+            "title": "Details",
+            "fields": [
+              "project_code",
+              "study_submitter_id",
+              "subject_submitter_id",
+              "sample_submitter_id",
+              "slide_submitter_id",
+              "assay_method",
+              "marker_antibodies"
+            ]
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "fields": [
+          "project_code",
+          "study_submitter_id",
+          "subject_submitter_id",
+          "sample_submitter_id",
+          "slide_submitter_id",
+          "marker_antibodies",
+          "image_location"
+        ]
+      },
+      "buttons": [
+        {
+          "enabled": true,
+          "type": "data",
+          "title": "Download All Clinical",
+          "leftIcon": "user",
+          "rightIcon": "download",
+          "fileName": "clinical.json"
+        }
+      ],
+      "guppyConfig": {
+        "dataType": "histopathology_assay",
+        "nodeCountTitle": "Histopathology",
+        "fieldMapping": [
+          { "field": "project_code", "name": "Project" },
+          { "field": "study_submitter_id", "name": "Study" },
+          { "field": "sample_submitter_id", "name": "Sample" },
+          { "field": "subject_submitter_id", "name": "Subject" },
+          { "field": "slide_submitter_id", "name": "Slide" },
+          { "field": "marker_antibodies", "name": "Marker Antibodies" }
+        ],
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "histopathology_assay_id"
         }
       }
     }

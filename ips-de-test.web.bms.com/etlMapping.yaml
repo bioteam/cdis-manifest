@@ -7,7 +7,7 @@ mappings:
       - name: submitter_id
       - name: project_id
     parent_props:
-      - path: studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code]
+      - path: studies[study_id:id,study_submitter_id:submitter_id,drug].projects[project_code:code]
     flatten_props:
       - path: demographics
         props:
@@ -30,15 +30,6 @@ mappings:
       - name: _samples_count
         path: samples
         fn: count
-      - name: _aliquots_count
-        path: samples.aliquots
-        fn: count
-      - name: _read_groups_count
-        path: samples.aliquots.read_groups
-        fn: count
-      - name: _submitted_unaligned_reads_count
-        path: samples.aliquots.read_groups.unaligned_reads_files
-        fn: count
       - name: sample_type
         path: samples
         src: sample_type
@@ -47,19 +38,10 @@ mappings:
         path: samples
         src: submitter_id
         fn: set
-    joining_props:
-      - index: file
-        join_on: subject_id
-        props:
-          - name: data_format
-            src: data_format
-            fn: set
-          - name: data_type
-            src: data_type
-            fn: set
-          - name: file_id
-            src: file_id
-            fn: set
+      - name: slide_submitter_id
+        path: samples.slides
+        src: submitter_id
+        fn: set
   - name: dcf_analysis
     doc_type: analysis
     type: aggregator
@@ -70,13 +52,17 @@ mappings:
       - name: category
     parent_props:
       - path: studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code].programs[program_name:name]
-    joining_props:
-      - index: subject
-        join_on: study_id
-        props:
-          - name: subject_submitter_id
-            src: submitter_id
-            fn: set
+  - name: dcf_histopathology
+    doc_type: histopathology_assay
+    type: aggregator
+    root: histopathology_assay
+    props:
+      - name: assay_method
+      - name: image_location
+      - name: marker_antibodies
+    parent_props:
+      - path: samples[sample_id:id,sample_submitter_id:submitter_id].subjects[subject_submitter_id:submitter_id].studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code].programs[program_name:name]
+      - path: slides[slide_id:id,slide_submitter_id:submitter_id].samples[sample_id:id,sample_submitter_id:submitter_id].subjects[subject_submitter_id:submitter_id].studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code].programs[program_name:name]
   - name: dcf_file
     doc_type: file
     type: collector
@@ -93,11 +79,14 @@ mappings:
       - name: data_category
       - name: experimental_strategy
     injecting_props:
-      subject:
+      study:
         props:
-          - name: subject_id
-            src: id
+          - name: study_submitter_id
+            src: submitter_id
             fn: set
-          - name: project_id
-          #- name: project_code
+      project:
+        props:
+          - name: project_ref_code
+            src: code
+            fn: set
 
