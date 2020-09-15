@@ -135,7 +135,8 @@
           "project_code",
           "study_submitter_id",
           "category",
-          "drug"
+          "drug",
+          "study_description"
         ],
         "linkFields": [
           "web_browser_url",

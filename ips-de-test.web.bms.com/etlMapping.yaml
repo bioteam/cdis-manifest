@@ -51,7 +51,7 @@ mappings:
       - name: client_url
       - name: category
     parent_props:
-      - path: studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code].programs[program_name:name]
+      - path: studies[study_id:id,study_submitter_id:submitter_id,study_design,study_description,drug].projects[project_code:code].programs[program_name:name]
   - name: dcf_histopathology
     doc_type: histopathology_assay
     type: aggregator
