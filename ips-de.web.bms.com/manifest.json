@@ -1,27 +1,75 @@
 {
   "notes": [
     "This is the gitops environment manifest",
-    "That's all I have to say"
+    "for https://ips-de.web.bms.com/"
   ],
   "versions": {
     "guppy": "quay.io/cdis/guppy:2020.06",
     "arborist": "082619190404.dkr.ecr.us-east-1.amazonaws.com/arborist:1.0.1",
     "aws-es-proxy": "abutaha/aws-es-proxy:0.8",
-    "fence": "082619190404.dkr.ecr.us-east-1.amazonaws.com/fence:1.0.11",
+    "fence": "082619190404.dkr.ecr.us-east-1.amazonaws.com/fence:1.0.12",
     "fluentd": "fluent/fluentd-kubernetes-daemonset:v1.2-debian-cloudwatch",
     "indexd": "082619190404.dkr.ecr.us-east-1.amazonaws.com/indexd:1.0.2",
-    "peregrine": "082619190404.dkr.ecr.us-east-1.amazonaws.com/peregrine:1.0.20",
+    "peregrine": "082619190404.dkr.ecr.us-east-1.amazonaws.com/peregrine:1.0.21",
     "pidgin": "quay.io/cdis/pidgin:2020.06",
-    "portal": "082619190404.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.67",
+    "portal": "082619190404.dkr.ecr.us-east-1.amazonaws.com/data-portal:1.0.74",
     "revproxy": "quay.io/cdis/nginx:2020.06",
-    "sheepdog": "082619190404.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.34",
+    "sheepdog": "082619190404.dkr.ecr.us-east-1.amazonaws.com/sheepdog:1.0.35",
     "spark": "quay.io/cdis/gen3-spark:2020.06",
     "manifestservice": "quay.io/cdis/manifestservice:2020.06",
     "hatchery": "quay.io/cdis/hatchery:2020.06",
     "ambassador": "quay.io/datawire/ambassador:0.60.3",
     "wts": "082619190404.dkr.ecr.us-east-1.amazonaws.com/wts:1.0.2",
-    "tube": "quay.io/cdis/tube:2020.06",
+    "tube": "quay.io/cdis/tube:0.4.0",
     "ssjdispatcher": "quay.io/cdis/ssjdispatcher:2020.06"
+  },
+  "global": {
+    "environment": "gdh-prod",
+    "hostname": "ips-de.web.bms.com",
+    "revproxy_arn": "arn:aws:acm:us-east-1:098381893833:certificate/4b21d947-d829-43fa-944e-ba8c953ba2c3",
+    "dictionary_url": "https://bms-gen3-dev.s3.amazonaws.com/datadictionary/develop/schema.json",
+    "portal_app": "gitops",
+    "kube_bucket": "kube-commons-prod-gen3",
+    "logs_bucket": "logs-commons-prod-gen3",
+    "sync_from_dbgap": "False",
+    "useryaml_s3path": "s3://gdh-prod-config/config/user.yaml",
+    "dispatcher_job_num": "10",
+    "netpolicy": "on",
+    "tier_access_level": "libre"
+  },
+  "scaling": {
+    "fence": {
+      "strategy": "pin",
+      "num": 1 
+    },
+    "indexd": {
+      "strategy": "pin",
+      "num": 1 
+    },
+    "revproxy": {
+      "strategy": "pin",
+      "num": 1 
+    },
+    "sheepdog": {
+      "strategy": "pin",
+      "num": 1 
+    },
+    "peregrine": {
+      "strategy": "pin",
+      "num": 1 
+    },
+    "portal": {
+      "strategy": "pin",
+      "num": 1 
+    },
+    "arborist": {
+      "strategy": "pin",
+      "num": 1 
+    },
+    "presigned-url-fence": {
+      "strategy": "pin",
+      "num": 1 
+    }
   },
   "guppy": {
     "indices": [
@@ -32,9 +80,17 @@
       {
         "index": "dcf_file",
         "type": "file"
+      },
+      {
+        "index": "dcf_analysis",
+        "type": "analysis"
+      },
+      {
+        "index": "dcf_histopathology",
+        "type": "histopathology_assay"
       }
-    ],
-    "auth_filter_field": "auth_resource_path"
+      ],
+    "config_index": "dcf_array-config"
   },
   "arborist": {
     "deployment_version": "2"
@@ -72,76 +128,41 @@
       "name": "Jupyter Notebook Bio Python",
       "image": "quay.io/occ_data/jupyternotebook:1.9.0",
       "env": {},
-      "args": ["--NotebookApp.base_url=/lw-workspace/proxy/","--NotebookApp.password=''","--NotebookApp.token=''"],
+      "args": [
+        "--NotebookApp.base_url=/lw-workspace/proxy/",
+        "--NotebookApp.password=''",
+        "--NotebookApp.token=''"
+      ],
       "command": ["start-notebook.sh"],
       "path-rewrite": "/lw-workspace/proxy/",
       "use-tls": "false",
       "ready-probe": "/lw-workspace/proxy/",
-      "lifecycle-post-start": ["/bin/sh","-c","export IAM=`whoami`; rm -rf /home/$IAM/pd/dockerHome; ln -s $(pwd) /home/$IAM/pd/dockerHome; mkdir -p /home/$IAM/.jupyter/custom; echo \"define(['base/js/namespace'], function(Jupyter){Jupyter._target = '_self';})\" >/home/$IAM/.jupyter/custom/custom.js; ln -s /data /home/$IAM/pd/; true"],
+      "lifecycle-post-start": [
+        "/bin/sh",
+        "-c",
+        "export IAM=`whoami`; rm -rf /home/$IAM/pd/dockerHome; ln -s $(pwd) /home/$IAM/pd/dockerHome; mkdir -p /home/$IAM/.jupyter/custom; echo \"define(['base/js/namespace'], function(Jupyter){Jupyter._target = '_self';})\" >/home/$IAM/.jupyter/custom/custom.js; ln -s /data /home/$IAM/pd/; true"
+        ],
       "user-uid": 1000,
       "fs-gid": 100,
       "user-volume-location": "/home/jovyan/pd"
     },{
-      "target-port": 8888,
-      "cpu-limit": "1.0",
-      "memory-limit": "8096Mi",
-      "name": "Helium Autoencoder Demo",
-      "image": "quay.io/cdis/auntoencoder-copd-demo:latest",
-      "env": {},
-      "args": ["--NotebookApp.base_url=/lw-workspace/proxy/","--NotebookApp.password=''","--NotebookApp.token=''"],
-      "command": ["start-notebook.sh"],
-      "path-rewrite": "/lw-workspace/proxy/",
-      "use-tls": "false",
-      "ready-probe": "/lw-workspace/proxy/",
-      "lifecycle-post-start": ["/bin/sh","-c","export IAM=`whoami`; rm -rf /home/$IAM/pd/dockerHome; ln -s $(pwd) /home/$IAM/pd/dockerHome; mkdir -p /home/$IAM/.jupyter/custom; echo \"define(['base/js/namespace'], function(Jupyter){Jupyter._target = '_self';})\" >/home/$IAM/.jupyter/custom/custom.js; ln -s /data /home/$IAM/pd/; true"],
-      "user-uid": 1000,
-      "fs-gid": 100
-    },{
-      "target-port": 8888,
-      "cpu-limit": "1.0",
-      "memory-limit": "8096Mi",
-      "name": "Helium Tensorflow-Pytorch",
-      "image": "heliumdatastage/tensorflow-pytorch-ext:1",
-      "env": {},
-      "args": ["--NotebookApp.base_url=/lw-workspace/proxy/","--NotebookApp.password=''","--NotebookApp.token=''"],
-      "command": ["start-notebook.sh"],
-      "path-rewrite": "/lw-workspace/proxy/",
-      "use-tls": "false",
-      "ready-probe": "/lw-workspace/proxy/",
-      "lifecycle-post-start": ["/bin/sh","-c","export IAM=`whoami`; rm -rf /home/$IAM/pd/dockerHome; ln -s $(pwd) /home/$IAM/pd/dockerHome; mkdir -p /home/$IAM/.jupyter/custom; echo \"define(['base/js/namespace'], function(Jupyter){Jupyter._target = '_self';})\" >/home/$IAM/.jupyter/custom/custom.js; ln -s /data /home/$IAM/pd/; true"],
-      "user-uid": 1000,
-      "fs-gid": 100
-    },{
-      "target-port": 8888,
-      "cpu-limit": "1.0",
-      "memory-limit": "8096Mi",
-      "name": "Helium CIP Demo",
-      "image": "heliumdatastage/jup-cip:v1",
-      "env": {},
-      "args": ["--NotebookApp.base_url=/lw-workspace/proxy/","--NotebookApp.password=''","--NotebookApp.token=''"],
-      "command": ["start-notebook.sh"],
-      "path-rewrite": "/lw-workspace/proxy/",
-      "use-tls": "false",
-      "ready-probe": "/lw-workspace/proxy/",
-      "lifecycle-post-start": ["/bin/sh","-c","export IAM=`whoami`; rm -rf /home/$IAM/pd/dockerHome; ln -s $(pwd) /home/$IAM/pd/dockerHome; mkdir -p /home/$IAM/.jupyter/custom; echo \"define(['base/js/namespace'], function(Jupyter){Jupyter._target = '_self';})\" >/home/$IAM/.jupyter/custom/custom.js; ln -s /data /home/$IAM/pd/; true"],
-      "user-uid": 1000,
-      "fs-gid": 100
-    }]
-  },
-  "global": {
-    "environment": "gdh-prod",
-    "hostname": "ips-de.web.bms.com",
-    "revproxy_arn": "arn:aws:acm:us-east-1:098381893833:certificate/4b21d947-d829-43fa-944e-ba8c953ba2c3",
-    "dictionary_url": "https://bms-gen3-dev.s3.amazonaws.com/datadictionary/develop/schema.json",
-    "portal_app": "gitops",
-    "kube_bucket": "kube-commons-prod-gen3",
-    "logs_bucket": "logs-commons-prod-gen3",
-    "sync_from_dbgap": "False",
-    "useryaml_s3path": "s3://gdh-prod-config/config/user.yaml",
-    "dispatcher_job_num": "10",
-    "netpolicy": "on",
-    "tier_access_level": "libre"
-  },
+        "target-port": 8888,
+        "cpu-limit": "1.0",
+        "memory-limit": "1024Mi",
+        "name": "A collection of Jupyter notebooks to explore health outcomes for COVID-19",
+        "image": "quay.io/cdis/jupyter-covid19:jupyter-covid1.0.6",
+        "env": {"FRAME_ANCESTORS": "https://ips-de-test.web.bms.com"},
+        "args": ["--NotebookApp.base_url=/lw-workspace/proxy/","--NotebookApp.default_url=/lab","--NotebookApp.password=''","--NotebookApp.token=''"],
+        "command": ["start-notebook.sh"],
+        "path-rewrite": "/lw-workspace/proxy/",
+        "use-tls": "false",
+        "ready-probe": "/lw-workspace/proxy/",
+        "lifecycle-post-start": ["/bin/sh","-c","export IAM=`whoami`; rm -rf /home/$IAM/pd/dockerHome; ln -s $(pwd) /home/$IAM/pd/dockerHome; mkdir -p /home/$IAM/.jupyter/custom; echo \"define(['base/js/namespace'], function(Jupyter){Jupyter._target = '_self';})\" >/home/$IAM/.jupyter/custom/custom.js; ln -s /data /home/$IAM/pd/; true"],
+        "user-uid": 1000,
+        "fs-gid": 100,
+        "user-volume-location": "/home/jovyan/pd"
+      }]
+    },
   "ssjdispatcher": {
     "job_images": {
       "indexing": "quay.io/cdis/indexs3client:latest",

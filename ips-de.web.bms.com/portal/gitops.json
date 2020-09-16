@@ -1,8 +1,12 @@
 {
-  "useArboristUI": false,
-  "gaTrackingId": "undefined",
+  "gaTrackingId": "UA-175551911-1",
   "graphql": {
     "boardCounts": [
+      {
+        "graphql": "_study_count",
+        "name": "Study",
+        "plural": "Studies"
+      },
       {
         "graphql": "_subject_count",
         "name": "Subject",
@@ -12,44 +16,23 @@
         "graphql": "_sample_count",
         "name": "Sample",
         "plural": "Samples"
-      },
+      }
+    ],
+    "chartCounts": [
       {
         "graphql": "_study_count",
         "name": "Study",
         "plural": "Studies"
       },
       {
-        "graphql": "_read_group_count",
-        "name": "Result",
-        "plural": "Results"
-      },
-      {
-        "graphql": "_aliquot_count",
-        "name": "Aliquot",
-        "plural": "Aliquots"
-      }
-    ],
-    "chartCounts": [
-      {
         "graphql": "_subject_count",
-        "name": "Subject"
+        "name": "Subject",
+        "plural": "Subjects"
       },
       {
         "graphql": "_sample_count",
         "name": "Sample",
         "plural": "Samples"
-      },
-      {
-        "graphql": "_study_count",
-        "name": "Study"
-      },
-      {
-        "graphql": "_read_group_count",
-        "name": "Result"
-      },
-      {
-        "graphql": "_aliquot_count",
-        "name": "Aliquot"
       }
     ],
     "projectDetails": "boardCounts"
@@ -57,39 +40,13 @@
   "components": {
     "appName": "IPS Data Commons for R&ED Portal",
     "index": {
-      "introduction": {
-        "heading": "IPS Data Commons for R&ED",
-        "text": "The IPS Data Commons for R&ED supports the management, analysis and sharing of data for the research community.",
-        "link": "/submission"
-      },
       "buttons": [
         {
-          "name": "Define Data Field",
-          "icon": "data-field-define",
-          "body": "The IPS Data Commons for R&ED define the data in a general way. Please study the dictionary before you start browsing.",
-          "link": "/DD",
-          "label": "Learn more"
-        },
-        {
-          "name": "Explore Data",
+          "name": "CDVR Search",
           "icon": "data-explore",
-          "body": "The Exploration Page gives you insights and a clear overview under selected factors.",
+          "body": "The CDVR Search Page gives you insights and a clear overview under selected factors.",
           "link": "/explorer",
-          "label": "Explore data"
-        },
-        {
-          "name": "Access Data",
-          "icon": "data-access",
-          "body": "Use our selected tool to filter out the data you need.",
-          "link": "/query",
-          "label": "Query data"
-        },
-        {
-          "name": "Submit Metadata",
-          "icon": "data-submit",
-          "body": "Submit Data based on the dictionary.",
-          "link": "/submission",
-          "label": "Submit Metadata"
+          "label": "Explore"
         }
       ]
     },
@@ -97,52 +54,16 @@
       "title": "IPS Data Commons for R&ED",
       "items": [
         {
-          "icon": "projects",
-          "link": "/bms-projects",
-          "color": "#a2a2a2",
-          "name": "Projects"
-        },
-        {
-          "icon": "dictionary",
-          "link": "/DD",
-          "color": "#a2a2a2",
-          "name": "Dictionary"
-        },
-        {
+          "name": "CDVR Search",
           "icon": "exploration",
           "link": "/explorer",
-          "color": "#a2a2a2",
-          "name": "Exploration"
+          "color": "#a2a2a2"
         },
         {
-          "icon": "files",
-          "link": "/files",
-          "color": "#a2a2a2",
-          "name": "Files"
-        },
-        {
-          "icon": "query",
-          "link": "/query",
-          "color": "#a2a2a2",
-          "name": "Query"
-        },
-        {
-          "icon": "workspace",
-          "link": "#hostname#workspace/",
-          "color": "#a2a2a2",
-          "name": "Workspace"
-        },
-        {
-          "icon": "apps",
-          "link": "/bms-apps",
-          "color": "#a2a2a2",
-          "name": "Apps"
-        },
-        {
+          "name": "Profile",
           "icon": "profile",
           "link": "/identity",
-          "color": "#a2a2a2",
-          "name": "Profile"
+          "color": "#a2a2a2"
         }
       ]
     },
@@ -151,7 +72,7 @@
         {
           "icon": "upload",
           "link": "/submission",
-          "name": "Submit Metadata"
+          "name": "Submit Data"
         },
         {
           "link": "https://gen3.org/resources/user/",
@@ -166,35 +87,6 @@
       "contact": "",
       "email": ""
     },
-    "certs": {
-      "security_quiz": {
-        "title": "BloodPAC User agreement",
-        "description": "The agreement on what you can and need to do in a Commons.",
-        "questions": [
-          {
-            "name": "Things you can do after registration",
-            "question": "As a registered user, I can do the following things without any problem. Is it true or not:",
-            "options": ["Browse public Project", "Upload file", "Download file", "Invite people"],
-            "answer": 0,
-            "hint": "Some information about this question"
-          },
-          {
-            "name": "Things you need to do to become the registered user",
-            "question": "In order to be a register user, I must do the following things otherwise:",
-            "options": ["Agree the user agreement", "Accept a consent", "None of them", "Both of them"],
-            "answer": 2,
-            "hint": "Some information about this question"
-          },
-          {
-            "name": "Things you can do with data",
-            "question": "How can I share data with other people according to the policy of the commons",
-            "options": ["I can not share data", "I can only share data with BPA memebers", "I can share data with family", "I can share data with my wife"],
-            "answer": 1,
-            "hint": "Some information about this question"
-          }
-        ]
-      }
-    },
     "footerLogos": [
       {
         "src": "/src/img/gen3.png",
@@ -206,200 +98,86 @@
         "href": "https://ctds.uchicago.edu/",
         "alt": "Center for Translational Data Science at the University of Chicago"
       }
-    ],
-    "privacyPolicy": {
-      "text": "",
-      "routeHref": "",
-      "footerHref": "",
-      "file": ""
-    }
+    ]
   },
-  "requiredCerts": [],
   "featureFlags": {
     "explorer": true,
-    "analysis": false
+    "analysis": true
   },
-  "dataExplorerConfig": {
-    "charts": {
-      "study_submitter_id": {
-        "chartType": "count",
-        "title": "Studies"
-      },
-      "node_id": {
-        "chartType": "count",
-        "title": "Subjects"
-      },
-      "sample_submitter_id": {
-        "chartType": "count",
-        "title": "Samples"
-      },
-      "_read_group_count": {
-        "chartType": "count",
-        "title": "Results"
-      },
-      "gender": {
-        "chartType": "pie",
-        "title": "Gender"
-      },
-      "sample_type": {
-        "chartType": "bar",
-        "title": "Sample Type"
-      },
-      "library_strategy": {
-        "chartType": "bar",
-        "title": "Library Strategy"
-      }
-    },
-    "filters": {
-      "tabs": [
-        {
-          "title": "Projects",
-          "fields": [
-            "study_submitter_id",
-            "project_id"
-          ]
-        },
-        {
-          "title": "Strategies",
-          "fields": [
-            "library_strategy"
-          ]
-        },
-        {
-          "title": "Subjects",
-          "fields":[
-            "sample_type",
-            "gender"
-          ]
+  "analysisTools": [],
+  "explorerConfig": [
+    {
+      "tabTitle": "Analyses",
+      "charts": {
+        "category": {
+          "chartType": "bar",
+          "title": "Category"
         }
-      ]
-    },
-    "table": {
-      "enabled": true
-    },
-    "buttons": [
-      {
-        "enabled": true,
-        "type": "data",
-        "title": "Download All Clinical",
-        "leftIcon": "user",
-        "rightIcon": "download",
-        "fileName": "clinical.json"
       },
-      {
-        "enabled": true,
-        "type": "manifest",
-        "title": "Download Manifest",
-        "leftIcon": "datafile",
-        "rightIcon": "download",
-        "fileName": "manifest.json"
+      "filters": {
+        "tabs": [
+          {
+            "title": "Details",
+            "fields": [
+              "project_code",
+              "study_submitter_id",
+              "category",
+              "drug"
+            ]
+          }
+        ]
       },
-      {
+      "table": {
         "enabled": true,
-        "type": "export-to-workspace",
-        "title": "Export to Workspace",
-        "leftIcon": "datafile",
-        "rightIcon": "download"
-      }
-    ],
-    "guppyConfig": {
-      "dataType": "subject",
-      "nodeCountTitle": "Subjects",
-      "fieldMapping": [
-        { "field": "study_submitter_id", "name": "Study" },
-        { "field": "sample_submitter_id", "name": "Sample" },
-        { "field": "sample_type", "name": "Sample Type" },
-        { "field": "library_strategy", "name": "Library Strategy" }
-      ],
-      "manifestMapping": {
-        "resourceIndexType": "file",
-        "resourceIdField": "object_id",
-        "referenceIdFieldInResourceIndex": "subject_id",
-        "referenceIdFieldInDataIndex": "node_id"
+        "fields": [
+          "web_browser_url",
+          "client_url",
+          "project_code",
+          "study_submitter_id",
+          "category",
+          "drug",
+          "study_description"
+        ],
+        "linkFields": [
+          "web_browser_url",
+          "client_url"
+        ]
       },
-      "accessibleFieldCheckList": ["subject_id"],
-      "accessibleValidationField": "subject_id",
-      "accessibleFieldCheckList": ["project_id"],
-      "accessibleValidationField": "project_id"
-    }
-  },
-  "fileExplorerConfig": {
-    "charts": {
-      "experimental_strategy": {
-        "chartType": "pie",
-        "title": "Experimental Strategy"
-      }
-    },
-    "filters": {
-      "tabs": [
+      "buttons": [
         {
-          "title": "Projects",
-          "fields": [
-            "project_id"
-          ]
-        },
-        {
-          "title": "Strategies",
-          "fields": [
-            "experimental_strategy"
-          ]
-        },
-        {
-          "title": "Files",
-          "fields": [
-            "data_type",
-            "data_format",
-            "data_category"
-          ]
+          "enabled": true,
+          "type": "data",
+          "title": "Download All Clinical",
+          "leftIcon": "user",
+          "rightIcon": "download",
+          "fileName": "clinical.json"
         }
-      ]
-    },
-    "table": {
-      "enabled": true,
-      "fields": [
-        "project_id",
-        "file_name",
-        "file_size",
-        "object_id"
-      ]
-    },
-    "dropdowns": {},
-    "buttons": [
-      {
-        "enabled": true,
-        "type": "file-manifest",
-        "title": "Download Manifest",
-        "leftIcon": "datafile",
-        "rightIcon": "download",
-        "fileName": "file-manifest.json",
-        "dropdownId": "download"
-      },
-      {
-        "enabled": true,
-        "type": "export-files-to-workspace",
-        "title": "Export to Workspace",
-        "leftIcon": "datafile",
-        "rightIcon": "download"
-      }
-    ],
-    "guppyConfig": {
-      "dataType": "file",
-      "fieldMapping": [
-        { "field": "object_id", "name": "GUID" },
-        { "field": "project_id", "name": "Project" }
       ],
-      "nodeCountTitle": "Files",
-      "manifestMapping": {
-        "resourceIndexType": "subject",
-        "resourceIdField": "subject_id",
-        "referenceIdFieldInResourceIndex": "object_id",
-        "referenceIdFieldInDataIndex": "object_id"
-      },
-      "accessibleFieldCheckList": ["project_id"],
-      "accessibleValidationField": "project_id",
-      "accessibleFieldCheckList": ["experimental_strategy"],
-      "accessibleValidationField": "experimental_strategy",
-      "downloadAccessor": "object_id"
+      "guppyConfig": {
+        "dataType": "analysis",
+        "nodeCountTitle": "Analyses",
+        "fieldMapping": [
+          {
+            "field": "project_code",
+            "name": "Project"
+          },
+          {
+            "field": "study_submitter_id",
+            "name": "Study"
+          },
+          {
+            "field": "web_browser_url",
+            "name": "Web URL"
+          },
+          {
+            "field": "client_url",
+            "name": "Client URL"
+          }
+        ],
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "analysis_id"
+        }
+      }
     }
-  }
+  ]
 }
