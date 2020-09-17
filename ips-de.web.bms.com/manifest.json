@@ -84,8 +84,12 @@
       {
         "index": "dcf_analysis",
         "type": "analysis"
+      },
+      {
+        "index": "dcf_histopathology",
+        "type": "histopathology_assay"
       }
-      ],
+    ],
     "config_index": "dcf_array-config"
   },
   "arborist": {
