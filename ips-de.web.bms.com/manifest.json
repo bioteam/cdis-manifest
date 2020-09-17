@@ -20,7 +20,7 @@
     "hatchery": "quay.io/cdis/hatchery:2020.06",
     "ambassador": "quay.io/datawire/ambassador:0.60.3",
     "wts": "082619190404.dkr.ecr.us-east-1.amazonaws.com/wts:1.0.2",
-    "tube": "quay.io/cdis/tube:0.4.0",
+    "tube": "quay.io/cdis/tube:2020.09",
     "ssjdispatcher": "quay.io/cdis/ssjdispatcher:2020.06"
   },
   "global": {
