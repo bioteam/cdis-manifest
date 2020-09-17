@@ -20,7 +20,7 @@
     "hatchery": "quay.io/cdis/hatchery:2020.06",
     "ambassador": "quay.io/datawire/ambassador:0.60.3",
     "wts": "082619190404.dkr.ecr.us-east-1.amazonaws.com/wts:1.0.2",
-    "tube": "quay.io/cdis/tube:2020.09",
+    "tube": "quay.io/cdis/tube:0.4.0",
     "ssjdispatcher": "quay.io/cdis/ssjdispatcher:2020.06"
   },
   "global": {
@@ -74,20 +74,8 @@
   "guppy": {
     "indices": [
       {
-        "index": "dcf_etl",
-        "type": "subject"
-      },
-      {
-        "index": "dcf_file",
-        "type": "file"
-      },
-      {
         "index": "dcf_analysis",
         "type": "analysis"
-      },
-      {
-        "index": "dcf_histopathology",
-        "type": "histopathology_assay"
       }
     ],
     "config_index": "dcf_array-config"

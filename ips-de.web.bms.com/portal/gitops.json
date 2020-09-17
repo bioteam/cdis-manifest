@@ -6,16 +6,6 @@
         "graphql": "_study_count",
         "name": "Study",
         "plural": "Studies"
-      },
-      {
-        "graphql": "_subject_count",
-        "name": "Subject",
-        "plural": "Subjects"
-      },
-      {
-        "graphql": "_sample_count",
-        "name": "Sample",
-        "plural": "Samples"
       }
     ],
     "chartCounts": [
@@ -23,16 +13,6 @@
         "graphql": "_study_count",
         "name": "Study",
         "plural": "Studies"
-      },
-      {
-        "graphql": "_subject_count",
-        "name": "Subject",
-        "plural": "Subjects"
-      },
-      {
-        "graphql": "_sample_count",
-        "name": "Sample",
-        "plural": "Samples"
       }
     ],
     "projectDetails": "boardCounts"
