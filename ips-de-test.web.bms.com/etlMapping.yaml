@@ -57,8 +57,7 @@ mappings:
       - name: image_location
       - name: marker_antibodies
     parent_props:
-      - path: samples[sample_id:id,sample_submitter_id:submitter_id].subjects[subject_submitter_id:submitter_id].studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code].programs[program_name:name]
-      - path: slides[slide_id:id,slide_submitter_id:submitter_id].samples[sample_id:id,sample_submitter_id:submitter_id].subjects[subject_submitter_id:submitter_id].studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code].programs[program_name:name]
+      - path: biospecimens[biospecimen_id:id,biospecimen_submitter_id:submitter_id].subjects[subject_submitter_id:submitter_id].studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code].programs[program_name:name]
   - name: dcf_file
     doc_type: file
     type: collector
