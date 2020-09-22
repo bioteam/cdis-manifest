@@ -13,9 +13,9 @@
         "plural": "Subjects"
       },
       {
-        "graphql": "_sample_count",
-        "name": "Sample",
-        "plural": "Samples"
+        "graphql": "_biospecimen_count",
+        "name": "Biospecimen",
+        "plural": "Biospecimens"
       }
     ],
     "chartCounts": [
@@ -30,9 +30,9 @@
         "plural": "Subjects"
       },
       {
-        "graphql": "_sample_count",
-        "name": "Sample",
-        "plural": "Samples"
+        "graphql": "_biospecimen_count",
+        "name": "Biospecimen",
+        "plural": "Biospecimens"
       }
     ],
     "projectDetails": "boardCounts"
@@ -40,13 +40,39 @@
   "components": {
     "appName": "IPS Data Commons for R&ED Portal",
     "index": {
+      "introduction": {
+        "heading": "IPS Data Commons for R&ED",
+        "text": "The IPS Data Commons for R&ED supports the management, analysis and sharing of data for the research community.",
+        "link": "/submission"
+      },
       "buttons": [
         {
-          "name": "CDVR Search",
+          "name": "Define Data Field",
+          "icon": "data-field-define",
+          "body": "The IPS Data Commons for R&ED define the data in a general way. Please study the dictionary before you start browsing.",
+          "link": "/DD",
+          "label": "Learn more"
+        },
+        {
+          "name": "Explore Data",
           "icon": "data-explore",
-          "body": "The CDVR Search Page gives you insights and a clear overview under selected factors.",
+          "body": "The Exploration Page gives you insights and a clear overview under selected factors.",
           "link": "/explorer",
-          "label": "Explore"
+          "label": "Explore data"
+        },
+        {
+          "name": "Access Data",
+          "icon": "data-access",
+          "body": "Use our selected tool to filter out the data you need.",
+          "link": "/query",
+          "label": "Query data"
+        },
+        {
+          "name": "Submit Metadata",
+          "icon": "data-submit",
+          "body": "Submit Data based on the dictionary.",
+          "link": "/submission",
+          "label": "Submit Metadata"
         }
       ]
     },
@@ -54,9 +80,39 @@
       "title": "IPS Data Commons for R&ED",
       "items": [
         {
-          "name": "CDVR Search",
+          "name": "Projects",
+          "icon": "projects",
+          "link": "/bms-projects",
+          "color": "#a2a2a2"
+        },
+        {
+          "name": "Dictionary",
+          "icon": "dictionary",
+          "link": "/DD",
+          "color": "#a2a2a2"
+        },
+        {
+          "name": "Exploration",
           "icon": "exploration",
           "link": "/explorer",
+          "color": "#a2a2a2"
+        },
+        {
+          "name": "Query",
+          "icon": "query",
+          "link": "/query",
+          "color": "#a2a2a2"
+        },
+        {
+          "name": "Workspace",
+          "icon": "workspace",
+          "link": "#hostname#workspace/",
+          "color": "#a2a2a2"
+        },
+        {
+          "name": "Apps",
+          "icon": "apps",
+          "link": "/bms-apps",
           "color": "#a2a2a2"
         },
         {
@@ -107,7 +163,141 @@
   "analysisTools": [],
   "explorerConfig": [
     {
-      "tabTitle": "Analyses",
+      "tabTitle": "Data",
+      "charts": {
+        "race": {
+          "chartType": "bar",
+          "title": "Race"
+        },
+        "gender": {
+          "chartType": "bar",
+          "title": "Gender"
+        },
+        "study_submitter_id": {
+          "chartType": "count",
+          "title": "Studies"
+        },
+        "node_id": {
+          "chartType": "count",
+          "title": "Subjects"
+        }
+      },
+      "filters": {
+        "tabs": [
+          {
+            "title": "Details",
+            "fields": [
+              "project_code",
+              "study_submitter_id",
+              "submitter_id",
+              "biospecimen_submitter_id",
+              "drug"
+            ]
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "fields": [
+          "project_code",
+          "study_submitter_id",
+          "submitter_id",
+          "biospecimen_submitter_id",
+          "drug",
+          "race",
+          "gender",
+          "primary_diagnosis",
+          "best_overall_response"
+        ]
+      },
+      "buttons": [
+        {
+          "enabled": true,
+          "type": "data",
+          "title": "Download All Clinical",
+          "leftIcon": "user",
+          "rightIcon": "download",
+          "fileName": "clinical.json"
+        }
+      ],
+      "guppyConfig": {
+        "dataType": "subject",
+        "nodeCountTitle": "Subjects",
+        "fieldMapping": [
+          { "field": "project_code", "name": "Project" },
+          { "field": "study_submitter_id", "name": "Study" },
+          { "field": "submitter_id", "name": "Subject" },
+          { "field": "biospecimen_submitter_id", "name": "Biospecimen" }
+        ],
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "subject_id"
+        }
+      }
+    },
+    {
+      "tabTitle": "Files",
+      "charts": {},
+      "filters": {
+        "tabs": [
+          {
+            "title": "Details",
+            "fields": [
+              "project_ref_code",
+              "study_submitter_id",
+              "data_type",
+              "data_format",
+              "data_category"
+            ]
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "fields": [
+          "project_ref_code",
+          "study_submitter_id",
+          "data_type",
+          "data_format",
+          "data_category",
+          "file_name",
+          "file_size",
+          "object_id"
+        ]
+      },
+      "buttons": [
+        {
+          "enabled": true,
+          "type": "file-manifest",
+          "title": "Download Manifest",
+          "leftIcon": "datafile",
+          "rightIcon": "download",
+          "fileName": "file-manifest.json",
+          "dropdownId": "download"
+        },
+        {
+          "enabled": true,
+          "type": "export-files-to-workspace",
+          "title": "Export to Workspace",
+          "leftIcon": "datafile",
+          "rightIcon": "download"
+        }
+      ],
+      "guppyConfig": {
+        "dataType": "file",
+        "fieldMapping": [
+          { "field": "object_id", "name": "GUID" },
+          { "field": "project_ref_code", "name": "Project" },
+          { "field": "study_submitter_id", "name": "Study" }
+        ],
+        "nodeCountTitle": "Files",
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "object_id"
+        },
+        "downloadAccessor": "object_id"
+      }
+    },
+    {
+      "tabTitle": "CDVR",
       "charts": {
         "category": {
           "chartType": "bar",
@@ -135,8 +325,7 @@
           "project_code",
           "study_submitter_id",
           "category",
-          "drug",
-          "study_description"
+          "drug"
         ],
         "linkFields": [
           "web_browser_url",
@@ -157,25 +346,77 @@
         "dataType": "analysis",
         "nodeCountTitle": "Analyses",
         "fieldMapping": [
-          {
-            "field": "project_code",
-            "name": "Project"
-          },
-          {
-            "field": "study_submitter_id",
-            "name": "Study"
-          },
-          {
-            "field": "web_browser_url",
-            "name": "Web URL"
-          },
-          {
-            "field": "client_url",
-            "name": "Client URL"
-          }
+          { "field": "project_code", "name": "Project" },
+          { "field": "study_submitter_id", "name": "Study" },
+          { "field": "web_browser_url", "name": "Web URL" },
+          { "field": "client_url", "name": "Client URL" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "analysis_id"
+        }
+      }
+    },
+    {
+      "tabTitle": "STDH",
+      "charts": {
+        "assay_method": {
+          "chartType": "bar",
+          "title": "Asssay Method"
+        },
+        "marker_antibodies": {
+          "chartType": "bar",
+          "title": "Marker Antibodies"
+        }
+      },
+      "filters": {
+        "tabs": [
+          {
+            "title": "Details",
+            "fields": [
+              "project_code",
+              "study_submitter_id",
+              "subject_submitter_id",
+              "biospecimen_submitter_id",
+              "assay_method",
+              "marker_antibodies"
+            ]
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "fields": [
+          "project_code",
+          "study_submitter_id",
+          "subject_submitter_id",
+          "biospecimen_submitter_id",
+          "marker_antibodies",
+          "image_location"
+        ]
+      },
+      "buttons": [
+        {
+          "enabled": true,
+          "type": "data",
+          "title": "Download All Clinical",
+          "leftIcon": "user",
+          "rightIcon": "download",
+          "fileName": "clinical.json"
+        }
+      ],
+      "guppyConfig": {
+        "dataType": "histopathology_assay",
+        "nodeCountTitle": "Histopathology",
+        "fieldMapping": [
+          { "field": "project_code", "name": "Project" },
+          { "field": "study_submitter_id", "name": "Study" },
+          { "field": "biospecimen_submitter_id", "name": "Biospecimen" },
+          { "field": "subject_submitter_id", "name": "Subject" },
+          { "field": "slide_submitter_id", "name": "Slide" },
+          { "field": "marker_antibodies", "name": "Marker Antibodies" }
+        ],
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "histopathology_assay_id"
         }
       }
     }
