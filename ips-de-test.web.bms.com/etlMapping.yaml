@@ -27,19 +27,15 @@ mappings:
         path: diagnoses
         src: best_overall_response
         fn: list
-      - name: _samples_count
-        path: samples
+      - name: _biospecimens_count
+        path: biospecimens
         fn: count
-      - name: sample_type
-        path: samples
-        src: sample_type
+      - name: composition
+        path: biospecimens
+        src: composition
         fn: set
-      - name: sample_submitter_id
-        path: samples
-        src: submitter_id
-        fn: set
-      - name: slide_submitter_id
-        path: samples.slides
+      - name: biospecimen_submitter_id
+        path: biospecimens
         src: submitter_id
         fn: set
   - name: dcf_analysis
