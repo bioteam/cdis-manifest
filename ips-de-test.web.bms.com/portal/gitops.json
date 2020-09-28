@@ -40,10 +40,6 @@
   "components": {
     "appName": "IPS Data Commons for R&ED Portal",
     "index": {
-      "introduction": {
-        "heading": "IPS Data Commons for R&ED",
-        "text": "The IPS Data Commons for R&ED supports the management, analysis and sharing of data for the research community."
-      },
       "buttons": [
         {
           "name": "Define Data Field",
