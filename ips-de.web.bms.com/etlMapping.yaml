@@ -27,19 +27,15 @@ mappings:
         path: diagnoses
         src: best_overall_response
         fn: list
-      - name: _samples_count
-        path: samples
+      - name: _biospecimens_count
+        path: biospecimens
         fn: count
-      - name: sample_type
-        path: samples
-        src: sample_type
+      - name: composition
+        path: biospecimens
+        src: composition
         fn: set
-      - name: sample_submitter_id
-        path: samples
-        src: submitter_id
-        fn: set
-      - name: slide_submitter_id
-        path: samples.slides
+      - name: biospecimen_submitter_id
+        path: biospecimens
         src: submitter_id
         fn: set
   - name: dcf_analysis
@@ -61,8 +57,7 @@ mappings:
       - name: image_location
       - name: marker_antibodies
     parent_props:
-      - path: samples[sample_id:id,sample_submitter_id:submitter_id].subjects[subject_submitter_id:submitter_id].studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code].programs[program_name:name]
-      - path: slides[slide_id:id,slide_submitter_id:submitter_id].samples[sample_id:id,sample_submitter_id:submitter_id].subjects[subject_submitter_id:submitter_id].studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code].programs[program_name:name]
+      - path: biospecimens[biospecimen_id:id,biospecimen_submitter_id:submitter_id].subjects[subject_submitter_id:submitter_id].studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code].programs[program_name:name]
   - name: dcf_file
     doc_type: file
     type: collector
