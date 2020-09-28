@@ -299,6 +299,10 @@
     {
       "tabTitle": "CDVR",
       "charts": {
+        "study_submitter_id": {
+          "chartType": "count",
+          "title": "Studies"
+        },
         "category": {
           "chartType": "bar",
           "title": "Category"
@@ -406,7 +410,7 @@
       ],
       "guppyConfig": {
         "dataType": "histopathology_assay",
-        "nodeCountTitle": "Histopathology",
+        "nodeCountTitle": "Histopathology Assays",
         "fieldMapping": [
           { "field": "project_code", "name": "Project" },
           { "field": "study_submitter_id", "name": "Study" },
