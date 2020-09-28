@@ -42,8 +42,7 @@
     "index": {
       "introduction": {
         "heading": "IPS Data Commons for R&ED",
-        "text": "The IPS Data Commons for R&ED supports the management, analysis and sharing of data for the research community.",
-        "link": "/submission"
+        "text": "The IPS Data Commons for R&ED supports the management, analysis and sharing of data for the research community."
       },
       "buttons": [
         {
@@ -59,20 +58,6 @@
           "body": "The Exploration Page gives you insights and a clear overview under selected factors.",
           "link": "/explorer",
           "label": "Explore data"
-        },
-        {
-          "name": "Access Data",
-          "icon": "data-access",
-          "body": "Use our selected tool to filter out the data you need.",
-          "link": "/query",
-          "label": "Query data"
-        },
-        {
-          "name": "Submit Metadata",
-          "icon": "data-submit",
-          "body": "Submit Data based on the dictionary.",
-          "link": "/submission",
-          "label": "Submit Metadata"
         }
       ]
     },
