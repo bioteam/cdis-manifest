@@ -6,6 +6,8 @@ mappings:
     props:
       - name: submitter_id
       - name: project_id
+      - name: disease_type
+      - name: species
     parent_props:
       - path: studies[study_id:id,study_submitter_id:submitter_id,indication,study_design,study_objective,drug].projects[project_code:code]
     flatten_props:
