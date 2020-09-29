@@ -364,6 +364,8 @@
               "study_design",
               "study_objective",
               "submitter_id",
+              "disease_type",
+              "species",
               "biospecimen_submitter_id",
               "drug"
             ]
@@ -380,6 +382,8 @@
           "study_design",
           "study_objective",
           "submitter_id",
+          "disease_type",
+          "species",
           "biospecimen_submitter_id",
           "race",
           "gender",
@@ -406,6 +410,8 @@
           { "field": "drug", "name": "Study Drug" },
           { "field": "indication", "name": "Study Indication" },
           { "field": "submitter_id", "name": "Subject" },
+          { "field": "disease_type", "name": "Subject Disease" },
+          { "field": "species", "name": "Subject Species" },
           { "field": "biospecimen_submitter_id", "name": "Biospecimen" }
         ],
         "manifestMapping": {
