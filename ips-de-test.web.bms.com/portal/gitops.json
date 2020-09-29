@@ -339,21 +339,17 @@
     {
       "tabTitle": "Cross-Study",
       "charts": {
-        "race": {
-          "chartType": "bar",
-          "title": "Race"
-        },
-        "gender": {
-          "chartType": "bar",
-          "title": "Gender"
-        },
-        "study_submitter_id": {
+       "study_submitter_id": {
           "chartType": "count",
           "title": "Studies"
         },
         "node_id": {
           "chartType": "count",
           "title": "Subjects"
+        },
+        "biospecimen_submitter_id": {
+          "chartType": "count",
+          "title": "Biospecimens"
         }
       },
       "filters": {
@@ -368,7 +364,9 @@
               "study_design",
               "study_objective",
               "submitter_id",
-              "biospecimen_submitter_id"
+              "biospecimen_submitter_id",
+              "composition",
+              "biospecimen_anatomic_site"
             ]
           }
         ]
@@ -384,6 +382,8 @@
           "study_objective",
           "submitter_id",
           "biospecimen_submitter_id",
+          "composition",
+          "biospecimen_anatomic_site",
           "race",
           "gender",
           "primary_diagnosis",
@@ -407,7 +407,8 @@
           { "field": "project_code", "name": "Project" },
           { "field": "study_submitter_id", "name": "Study" },
           { "field": "submitter_id", "name": "Subject" },
-          { "field": "biospecimen_submitter_id", "name": "Biospecimen" }
+          { "field": "biospecimen_submitter_id", "name": "Biospecimen" },
+          { "field": "biospecimen_anatomic_site", "name": "Anatomic Site" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "subject_id"
