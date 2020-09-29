@@ -52,8 +52,8 @@ mappings:
           - name: data_type
             src: data_type
             fn: set
-          - name: file_id
-            src: file_id
+          - name: data_category
+            src: data_category
             fn: set
   - name: dcf_file
     doc_type: file
