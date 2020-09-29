@@ -58,22 +58,6 @@ mappings:
         path: biospecimens
         src: submitter_id
         fn: set
-    joining_props:
-      - index: file
-        join_on: subject_id
-        props:
-          - name: data_format
-            src: data_format
-            fn: set
-          - name: data_type
-            src: data_type
-            fn: set
-          - name: data_category
-            src: data_category
-            fn: set
-          - name: file_id
-            src: file_id
-            fn: set
   - name: dcf_analysis
     doc_type: analysis
     type: aggregator
@@ -110,10 +94,13 @@ mappings:
       - name: data_category
       - name: experimental_strategy
     injecting_props:
-      subject:
+      study:
         props:
-          - name: subject_id
-            src: id
+          - name: study_submitter_id
+            src: submitter_id
             fn: set
-          - name: project_id
-
+      project:
+        props:
+          - name: project_ref_code
+            src: code
+            fn: set
