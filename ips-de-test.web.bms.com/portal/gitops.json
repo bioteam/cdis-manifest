@@ -200,13 +200,16 @@
         ],
         "nodeCountTitle": "Files",
         "manifestMapping": {
-          "referenceIdFieldInResourceIndex": "object_id"
+          "resourceIndexType": "file",
+          "resourceIdField": "object_id",
+          "referenceIdFieldInResourceIndex": "object_id",
+          "referenceIdFieldInDataIndex": "object_id"
         },
         "downloadAccessor": "object_id"
       }
     },
     {
-      "tabTitle": "STDH",
+      "tabTitle": "Histopathology",
       "charts": {
         "assay_method": {
           "chartType": "bar",
