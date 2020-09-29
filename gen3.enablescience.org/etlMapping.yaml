@@ -14,6 +14,7 @@ mappings:
           - name: gender
           - name: race
           - name: ethnicity
+          - name: vital_status
     aggregated_props:
       - name: _samples_count
         path: samples

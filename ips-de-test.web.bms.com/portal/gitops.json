@@ -416,7 +416,7 @@
           { "field": "disease_type", "name": "Subject Disease" },
           { "field": "species", "name": "Subject Species" },
           { "field": "biospecimen_submitter_id", "name": "Biospecimen" },
-          { "field": "composition", "name": "Biospecimen" }
+          { "field": "composition", "name": "Biospecimen Composition" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "subject_id"
