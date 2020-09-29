@@ -337,7 +337,7 @@
       }
     },
     {
-      "tabTitle": "Data",
+      "tabTitle": "Cross-Study",
       "charts": {
         "race": {
           "chartType": "bar",
@@ -363,9 +363,12 @@
             "fields": [
               "project_code",
               "study_submitter_id",
+              "drug",
+              "indication",
+              "study_design",
+              "study_objective",
               "submitter_id",
-              "biospecimen_submitter_id",
-              "drug"
+              "biospecimen_submitter_id"
             ]
           }
         ]
@@ -375,9 +378,12 @@
         "fields": [
           "project_code",
           "study_submitter_id",
+          "drug",
+          "indication",
+          "study_design",
+          "study_objective",
           "submitter_id",
           "biospecimen_submitter_id",
-          "drug",
           "race",
           "gender",
           "primary_diagnosis",
