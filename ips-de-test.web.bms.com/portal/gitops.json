@@ -367,7 +367,8 @@
               "disease_type",
               "species",
               "biospecimen_submitter_id",
-              "drug"
+              "composition",
+              "biospecimen_anatomic_site"
             ]
           }
         ]
@@ -385,6 +386,8 @@
           "disease_type",
           "species",
           "biospecimen_submitter_id",
+          "composition",
+          "biospecimen_anatomic_site",
           "race",
           "gender",
           "primary_diagnosis",
@@ -412,7 +415,8 @@
           { "field": "submitter_id", "name": "Subject" },
           { "field": "disease_type", "name": "Subject Disease" },
           { "field": "species", "name": "Subject Species" },
-          { "field": "biospecimen_submitter_id", "name": "Biospecimen" }
+          { "field": "biospecimen_submitter_id", "name": "Biospecimen" },
+          { "field": "composition", "name": "Biospecimen" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "subject_id"
