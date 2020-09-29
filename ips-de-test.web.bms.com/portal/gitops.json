@@ -151,7 +151,7 @@
           {
             "title": "Details",
             "fields": [
-              "project_code",
+              "project_ref_code",
               "study_submitter_id",
               "data_type",
               "data_format",
@@ -163,7 +163,7 @@
       "table": {
         "enabled": true,
         "fields": [
-          "project_code",
+          "project_ref_code",
           "study_submitter_id",
           "data_type",
           "data_format",
@@ -195,7 +195,7 @@
         "dataType": "file",
         "fieldMapping": [
           { "field": "object_id", "name": "GUID" },
-          { "field": "project_code", "name": "Project" },
+          { "field": "project_ref_code", "name": "Project" },
           { "field": "study_submitter_id", "name": "Study" }
         ],
         "nodeCountTitle": "Files",
@@ -337,19 +337,23 @@
       }
     },
     {
-      "tabTitle": "Cross-Study",
+      "tabTitle": "Data",
       "charts": {
-       "study_submitter_id": {
+        "race": {
+          "chartType": "bar",
+          "title": "Race"
+        },
+        "gender": {
+          "chartType": "bar",
+          "title": "Gender"
+        },
+        "study_submitter_id": {
           "chartType": "count",
           "title": "Studies"
         },
         "node_id": {
           "chartType": "count",
           "title": "Subjects"
-        },
-        "biospecimen_submitter_id": {
-          "chartType": "count",
-          "title": "Biospecimens"
         }
       },
       "filters": {
@@ -359,14 +363,9 @@
             "fields": [
               "project_code",
               "study_submitter_id",
-              "drug",
-              "indication",
-              "study_design",
-              "study_objective",
               "submitter_id",
               "biospecimen_submitter_id",
-              "composition",
-              "biospecimen_anatomic_site"
+              "drug"
             ]
           }
         ]
@@ -376,14 +375,9 @@
         "fields": [
           "project_code",
           "study_submitter_id",
-          "drug",
-          "indication",
-          "study_design",
-          "study_objective",
           "submitter_id",
           "biospecimen_submitter_id",
-          "composition",
-          "biospecimen_anatomic_site",
+          "drug",
           "race",
           "gender",
           "primary_diagnosis",
@@ -406,11 +400,8 @@
         "fieldMapping": [
           { "field": "project_code", "name": "Project" },
           { "field": "study_submitter_id", "name": "Study" },
-          { "field": "drug", "name": "Study Drug" },
-          { "field": "indication", "name": "Study Indication" },
           { "field": "submitter_id", "name": "Subject" },
-          { "field": "biospecimen_submitter_id", "name": "Biospecimen" },
-          { "field": "composition", "name": "Biospecimen Composition" }
+          { "field": "biospecimen_submitter_id", "name": "Biospecimen" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "subject_id"
