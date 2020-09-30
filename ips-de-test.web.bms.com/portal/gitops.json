@@ -439,7 +439,7 @@
           { "field": "gender", "name": "Deomographic Gender" },
           { "field": "race", "name": "Deomographic Race" },
           { "field": "vital_status", "name": "Deomographic Vital Status" },
-          { "field": "age", "name": "Diagnosis Vital Status" },
+          { "field": "age", "name": "Diagnosis Age" },
           { "field": "classification_of_tumor", "name": "Diagnosis Classification" },
           { "field": "primary_diagnosis", "name": "Diagnosis Primary" },
           { "field": "tissue_or_organ_of_origin", "name": "Diagnosis Tissue" },
