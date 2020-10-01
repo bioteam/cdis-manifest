@@ -49,11 +49,18 @@
           "label": "Learn more"
         },
         {
-          "name": "Explore Data",
+          "name": "CDVR Search",
           "icon": "data-explore",
-          "body": "The Exploration Page gives you insights and a clear overview under selected factors.",
+          "body": "The CDVR Search App is an exploration interface that allows scientists to find Web and Desktop Spotfire builds",
           "link": "/explorer",
-          "label": "Explore data"
+          "label": "Explore"
+        },
+        {
+          "name": "Project Enrollment",
+          "icon": "data-submit",
+          "body": "Enroll a project",
+          "link": "/enrollment",
+          "label": "Enroll project"
         }
       ]
     },
