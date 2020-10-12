@@ -355,20 +355,40 @@
       "filters": {
         "tabs": [
           {
-            "title": "Details",
+            "title": "Project",
             "fields": [
-              "project_code",
+              "project_code"
+            ]
+          },
+          {
+            "title": "Study",
+            "fields": [
               "study_submitter_id",
               "drug",
               "indication",
               "study_design",
-              "study_objective",
+              "study_objective"
+            ]
+          },
+          {
+            "title": "Subject",
+            "fields": [
               "submitter_id",
               "disease_type",
-              "species",
+              "species"
+            ]
+          },
+          {
+            "title": "Biospecimen",
+            "fields": [
               "biospecimen_submitter_id",
               "composition",
-              "biospecimen_anatomic_site",
+              "biospecimen_anatomic_site"
+            ]
+          },
+          {
+            "title": "Demographics",
+            "fields": [
               "ethnicity",
               "gender",
               "race",
