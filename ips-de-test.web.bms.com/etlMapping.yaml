@@ -17,62 +17,21 @@ mappings:
           - name: race
           - name: ethnicity
           - name: vital_status
-    aggregated_props:
-      - name: age
-        path: diagnoses
-        src: age
-        fn: max
-      - name: classification_of_tumor
-        path: diagnoses
-        src: classification_of_tumor
-        fn: list
-      - name: primary_diagnosis
-        path: diagnoses
-        src: primary_diagnosis
-        fn: list
-      - name: tissue_or_organ_of_origin
-        path: diagnoses
-        src: tissue_or_organ_of_origin
-        fn: list
-      - name: ajcc_clinical_stage
-        path: diagnoses
-        src: ajcc_clinical_stage
-        fn: list
-      - name: tumor_grade
-        path: diagnoses
-        src: tumor_grade
-        fn: list
-      - name: best_overall_response
-        path: diagnoses
-        src: best_overall_response
-        fn: list
-      - name: composition
-        path: biospecimens
-        src: composition
-        fn: set
-      - name: biospecimen_anatomic_site
-        path: biospecimens
-        src: biospecimen_anatomic_site
-        fn: set
-      - name: biospecimen_submitter_id
-        path: biospecimens
-        src: submitter_id
-        fn: set
-    joining_props:
-      - index: file
-        join_on: subject_id
+      - path: diagnoses
         props:
-          - name: data_format
-            src: data_format
-            fn: set
-          - name: data_type
-            src: data_type
-            fn: set
-          - name: data_category
-            src: data_category
-            fn: set
-          - name: file_id
-            src: file_id
+          - name: age
+          - name: classification_of_tumor
+          - name: primary_diagnosis
+          - name: tissue_or_organ_of_origin
+          - name: ajcc_clinical_stage
+          - name: tumor_grade
+          - name: best_overall_response
+      - path: biospecimens
+        props:
+          - name: composition
+          - name: biospecimen_anatomic_site
+          - name: biospecimen_submitter_id
+            src: submitter_id
             fn: set
   - name: dcf_analysis
     doc_type: analysis
@@ -110,18 +69,23 @@ mappings:
       - name: data_category
       - name: experimental_strategy
     injecting_props:
+      biospecimen:
+        props:
+          - name: biospecimen_id
+            src: node_id
+            fn: set
       subject:
         props:
           - name: subject_id
-            src: id
+            src: node_id
             fn: set
       study:
         props:
-          - name: study_submitter_id
-            src: submitter_id
+          - name: study_id
+            src: node_id
             fn: set
       project:
         props:
-          - name: project_ref_code
+          - name: project_code
             src: code
             fn: set
