@@ -357,6 +357,10 @@
         "biospecimen_submitter_id": {
           "chartType": "count",
           "title": "Biospecimens"
+        },
+        "gender": {
+          "chartType": "pie",
+          "title": "Gender"
         }
       },
       "filters": {
