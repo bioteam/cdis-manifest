@@ -17,15 +17,6 @@ mappings:
           - name: race
           - name: ethnicity
           - name: vital_status
-      - path: diagnoses
-        props:
-          - name: age
-          - name: classification_of_tumor
-          - name: primary_diagnosis
-          - name: tissue_or_organ_of_origin
-          - name: ajcc_clinical_stage
-          - name: tumor_grade
-          - name: best_overall_response
       - path: biospecimens
         props:
           - name: composition
