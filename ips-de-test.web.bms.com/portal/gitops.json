@@ -358,9 +358,25 @@
           "chartType": "count",
           "title": "Biospecimens"
         },
+        "indication": {
+          "chartType": "bar",
+          "title": "Study Indication"
+        },
+        "disease_type": {
+          "chartType": "bar",
+          "title": "Subject Disease"
+        },
+        "composition": {
+          "chartType": "bar",
+          "title": "Biospecimen Composition"
+        },
         "gender": {
           "chartType": "pie",
           "title": "Gender"
+        },
+        "primary_diagnosis": {
+          "chartType": "bar",
+          "title": "Diagnosis Primary"
         }
       },
       "filters": {
