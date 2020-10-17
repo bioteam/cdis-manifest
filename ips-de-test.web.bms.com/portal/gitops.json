@@ -38,13 +38,13 @@
     "projectDetails": "boardCounts"
   },
   "components": {
-    "appName": "IPS Data Commons for R&ED Portal",
+    "appName": "Research Data Commons for R&ED Portal",
     "index": {
       "buttons": [
         {
           "name": "Define Data Field",
           "icon": "data-field-define",
-          "body": "The IPS Data Commons for R&ED define the data in a general way. Please study the dictionary before you start browsing.",
+          "body": "The Research Data Commons for R&ED define the data in a general way. Please study the dictionary before you start browsing.",
           "link": "/DD",
           "label": "Learn more"
         },
@@ -65,7 +65,7 @@
       ]
     },
     "navigation": {
-      "title": "IPS Data Commons for R&ED",
+      "title": "Research Data Commons for R&ED",
       "items": [
         {
           "name": "Projects",
@@ -125,7 +125,7 @@
       ]
     },
     "login": {
-      "title": "IPS Data Commons for R&ED",
+      "title": "Research Data Commons for R&ED",
       "subTitle": "Explore, Analyze, and Share Data",
       "text": "This website supports the management, analysis and sharing of human disease data for the research community and aims to advance basic understanding of the genetic basis of complex traits and accelerate discovery and development of therapies, diagnostic tests, and other technologies for diseases like cancer.",
       "contact": "",
