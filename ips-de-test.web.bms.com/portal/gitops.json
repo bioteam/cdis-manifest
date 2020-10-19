@@ -237,6 +237,7 @@
       "table": {
         "enabled": true,
         "fields": [
+          "graph_url",
           "project_code",
           "study_submitter_id",
           "drug",
@@ -260,8 +261,11 @@
           "ajcc_clinical_stage",
           "tumor_grade",
           "best_overall_response"
+    ],
+    "linkFields": [
+      "graph_url"
     ]
-      },
+  },
       "buttons": [
         {
           "enabled": true,
@@ -276,6 +280,7 @@
         "dataType": "subject",
         "nodeCountTitle": "Subjects",
         "fieldMapping": [
+          { "field": "graph_url", "name": "Graph" },
           { "field": "project_code", "name": "Project" },
           { "field": "study_submitter_id", "name": "Study" },
           { "field": "drug", "name": "Study Drug" },
