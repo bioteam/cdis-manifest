@@ -1,0 +1,132 @@
+mappings:
+  - name: dcf_etl
+    doc_type: subject
+    type: aggregator
+    root: subject
+    props:
+      - name: submitter_id
+      - name: project_id
+      - name: disease_type
+      - name: species
+    parent_props:
+      - path: studies[study_id:node_id,study_submitter_id:submitter_id,indication,study_design,study_objective,drug].projects[graph_url,project_code:code]
+    flatten_props:
+      - path: demographics
+        props:
+          - name: gender
+          - name: race
+          - name: ethnicity
+          - name: vital_status
+    aggregated_props:
+      - name: age
+        path: diagnoses
+        src: age
+        fn: max
+      - name: classification_of_tumor
+        path: diagnoses
+        src: classification_of_tumor
+        fn: list
+      - name: primary_diagnosis
+        path: diagnoses
+        src: primary_diagnosis
+        fn: list
+      - name: tissue_or_organ_of_origin
+        path: diagnoses
+        src: tissue_or_organ_of_origin
+        fn: list
+      - name: ajcc_clinical_stage
+        path: diagnoses
+        src: ajcc_clinical_stage
+        fn: list
+      - name: tumor_grade
+        path: diagnoses
+        src: tumor_grade
+        fn: list
+      - name: best_overall_response
+        path: diagnoses
+        src: best_overall_response
+        fn: list
+      - name: composition
+        path: biospecimens
+        src: composition
+        fn: set
+      - name: biospecimen_anatomic_site
+        path: biospecimens
+        src: biospecimen_anatomic_site
+        fn: set
+      - name: biospecimen_submitter_id
+        path: biospecimens
+        src: submitter_id
+        fn: set
+    joining_props:
+      - index: file
+        join_on: subject_id
+        props:
+          - name: data_format
+            src: data_format
+            fn: set
+          - name: data_type
+            src: data_type
+            fn: set
+          - name: data_category
+            src: data_category
+            fn: set
+          - name: file_id
+            src: file_id
+            fn: set
+  - name: dcf_analysis
+    doc_type: analysis
+    type: aggregator
+    root: analysis
+    props:
+      - name: web_browser_url
+      - name: client_url
+      - name: category
+    parent_props:
+      - path: studies[study_id:id,study_submitter_id:submitter_id,study_design,study_description,drug].projects[project_code:code].programs[program_name:name]
+  - name: dcf_histopathology
+    doc_type: histopathology_assay
+    type: aggregator
+    root: histopathology_assay
+    props:
+      - name: assay_method
+      - name: image_location
+      - name: marker_antibodies
+    parent_props:
+      - path: biospecimens[biospecimen_id:id,biospecimen_submitter_id:submitter_id].subjects[subject_submitter_id:submitter_id].studies[study_id:id,study_submitter_id:submitter_id,study_design,drug].projects[project_code:code].programs[program_name:name]
+  - name: dcf_file
+    doc_type: file
+    type: collector
+    root: None
+    category: data_file
+    props:
+      - name: object_id
+      - name: md5sum
+      - name: file_name
+      - name: file_size
+      - name: data_format
+      - name: data_type
+      - name: state
+      - name: data_category
+      - name: experimental_strategy
+    injecting_props:
+      biospecimen:
+        props:
+          - name: biospecimen_id
+            src: node_id
+            fn: set
+      subject:
+        props:
+          - name: subject_id
+            src: node_id
+            fn: set
+      study:
+        props:
+          - name: study_submitter_id
+            src: submitter_id
+            fn: set
+      project:
+        props:
+          - name: project_code
+            src: code
+            fn: set
