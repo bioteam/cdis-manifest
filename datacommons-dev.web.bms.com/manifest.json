@@ -24,7 +24,7 @@
     "ssjdispatcher": "quay.io/cdis/ssjdispatcher:2020.06"
   },
   "global": {
-    "environment": "gdh-test",
+    "environment": "ips-dev",
     "hostname": "datacommons-dev.web.bms.com",
     "revproxy_arn": "arn:aws:acm:us-east-1:218320979545:certificate/58cdb5ff-a7ac-4bb5-8ef7-b6b17dd3494a",
     "dictionary_url": "https://bms-gen3-dev.s3.amazonaws.com/datadictionary/master/schema.json",
