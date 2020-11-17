@@ -86,6 +86,10 @@
       "type": "analysis"
     },
     {
+      "index": "dcf_study",
+      "type": "study"
+    },
+    {
       "index": "dcf_histopathology",
       "type": "histopathology_assay"
     }

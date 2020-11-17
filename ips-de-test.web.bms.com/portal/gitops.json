@@ -375,6 +375,10 @@
     {
       "tabTitle": "Studies",
       "charts": {
+        "project_id": {
+          "chartType": "count",
+          "title": "Projects"
+        },
         "indication": {
           "chartType": "bar",
           "title": "Study Indication"
@@ -425,8 +429,10 @@
           "study_setup",
           "study_objective",
           "study_design",
-          "study_description"
-        ],
+          "study_description",
+          "_subjects_count",
+          "_biospecimens_count"
+    ],
         "linkFields": [
           "project_graph_url"
         ]
@@ -454,7 +460,12 @@
           { "field": "submitter_id", "name": "Study" },
           { "field": "indication", "name": "Study Indication" },
           { "field": "drug", "name": "Study Drug" }
-        ]
+        ],
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "study_id"
+        },
+        "accessibleFieldCheckList": ["project_id"],
+        "accessibleValidationField": "project_id"
       }
     },
     {
