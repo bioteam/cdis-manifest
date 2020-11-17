@@ -454,10 +454,7 @@
           { "field": "submitter_id", "name": "Study" },
           { "field": "indication", "name": "Study Indication" },
           { "field": "drug", "name": "Study Drug" }
-        ],
-        "manifestMapping": {
-          "referenceIdFieldInResourceIndex": "study_id"
-        }
+        ]
       }
     },
     {
