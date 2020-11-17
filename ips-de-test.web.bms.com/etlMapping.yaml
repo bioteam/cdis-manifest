@@ -74,6 +74,31 @@ mappings:
           - name: file_id
             src: file_id
             fn: set
+  - name: dcf_study
+    doc_type: study
+    type: aggregator
+    root: study
+    props:
+      - name: project_id
+      - name: submitter_id
+      - name: indication
+      - name: drug
+      - name: jira_ticket
+      - name: study_setup
+      - name: study_objective
+      - name: study_design
+      - name: study_description
+      - name: data_description
+      - name: associated_study
+    aggregated_props:
+      - name: _subjects_count
+        path: subjects
+        fn: count
+      - name: _biospecimens_count
+        path: subjects.biospecimens
+        fn: count
+    parent_props:
+      - path: projects[project_code:code,project_name:name,project_investigator_name:investigator_name,project_graph_url:graph_url,project_experimental_strategy:experimental_strategy,project_data_provider:data_provider]
   - name: dcf_analysis
     doc_type: analysis
     type: aggregator
