@@ -373,6 +373,99 @@
       }
     },
     {
+      "tabTitle": "Studies",
+      "charts": {
+        "indication": {
+          "chartType": "bar",
+          "title": "Study Indication"
+        },
+        "drug": {
+          "chartType": "bar",
+          "title": "Study Drug"
+        },
+        "project_experimental_strategy": {
+          "chartType": "bar",
+          "title": "Experimental Strategy"
+        },
+        "study_objective": {
+          "chartType": "bar",
+          "title": "Study Objective"
+        },
+        "study_design": {
+          "chartType": "bar",
+          "title": "Study Design"
+        }
+      },
+      "filters": {
+        "tabs": [
+          {
+            "title": "Detail",
+            "fields": [
+              "indication",
+              "drug",
+              "project_experimental_strategy",
+              "study_objective",
+              "study_design"
+            ]
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "fields": [
+          "project_graph_url",
+          "project_code",
+          "project_name",
+          "project_investigator_name",
+          "project_experimental_strategy",
+          "project_data_provider",
+          "submitter_id",
+          "indication",
+          "drug",
+          "study_setup",
+          "study_objective",
+          "study_design",
+          "study_description",
+          "_subjects_count",
+          "_biospecimens_count",
+          "_samples_count"
+        ],
+        "linkFields": [
+          "graph_url"
+        ]
+      },
+      "buttons": [
+        {
+          "enabled": true,
+          "type": "data",
+          "title": "Download Studies",
+          "leftIcon": "user",
+          "rightIcon": "download",
+          "fileName": "studies.json"
+        }
+      ],
+      "guppyConfig": {
+        "dataType": "study",
+        "nodeCountTitle": "Studies",
+        "fieldMapping": [
+          { "field": "project_graph_url", "name": "Graph" },
+          { "field": "project_code", "name": "Project Code" },
+          { "field": "project_name", "name": "Project Name" },
+          { "field": "project_investigator_name", "name": "Investigator" },
+          { "field": "project_experimental_strategy", "name": "Strategy" },
+          { "field": "project_data_provider", "name": "Provider" },
+          { "field": "submitter_id", "name": "Study" },
+          { "field": "indication", "name": "Study Indication" },
+          { "field": "drug", "name": "Study Drug" },
+          { "field": "_subjects_count", "name": "Subjects" },
+          { "field": "_biospecimens_count", "name": "Biospecimens" }
+        ],
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "submitter_id"
+        }
+      }
+    },
+    {
       "tabTitle": "Histopathology",
       "charts": {
         "assay_method": {
