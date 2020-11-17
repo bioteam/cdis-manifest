@@ -461,7 +461,7 @@
           { "field": "_biospecimens_count", "name": "Biospecimens" }
         ],
         "manifestMapping": {
-          "referenceIdFieldInResourceIndex": "submitter_id"
+          "referenceIdFieldInResourceIndex": "study_id"
         }
       }
     },
