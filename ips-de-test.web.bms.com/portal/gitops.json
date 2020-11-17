@@ -399,7 +399,7 @@
       "filters": {
         "tabs": [
           {
-            "title": "Detail",
+            "title": "Details",
             "fields": [
               "indication",
               "drug",
@@ -425,13 +425,10 @@
           "study_setup",
           "study_objective",
           "study_design",
-          "study_description",
-          "_subjects_count",
-          "_biospecimens_count",
-          "_samples_count"
+          "study_description"
         ],
         "linkFields": [
-          "graph_url"
+          "project_graph_url"
         ]
       },
       "buttons": [
@@ -456,9 +453,7 @@
           { "field": "project_data_provider", "name": "Provider" },
           { "field": "submitter_id", "name": "Study" },
           { "field": "indication", "name": "Study Indication" },
-          { "field": "drug", "name": "Study Drug" },
-          { "field": "_subjects_count", "name": "Subjects" },
-          { "field": "_biospecimens_count", "name": "Biospecimens" }
+          { "field": "drug", "name": "Study Drug" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "study_id"
