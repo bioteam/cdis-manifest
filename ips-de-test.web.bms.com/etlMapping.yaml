@@ -80,6 +80,7 @@ mappings:
     root: study
     props:
       - name: submitter_id
+      - name: project_id
       - name: indication
       - name: drug
       - name: jira_ticket
