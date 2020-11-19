@@ -26,7 +26,7 @@
   "global": {
     "environment": "gdh-dev",
     "hostname": "gen3.enablescience.org",
-    "revproxy_arn": "arn:aws:acm:us-east-1:098381893833:certificate/4b21d947-d829-43fa-944e-ba8c953ba2c3",
+    "revproxy_arn": "arn:aws:acm:us-east-1:501351204723:certificate/db63d8ae-354f-49f1-8f70-1815b3fa884f",
     "dictionary_url": "https://bms-gen3-dev.s3.amazonaws.com/datadictionary/master/schema.json",
     "portal_app": "gitops",
     "kube_bucket": "kube-commons-test-gen3",
