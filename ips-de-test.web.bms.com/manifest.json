@@ -72,30 +72,30 @@
     }
   },
   "guppy": {
-  "indices": [
-    {
-      "index": "dcf_etl",
-      "type": "subject"
-    },
-    {
-      "index": "dcf_file",
-      "type": "file"
-    },
-    {
-      "index": "dcf_analysis",
-      "type": "analysis"
-    },
-    {
-      "index": "dcf_study",
-      "type": "study"
-    },
-    {
-      "index": "dcf_histopathology",
-      "type": "histopathology_assay"
-    }
-  ],
-  "config_index": "dcf_array-config"
-},
+    "indices": [
+      {
+        "index": "dcf_etl",
+        "type": "subject"
+      },
+      {
+        "index": "dcf_file",
+        "type": "file"
+      },
+      {
+        "index": "dcf_analysis",
+        "type": "analysis"
+      },
+      {
+        "index": "dcf_study",
+        "type": "study"
+      },
+      {
+        "index": "dcf_histopathology",
+        "type": "histopathology_assay"
+      }
+    ],
+    "config_index": "dcf_array-config"
+  },
   "arborist": {
     "deployment_version": "2"
   },
