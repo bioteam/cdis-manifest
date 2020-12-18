@@ -50,9 +50,9 @@
           "label": "Learn more"
         },
         {
-          "name": "CDVR Search",
+          "name": "Faceted Search",
           "icon": "data-explore",
-          "body": "The CDVR Search App is an exploration interface that allows scientists to find Web and Desktop Spotfire builds",
+          "body": "The Faceted Search App is an exploration interface that allows scientists to find data of interest",
           "link": "/explorer",
           "label": "Explore"
         },
@@ -509,70 +509,6 @@
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "histopathology_assay_id"
-        }
-      }
-    },
-    {
-      "tabTitle": "CDVR",
-      "charts": {
-        "study_submitter_id": {
-          "chartType": "count",
-          "title": "Studies"
-        },
-        "category": {
-          "chartType": "bar",
-          "title": "Category"
-        }
-      },
-      "filters": {
-        "tabs": [
-          {
-            "title": "Details",
-            "fields": [
-              "project_code",
-              "study_submitter_id",
-              "category",
-              "drug"
-            ]
-          }
-        ]
-      },
-      "table": {
-        "enabled": true,
-        "fields": [
-          "web_browser_url",
-          "client_url",
-          "project_code",
-          "study_submitter_id",
-          "category",
-          "drug"
-        ],
-        "linkFields": [
-          "web_browser_url",
-          "client_url"
-        ]
-      },
-      "buttons": [
-        {
-          "enabled": true,
-          "type": "data",
-          "title": "Download All Clinical",
-          "leftIcon": "user",
-          "rightIcon": "download",
-          "fileName": "clinical.json"
-        }
-      ],
-      "guppyConfig": {
-        "dataType": "analysis",
-        "nodeCountTitle": "Analyses",
-        "fieldMapping": [
-          { "field": "project_code", "name": "Project" },
-          { "field": "study_submitter_id", "name": "Study" },
-          { "field": "web_browser_url", "name": "Web URL" },
-          { "field": "client_url", "name": "Client URL" }
-        ],
-        "manifestMapping": {
-          "referenceIdFieldInResourceIndex": "analysis_id"
         }
       }
     }
