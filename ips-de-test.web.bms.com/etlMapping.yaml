@@ -9,7 +9,7 @@ mappings:
       - name: disease_type
       - name: species
     parent_props:
-      - path: studies[study_id:node_id,study_submitter_id:submitter_id,indication,study_design,study_objective,drug].projects[graph_url,project_code:code]
+      - path: studies[study_id:node_id,study_submitter_id:submitter_id,study_type,research_scientist,study_objective].projects[graph_url,project_code:code]
     flatten_props:
       - path: demographics
         props:
@@ -81,15 +81,10 @@ mappings:
     props:
       - name: submitter_id
       - name: project_id
-      - name: indication
-      - name: drug
-      - name: jira_ticket
-      - name: study_setup
+      - name: study_type
+      - name: research_scientist
       - name: study_objective
-      - name: study_design
       - name: study_description
-      - name: data_description
-      - name: associated_study
     aggregated_props:
       - name: _subjects_count
         path: subjects
@@ -108,7 +103,7 @@ mappings:
       - name: client_url
       - name: category
     parent_props:
-      - path: studies[study_id:id,study_submitter_id:submitter_id,study_design,study_description,drug].projects[project_code:code].programs[program_name:name]
+      - path: studies[study_id:id,study_submitter_id:submitter_id,study_description].projects[project_code:code].programs[program_name:name]
   - name: dcf_histopathology
     doc_type: histopathology_assay
     type: aggregator

@@ -1,5 +1,6 @@
 {
-  "gaTrackingId": "UA-175551911-1",
+  "useArboristUI": false,
+  "gaTrackingId": "undefined",
   "graphql": {
     "boardCounts": [
       {
@@ -68,46 +69,46 @@
       "title": "Research Data Commons",
       "items": [
         {
-          "name": "Projects",
           "icon": "projects",
           "link": "/bms-projects",
-          "color": "#a2a2a2"
+          "color": "#a2a2a2",
+          "name": "Projects"
         },
         {
-          "name": "Dictionary",
           "icon": "dictionary",
           "link": "/DD",
-          "color": "#a2a2a2"
+          "color": "#a2a2a2",
+          "name": "Dictionary"
         },
         {
-          "name": "Exploration",
           "icon": "exploration",
           "link": "/explorer",
-          "color": "#a2a2a2"
+          "color": "#a2a2a2",
+          "name": "Exploration"
         },
         {
-          "name": "Query",
           "icon": "query",
           "link": "/query",
-          "color": "#a2a2a2"
+          "color": "#a2a2a2",
+          "name": "Query"
         },
         {
-          "name": "Workspace",
           "icon": "workspace",
           "link": "#hostname#workspace/",
-          "color": "#a2a2a2"
+          "color": "#a2a2a2",
+          "name": "Workspace"
         },
         {
-          "name": "Apps",
           "icon": "apps",
           "link": "/bms-apps",
-          "color": "#a2a2a2"
+          "color": "#a2a2a2",
+          "name": "Apps"
         },
         {
-          "name": "Profile",
           "icon": "profile",
           "link": "/identity",
-          "color": "#a2a2a2"
+          "color": "#a2a2a2",
+          "name": "Profile"
         }
       ]
     },
@@ -146,7 +147,7 @@
   },
   "featureFlags": {
     "explorer": true,
-    "analysis": true
+    "analysis": false
   },
   "analysisTools": [],
   "explorerConfig": [
@@ -194,9 +195,7 @@
             "title": "Study",
             "fields": [
               "study_submitter_id",
-              "drug",
-              "indication",
-              "study_design",
+              "study_type",
               "study_objective"
             ]
           },
@@ -240,9 +239,8 @@
           "graph_url",
           "project_code",
           "study_submitter_id",
-          "drug",
-          "indication",
-          "study_design",
+          "research_scientist",
+          "study_type",
           "study_objective",
           "submitter_id",
           "disease_type",
@@ -283,8 +281,6 @@
           { "field": "graph_url", "name": "Graph" },
           { "field": "project_code", "name": "Project" },
           { "field": "study_submitter_id", "name": "Study" },
-          { "field": "drug", "name": "Study Drug" },
-          { "field": "indication", "name": "Study Indication" },
           { "field": "submitter_id", "name": "Subject" },
           { "field": "disease_type", "name": "Subject Disease" },
           { "field": "species", "name": "Subject Species" },
@@ -292,8 +288,8 @@
           { "field": "composition", "name": "Biospecimen Composition" },
           { "field": "ethnicity", "name": "Demographic Ethnicity" },
           { "field": "gender", "name": "Demographic Gender" },
-          { "field": "race", "name": "Deomographic Race" },
-          { "field": "vital_status", "name": "Deomographic Vital Status" },
+          { "field": "race", "name": "Demographic Race" },
+          { "field": "vital_status", "name": "Demographic Vital Status" },
           { "field": "age", "name": "Diagnosis Age" },
           { "field": "classification_of_tumor", "name": "Diagnosis Classification" },
           { "field": "primary_diagnosis", "name": "Diagnosis Primary" },
@@ -379,21 +375,13 @@
           "chartType": "count",
           "title": "Projects"
         },
-        "indication": {
-          "chartType": "bar",
-          "title": "Study Indication"
-        },
-        "drug": {
-          "chartType": "bar",
-          "title": "Study Drug"
-        },
         "project_experimental_strategy": {
           "chartType": "bar",
           "title": "Experimental Strategy"
         },
-        "study_objective": {
+        "study_type": {
           "chartType": "bar",
-          "title": "Study Objective"
+          "title": "Study Type"
         },
         "study_design": {
           "chartType": "bar",
@@ -405,11 +393,9 @@
           {
             "title": "Details",
             "fields": [
-              "indication",
-              "drug",
               "project_experimental_strategy",
-              "study_objective",
-              "study_design"
+              "study_type",
+              "study_objective"
             ]
           }
         ]
@@ -420,16 +406,12 @@
           "project_graph_url",
           "submitter_id",
           "study_description",
-          "drug",
           "project_code",
           "project_name",
           "project_investigator_name",
           "project_experimental_strategy",
           "project_data_provider",
-          "indication",
-          "study_setup",
           "study_objective",
-          "study_design",
           "_subjects_count",
           "_biospecimens_count"
     ],
@@ -457,9 +439,7 @@
           { "field": "project_investigator_name", "name": "Investigator" },
           { "field": "project_experimental_strategy", "name": "Strategy" },
           { "field": "project_data_provider", "name": "Provider" },
-          { "field": "submitter_id", "name": "Study" },
-          { "field": "indication", "name": "Study Indication" },
-          { "field": "drug", "name": "Study Drug" }
+          { "field": "submitter_id", "name": "Study" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "study_id"
