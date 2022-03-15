@@ -1,0 +1,386 @@
+{
+  "graphql":{
+    "boardCounts":[
+      {
+        "graphql":"_project_count",
+        "name":"Partner",
+        "plural":"Partners"
+      },
+      {
+        "graphql":"_case_count",
+        "name":"Case",
+        "plural":"Cases"
+      },
+      {
+        "graphql":"_lab_count",
+        "name":"Lab",
+        "plural":"Labs"
+      },
+      {
+        "graphql":"_sequence_count",
+        "name":"Sequence",
+        "plural":"Sequences"
+      }
+    ],
+    "chartCounts":[
+      {
+        "graphql":"_project_count",
+        "name":"Partner"
+      },
+      {
+        "graphql":"_case_count",
+        "name":"Case"
+      },
+      {
+        "graphql":"_lab_count",
+        "name":"Lab"
+      },
+      {
+        "graphql":"_sequence_count",
+        "name":"Sequence"
+      }
+    ],
+    "projectDetails":"boardCounts"
+  },
+  "explorerConfig":[
+    {
+      "tabTitle":"Partner",
+      "charts":{
+        "project_id":{
+          "chartType":"count",
+          "title":"Projects"
+        },
+        "_case_id":{
+          "chartType":"count",
+          "title":"Cases"
+        },
+        "Submission_Type": {
+          "chartType": "bar",
+          "title": "Submission Type"
+        },
+        "was_this_specimen_sequence_v2": {
+          "chartType": "pie",
+          "title": "Sequenced"
+        }
+      },
+      "filters":{
+        "tabs":[
+          {
+            "title":"Case",
+            "fields":[
+              "project_id",
+              "riphl_run",
+              "submitter_id",
+              "Submission_Type",
+              "Collection_Date",
+              "date_specimen_received_by",
+              "mmwr_year",
+              "mmwr_week",
+              "voc_v2",
+              "pangolin_v2",
+              "nextstrain_clade_v2",
+              "mutations_of_note_v2",
+              "gisaid_id_v2",
+              "was_this_specimen_sequence_v2",
+              "if_yes_result_date_v2"
+            ]
+          }
+        ]
+      },
+      "table":{
+        "enabled": true,
+        "fields":[
+          "project_id",
+          "submitter_id",
+          "Submission_Type",
+          "First_Name",
+          "Last_Name",
+          "DOB",
+          "Collection_Date",
+          "Original_Specimen_Type",
+          "Transport_Media",
+          "Transport_Other",
+          "date_specimen_received_by",
+          "ct_value_by_riphl",
+          "was_this_specimen_sequence_v2",
+          "if_yes_result_date_v2",
+          "gisaid_id_v2",
+          "riphl_run",
+          "nextstrain_clade_v2",
+          "mutations_of_note_v2",
+          "voc_v2",
+          "pangolin_v2",
+          "ambiguity_score_v2",
+          "mmwr_week",
+          "mmwr_year"
+        ]
+      },
+      "buttons":[ 
+      ],
+      "guppyConfig":{
+        "dataType":"case",
+        "nodeCountTitle":"Cases",
+        "fieldMapping": [
+          { "field": "project_id", "name": "Partner" },
+          { "field": "submitter_id", "name": "RIPHL ID" },
+          { "field": "Submission_Type", "name": "Submission Type" },
+          { "field": "First_Name", "name": "First Name" },
+          { "field": "Last_Name", "name": "Last Name" },
+          { "field": "DOB", "name": "DOB" },
+          { "field": "Collection_Date", "name": "Collection Date" },
+          { "field": "Original_Specimen_Type", "name": "Original Specimen Type" },
+          { "field": "Transport_Media", "name": "Transport Media" },
+          { "field": "Transport_Other", "name": "Transport Other" },
+          { "field": "date_specimen_received_by", "name": "Date Specimen Receieved" },
+          { "field": "ct_value_by_riphl", "name": "CT Value by RIPHL" },
+          { "field": "was_this_specimen_sequence_v2", "name": "Was this specimen sequenced?" },
+          { "field": "if_yes_result_date_v2", "name": "If yes, result date" },
+          { "field": "gisaid_id_v2", "name": "GISAID ID" },
+          { "field": "riphl_run", "name": "RIPHL Run" },
+          { "field": "nextstrain_clade_v2", "name": "Nextstrain Clade" },
+          { "field": "mutations_of_note_v2", "name": "Mutations of Note" },
+          { "field": "voc_v2", "name": "Variant of Concern" },
+          { "field": "pangolin_v2", "name": "Pangolin Lineage" },
+          { "field": "ambiguity_score_v2", "name": "Ambiguity Score" },
+          { "field": "mmwr_week", "name": "MMWR Week" },
+          { "field": "mmwr_year", "name": "MMWR Year" }
+        ],
+        "manifestMapping": {
+          "resourceIndexType": "file",
+          "resourceIdField": "object_id",
+          "referenceIdFieldInResourceIndex": "_case_id",
+          "referenceIdFieldInDataIndex": "node_id",
+          "accessibleFieldCheckList":[
+            "_case_id"
+          ],
+          "accessibleValidationField":"_case_id"
+          }
+      }
+    },
+    {
+      "tabTitle":"RIPHL",
+      "charts":{
+        "project_id":{
+          "chartType":"count",
+          "title":"Projects"
+        },
+        "_lab_id":{
+          "chartType":"count",
+          "title":"Labs"
+        }
+      },
+      "filters":{
+        "tabs":[
+          {
+            "title":"Lab",
+            "fields":[
+              "project_id",
+              "riphl_run",
+              "submitter_id",
+              "Submission_Type",
+              "Collection_Date",
+              "date_specimen_received_by",
+              "mmwr_year",
+              "mmwr_week",
+              "voc_v2",
+              "pangolin_v2",
+              "nextstrain_clade_v2",
+              "mutations_of_note_v2",
+              "gisaid_id_v2",
+              "was_this_specimen_sequence_v2",
+              "if_yes_result_date_v2"
+            ]
+          }
+        ]
+      },
+      "table":{
+        "enabled":true,
+        "fields":[
+          "project_code",
+          "submitter_id",
+          "Submission_Type",
+          "Collection_Date",
+          "Original_Specimen_Type",
+          "Transport_Media",
+          "Transport_Other",
+          "date_specimen_received_by",
+          "ct_value_by_riphl",
+          "was_this_specimen_sequence_v2",
+          "if_yes_result_date_v2",
+          "gisaid_id_v2",
+          "riphl_run",
+          "nextstrain_clade_v2",
+          "mutations_of_note_v2",
+          "voc_v2",
+          "pangolin_v2",
+          "ambiguity_score_v2",
+          "mmwr_week",
+          "mmwr_year"        ]
+      },
+      "guppyConfig":{
+        "dataType":"lab",
+        "nodeCountTitle":"Labs",
+        "fieldMapping":[
+          { "field": "project_code", "name": "Partner" },
+          { "field": "submitter_id", "name": "RIPHL ID" },
+          { "field": "Submission_Type", "name": "Submission Type" },
+          { "field": "Collection_Date", "name": "Collection Date" },
+          { "field": "Original_Specimen_Type", "name": "Original Specimen Type" },
+          { "field": "Transport_Media", "name": "Transport Media" },
+          { "field": "Transport_Other", "name": "Transport Other" },
+          { "field": "date_specimen_received_by", "name": "Date Specimen Receieved" },
+          { "field": "ct_value_by_riphl", "name": "CT Value by RIPHL" },
+          { "field": "was_this_specimen_sequence_v2", "name": "Was this specimen sequenced?" },
+          { "field": "if_yes_result_date_v2", "name": "If yes, result date" },
+          { "field": "gisaid_id_v2", "name": "GISAID ID" },
+          { "field": "riphl_run", "name": "RIPHL Run" },
+          { "field": "nextstrain_clade_v2", "name": "Nextstrain Clade" },
+          { "field": "mutations_of_note_v2", "name": "Mutations of Note" },
+          { "field": "voc_v2", "name": "Variant of Concern" },
+          { "field": "pangolin_v2", "name": "Pangolin Lineage" },
+          { "field": "ambiguity_score_v2", "name": "Ambiguity Score" },
+          { "field": "mmwr_week", "name": "MMWR Week" },
+          { "field": "mmwr_year", "name": "MMWR Year" }
+        ],
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "_lab_id"
+        }
+      }
+    },
+    {
+      "tabTitle":"CDPH",
+      "charts":{
+        "project_id":{
+          "chartType":"count",
+          "title":"Projects"
+        },
+        "_sequence_id":{
+          "chartType":"count",
+          "title":"Sequences"
+        }
+      },
+      "filters":{
+        "tabs":[
+          {
+            "title":"Sequence",
+            "fields":[
+              "project_id",
+              "submitter_id",
+              "ordering_facility_name",
+              "cdph_reason_for_submission",
+              "outbreak_type",
+              "squencing_status"
+            ]
+          }
+        ]
+      },
+      "table":{
+        "enabled":true,
+        "fields":[
+          "project_code",
+          "submitter_id",
+          "inedss_id",
+          "ordering_facility_name",
+          "cdph_reason_for_submission",
+          "outbreak_type",
+          "other_outbreak",
+          "ors",
+          "squencing_status"
+        ]
+      },
+      "guppyConfig":{
+        "dataType":"sequence",
+        "nodeCountTitle":"Sequences",
+        "fieldMapping":[
+          { "field": "project_code", "name": "Partner" },
+          { "field": "submitter_id", "name": "RIPHL ID" },
+          { "field": "inedss_id", "name": "INEDSS ID" },
+          { "field": "ordering_facility_name", "name": "Facility" },
+          { "field": "cdph_reason_for_submission", "name": "Submission" },
+          { "field": "outbreak_type", "name": "Outbreak" },
+          { "field": "other_outbreak", "name": "Other" },
+          { "field": "ors", "name": "ORS" },
+          { "field": "squencing_status", "name": "Status" }
+        ],
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "_sequence_id"
+        }
+      }
+    }
+  ],
+  "showArboristAuthzOnProfile":true,
+  "showFenceAuthzOnProfile":false,
+  "components": {
+    "appName": "RIPHL SARS-CoV-2 Submission System",
+    "index": {
+      "introduction": {
+        "heading": "SARS-CoV-2 Submission System",
+        "text": "SARS-CoV-2 Submission System supports ...",
+        "link": "/submission"
+      },
+      "buttons": [
+        {
+          "name": "Submission Templates",
+          "icon": "dictionary",
+          "body": "Download data submission spreadsheet templates",
+          "link": "/DD",
+          "label": "Templates",
+          "color": "#035C94"
+        },
+        {
+          "name": "Submit Data",
+          "icon": "upload",
+          "body": "Submit single case data by form or many case data by spreadsheet.",
+          "link": "/submission",
+          "label": "Submit",
+          "color": "#035C94"
+        },
+        {
+          "name": "Search Data",
+          "icon": "workspace",
+          "body": "The Search Page gives you insights and a clear overview of cases under selected factors.",
+          "link": "/explorer",
+          "label": "Search",
+          "color": "#035C94"
+        }
+      ]
+    },
+    "navigation": {
+      "title": "SARS-CoV-2 Submission System",
+      "items": [
+        {
+          "icon": "dictionary",
+          "link": "/DD",
+          "color": "#035C94",
+          "name": "Templates"
+        },
+        {
+          "icon": "upload",
+          "link": "/submission",
+          "color": "#035C94",
+          "name": "Submit"
+        },
+        {
+          "icon": "workspace",
+          "link": "/explorer",
+          "color": "#035C94",
+          "name": "Search"
+        },
+        {
+          "icon": "query",
+          "link": "https://riphldevweb.z13.web.core.windows.net/",
+          "color": "#035C94",
+          "name": "Help"
+        }
+      ]
+    },
+    "login": {
+      "title": "SARS-CoV-2 Submission System",
+      "subTitle": "Explore, Analyze, and Share Data",
+      "text": "RIPHL SARS-CoV-2 Submission System supports the management, analysis and sharing of ...",
+      "contact": "If you have any questions about access or the registration process, please contact ",
+      "email": "Sofiya_Bobrovska@rush.edu"
+    },
+    "footerLogos": []
+  }
+}
