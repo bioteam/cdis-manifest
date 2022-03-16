@@ -36,7 +36,7 @@ Assuming you want to edit the `gitops.json` file for `gen3-riphl-dev-tgeg-fd.azu
 4. Revert to 2020-09 tagged release.
 
     ```bash
-    git checkout tags/2020-09 -b 2020-09
+    git checkout tags/2020.09 -b 2020.09
     ```
 
 5. Now navigate to the `data-portal` folder (`cd data-portal`) and run `npm install --loglevel verbose`. This command will probably take a few mins.
