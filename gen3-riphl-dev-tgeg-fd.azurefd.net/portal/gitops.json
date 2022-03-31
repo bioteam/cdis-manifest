@@ -116,6 +116,14 @@
         ]
       },
       "buttons":[ 
+        {
+          "enabled": true,
+          "type": "data",
+          "title": "Download",
+          "leftIcon": "user",
+          "rightIcon": "download",
+          "fileName": "clinical.json"
+        }
       ],
       "guppyConfig":{
         "dataType":"case",
@@ -146,15 +154,8 @@
           { "field": "mmwr_year", "name": "MMWR Year" }
         ],
         "manifestMapping": {
-          "resourceIndexType": "file",
-          "resourceIdField": "object_id",
-          "referenceIdFieldInResourceIndex": "_case_id",
-          "referenceIdFieldInDataIndex": "node_id",
-          "accessibleFieldCheckList":[
-            "_case_id"
-          ],
-          "accessibleValidationField":"_case_id"
-          }
+          "referenceIdFieldInResourceIndex": "_case_id"
+        }
       }
     },
     {
@@ -315,7 +316,7 @@
     "index": {
       "introduction": {
         "heading": "SARS-CoV-2 Submission System",
-        "text": "SARS-CoV-2 Submission System supports ...",
+        "text": "Each institution is encouraged to submit 15 routine surveillance (most recent) and 10 special case SARS-CoV-2 positive specimens weekly. Please have all shipments arrive by Thursday at 4:30 pm. Email Sofiya Bobrovska (Sofiya_Bobrovska@rush.edu) or the main RIPHL email (RIPHL@rush.edu) if you have any questions.",
         "link": "/submission"
       },
       "buttons": [
@@ -330,15 +331,15 @@
         {
           "name": "Submit Data",
           "icon": "upload",
-          "body": "Submit single case data by form or many case data by spreadsheet.",
+          "body": "Submit either individual case data by form or multiple cases using spreadsheet template",
           "link": "/submission",
           "label": "Submit",
           "color": "#035C94"
         },
         {
-          "name": "Search Data",
+          "name": "Explore Data",
           "icon": "workspace",
-          "body": "The Search Page gives you insights and a clear overview of cases under selected factors.",
+          "body": "Search for case data and access reports",
           "link": "/explorer",
           "label": "Search",
           "color": "#035C94"
@@ -364,7 +365,7 @@
           "icon": "workspace",
           "link": "/explorer",
           "color": "#035C94",
-          "name": "Search"
+          "name": "Explore"
         },
         {
           "icon": "query",
@@ -374,10 +375,14 @@
         }
       ]
     },
+    "topBar": {
+      "items": [
+      ]
+    },
     "login": {
       "title": "SARS-CoV-2 Submission System",
       "subTitle": "Explore, Analyze, and Share Data",
-      "text": "RIPHL SARS-CoV-2 Submission System supports the management, analysis and sharing of ...",
+      "text": "Each institution is encouraged to submit 15 routine surveillance (most recent) and 10 special case SARS-CoV-2 positive specimens weekly. Please have all shipments arrive by Thursday at 4:30 pm. Email Sofiya Bobrovska (Sofiya_Bobrovska@rush.edu) or the main RIPHL email (RIPHL@rush.edu) if you have any questions.",
       "contact": "If you have any questions about access or the registration process, please contact ",
       "email": "Sofiya_Bobrovska@rush.edu"
     },
