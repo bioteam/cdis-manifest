@@ -18,8 +18,8 @@
       },
       {
         "graphql":"_sequence_count",
-        "name":"Sequence",
-        "plural":"Sequences"
+        "name":"CDPH",
+        "plural":"CDPHs"
       }
     ],
     "chartCounts":[
@@ -118,11 +118,11 @@
       "buttons":[ 
         {
           "enabled": true,
-          "type": "data",
-          "title": "Download",
+          "type": "data-tsv",
+          "title": "Download Table",
           "leftIcon": "user",
           "rightIcon": "download",
-          "fileName": "clinical.json"
+          "fileName": "case.tsv"
         }
       ],
       "guppyConfig":{
