@@ -179,6 +179,7 @@
         },
         "latest_pangolin_v2": {
           "chartType": "bar",
+          "title": "Pangolin Variants"
         },
       "composition": {
           "chartType": "bar",
