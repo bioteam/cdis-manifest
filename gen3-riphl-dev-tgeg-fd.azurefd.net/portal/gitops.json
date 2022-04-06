@@ -46,7 +46,7 @@
     {
       "tabTitle":"Cases",
       "charts":{
-        "project_id":{
+        "projects_code":{
           "chartType":"count",
           "title":"Projects"
         },
@@ -92,7 +92,7 @@
         {
           "enabled": true,
           "type": "data-tsv",
-          "title": "Download Table",
+          "title": "Download Selected Cases as case.tsv",
           "leftIcon": "user",
           "rightIcon": "download",
           "fileName": "case.tsv"
@@ -116,6 +116,163 @@
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "_case_id"
+        }
+      }
+    },
+    {
+      "tabTitle":"Labs",
+      "charts":{
+        "partner":{
+          "chartType":"count",
+          "title":"Projects"
+        },
+        "cases_submitter_id":{
+          "chartType":"count",
+          "title":"Cases"
+        },
+        "pangolin_v2": {
+          "chartType": "bar",
+          "title": "Pangolin"
+        },
+        "nextstrain_clade_v2": {
+          "chartType": "pie",
+          "title": "Nextstrain"
+        }
+      },
+      "filters":{
+        "tabs":[
+          {
+            "title":"Labs",
+            "fields":[
+              "partner",
+              "submitter_id",
+              "pangolin_v2",
+              "nextstrain_clade_v2"
+            ]
+          }
+        ]
+      },
+      "table":{
+        "enabled": true,
+        "fields":[
+          "project_id",
+          "submitter_id",
+          "cases_submitter_id",
+          "age_at_specimen_collection",
+          "ambiguity_score_v2",
+          "ct_value_by_riphl",
+          "date_specimen_received_by",
+          "gisaid_id_v2",
+          "if_no_seq_v2",
+          "if_yes_result_date_v2",
+          "latest_pangolin_date_v2",
+          "latest_pangolin_v2",
+          "likely_voc",
+          "mmwr_week",
+          "mmwr_year",
+          "mutations_of_note_v2",
+          "nextstrain_clade_v2",
+          "notes_v2",
+          "pangolin_v2",
+          "riphl_accession_number_v2",
+          "riphl_run",
+          "voc_v2",
+          "was_this_specimen_sequence_v2"
+        ]
+      },
+      "buttons":[ 
+        {
+          "enabled": true,
+          "type": "data-tsv",
+          "title": "Download Selected Labs as lab.tsv",
+          "leftIcon": "user",
+          "rightIcon": "download",
+          "fileName": "lab.tsv"
+        }
+      ],
+      "guppyConfig":{
+        "dataType":"lab",
+        "nodeCountTitle":"Labs",
+        "fieldMapping": [
+          { "field": "project_id", "name": "Project" },
+          { "field": "submitter_id", "name": "RIPHL ID" },
+          { "field": "projects_code", "name": "Partner" },
+          { "field": "pangolin_v2", "name": "Pangolin" },
+          { "field": "nextstrain_clade_v2", "name": "Nextstrain" }
+        ],
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "_lab_id"
+        }
+      }
+    },
+    {
+      "tabTitle":"CDPHs",
+      "charts":{
+        "partner":{
+          "chartType":"count",
+          "title":"Projects"
+        },
+        "cases_submitter_id":{
+          "chartType":"count",
+          "title":"Cases"
+        },
+        "cdph_reason_for_submission": {
+          "chartType": "bar",
+          "title": "Reason For Submission"
+        },
+        "outbreak_type": {
+          "chartType": "pie",
+          "title": "Outbreak"
+        }
+      },
+      "filters":{
+        "tabs":[
+          {
+            "title":"CDPHs",
+            "fields":[
+              "partner",
+              "submitter_id",
+              "cdph_reason_for_submission",
+              "outbreak_type",
+              "sequencing_status"
+            ]
+          }
+        ]
+      },
+      "table":{
+        "enabled": true,
+        "fields":[
+          "project_id",
+          "submitter_id",
+          "cdph_reason_for_submission",
+          "inedss_id",
+          "ordering_facility_name",
+          "ors",
+          "other_outbreak",
+          "outbreak_type",
+          "sequencing_status"
+        ]
+      },
+      "buttons":[ 
+        {
+          "enabled": true,
+          "type": "data-tsv",
+          "title": "Download Selected CDPHs as cdph.tsv",
+          "leftIcon": "user",
+          "rightIcon": "download",
+          "fileName": "cdph.tsv"
+        }
+      ],
+      "guppyConfig":{
+        "dataType":"cdph",
+        "nodeCountTitle":"CDPHs",
+        "fieldMapping": [
+          { "field": "project_id", "name": "Project" },
+          { "field": "submitter_id", "name": "RIPHL ID" },
+          { "field": "projects_code", "name": "Partner" }
+        ],
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "_cdph_id"
         }
       }
     }
@@ -148,7 +305,7 @@
           "color": "#035C94"
         },
         {
-          "name": "Explore Data",
+          "name": "Search Data",
           "icon": "workspace",
           "body": "Search for case data and access reports",
           "link": "/explorer",
@@ -176,7 +333,7 @@
           "icon": "workspace",
           "link": "/explorer",
           "color": "#035C94",
-          "name": "Explore"
+          "name": "Search"
         },
         {
           "icon": "query",
