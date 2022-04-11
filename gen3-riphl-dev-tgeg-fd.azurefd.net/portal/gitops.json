@@ -130,7 +130,7 @@
           "chartType":"count",
           "title":"Cases"
         },
-        "pangolin_v2": {
+        "latest_pangolin_v2": {
           "chartType": "bar",
           "title": "Pangolin"
         },
@@ -146,7 +146,7 @@
             "fields":[
               "partner",
               "submitter_id",
-              "pangolin_v2",
+              "latest_pangolin_v2",
               "nextstrain_clade_v2"
             ]
           }
@@ -280,10 +280,10 @@
   "showArboristAuthzOnProfile":true,
   "showFenceAuthzOnProfile":false,
   "components": {
-    "appName": "RIPHL SARS-CoV-2 Submission System",
+    "appName": "RIPHL Data Portal",
     "index": {
       "introduction": {
-        "heading": "SARS-CoV-2 Submission System",
+        "heading": "RIPHL Data Portal",
         "text": "Each institution is encouraged to submit 15 routine surveillance (most recent) and 10 special case SARS-CoV-2 positive specimens weekly. Please have all shipments arrive by Thursday at 4:30 pm. Email Sofiya Bobrovska (Sofiya_Bobrovska@rush.edu) or the main RIPHL email (RIPHL@rush.edu) if you have any questions.",
         "link": "/submission"
       },
@@ -315,7 +315,7 @@
       ]
     },
     "navigation": {
-      "title": "SARS-CoV-2 Submission System",
+      "title": "RIPHL Data Portal",
       "items": [
         {
           "icon": "dictionary",
@@ -348,7 +348,7 @@
       ]
     },
     "login": {
-      "title": "SARS-CoV-2 Submission System",
+      "title": "RIPHL Data Portal",
       "subTitle": "Explore, Analyze, and Share Data",
       "text": "Each institution is encouraged to submit 15 routine surveillance (most recent) and 10 special case SARS-CoV-2 positive specimens weekly. Please have all shipments arrive by Thursday at 4:30 pm. Email Sofiya Bobrovska (Sofiya_Bobrovska@rush.edu) or the main RIPHL email (RIPHL@rush.edu) if you have any questions.",
       "contact": "If you have any questions about access or the registration process, please contact ",
