@@ -256,13 +256,19 @@
       "filters":{
         "tabs":[
           {
-            "title":"Labs",
+            "title":"Lab",
             "fields":[
-              "partner",
-              "submitter_id",
+              "date_specimen_received_by",
+              "mmwr_year",
+              "mmwr_week",
+              "voc_v2",
               "latest_pangolin_v2",
-              "nextstrain_clade_v2"
-            ]
+              "nextstrain_clade_v2",
+              "mutations_of_note_v2",
+              "gisaid_id_v2",
+              "was_this_specimen_sequence_v2",
+              "if_yes_result_date_v2"
+            ]            
           }
         ]
       },
