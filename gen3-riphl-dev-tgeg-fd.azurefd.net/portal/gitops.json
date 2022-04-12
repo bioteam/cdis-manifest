@@ -44,6 +44,120 @@
   },
   "explorerConfig":[
     {
+      "tabTitle":"Partner",
+      "charts":{
+        "projects_code":{
+          "chartType":"count",
+          "title":"Projects"
+        },
+        "_case_nophi_id":{
+          "chartType":"count",
+          "title":"Cases"
+        },
+        "Submission_Type": {
+          "chartType": "bar",
+          "title": "Submission Type"
+        },
+        "was_this_specimen_sequence_v2": {
+          "chartType": "pie",
+          "title": "Sequenced"
+        }
+      },
+      "filters":{
+        "tabs":[
+          {
+            "title":"Case",
+            "fields":[
+              "partner",
+              "riphl_run",
+              "submitter_id",
+              "Submission_Type",
+              "Collection_Date"
+            ]
+          },
+          {
+            "title":"Lab",
+            "fields":[
+              "date_specimen_received_by",
+              "mmwr_year",
+              "mmwr_week",
+              "voc_v2",
+              "pangolin_v2",
+              "nextstrain_clade_v2",
+              "mutations_of_note_v2",
+              "gisaid_id_v2",
+              "was_this_specimen_sequence_v2",
+              "if_yes_result_date_v2"
+            ]            
+          }
+        ]
+      },
+      "table":{
+        "enabled": true,
+        "fields":[
+          "partner",
+          "submitter_id",
+          "Submission_Type",
+          "Collection_Date",
+          "Original_Specimen_Type",
+          "Transport_Media",
+          "Transport_Other",
+          "date_specimen_received_by",
+          "ct_value_by_riphl",
+          "was_this_specimen_sequence_v2",
+          "if_yes_result_date_v2",
+          "gisaid_id_v2",
+          "riphl_run",
+          "nextstrain_clade_v2",
+          "mutations_of_note_v2",
+          "voc_v2",
+          "pangolin_v2",
+          "ambiguity_score_v2",
+          "mmwr_week",
+          "mmwr_year"
+        ]
+      },
+      "buttons":[ 
+        {
+          "enabled": true,
+          "type": "data-tsv",
+          "title": "Download Table",
+          "leftIcon": "user",
+          "rightIcon": "download",
+          "fileName": "partner.tsv"
+        }
+      ],
+      "guppyConfig":{
+        "dataType":"case_nophi",
+        "nodeCountTitle":"Cases",
+        "fieldMapping": [
+          { "field": "partner", "name": "Partner" },
+          { "field": "submitter_id", "name": "RIPHL ID" },
+          { "field": "Submission_Type", "name": "Submission Type" },
+          { "field": "Collection_Date", "name": "Collection Date" },
+          { "field": "Original_Specimen_Type", "name": "Original Specimen Type" },
+          { "field": "Transport_Media", "name": "Transport Media" },
+          { "field": "Transport_Other", "name": "Transport Other" },
+          { "field": "date_specimen_received_by", "name": "Date Specimen Receieved" },
+          { "field": "ct_value_by_riphl", "name": "CT Value by RIPHL" },
+          { "field": "was_this_specimen_sequence_v2", "name": "Was this specimen sequenced?" },
+          { "field": "if_yes_result_date_v2", "name": "If yes, result date" },
+          { "field": "gisaid_id_v2", "name": "GISAID ID" },
+          { "field": "riphl_run", "name": "RIPHL Run" },
+          { "field": "nextstrain_clade_v2", "name": "Nextstrain Clade" },
+          { "field": "mutations_of_note_v2", "name": "Mutations of Note" },
+          { "field": "voc_v2", "name": "Variant of Concern" },
+          { "field": "pangolin_v2", "name": "Pangolin Lineage" },
+          { "field": "ambiguity_score_v2", "name": "Ambiguity Score" },
+          { "field": "mmwr_week", "name": "MMWR Week" },
+          { "field": "mmwr_year", "name": "MMWR Year" }
+        ],
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "_case_nophi_id"
+        }
+      }
+    },
+    {
       "tabTitle":"Cases",
       "charts":{
         "projects_code":{
@@ -132,7 +246,7 @@
         },
         "latest_pangolin_v2": {
           "chartType": "bar",
-          "title": "Pangolin"
+          "title": "Latest Pangolin"
         },
         "nextstrain_clade_v2": {
           "chartType": "pie",
@@ -155,7 +269,7 @@
       "table":{
         "enabled": true,
         "fields":[
-          "project_id",
+          "partner",
           "submitter_id",
           "cases_submitter_id",
           "age_at_specimen_collection",
@@ -194,11 +308,9 @@
         "dataType":"lab",
         "nodeCountTitle":"Labs",
         "fieldMapping": [
-          { "field": "project_id", "name": "Project" },
+          { "field": "partner", "name": "Partner" },
           { "field": "submitter_id", "name": "RIPHL ID" },
-          { "field": "projects_code", "name": "Partner" },
-          { "field": "pangolin_v2", "name": "Pangolin" },
-          { "field": "nextstrain_clade_v2", "name": "Nextstrain" }
+          { "field": "partner", "name": "Partner" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "_lab_id"
@@ -269,7 +381,7 @@
         "fieldMapping": [
           { "field": "project_id", "name": "Project" },
           { "field": "submitter_id", "name": "RIPHL ID" },
-          { "field": "projects_code", "name": "Partner" }
+          { "field": "partner", "name": "Partner" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "_cdph_id"
