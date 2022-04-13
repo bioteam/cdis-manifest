@@ -44,7 +44,7 @@
   },
   "explorerConfig":[
     {
-      "tabTitle":"Partner",
+      "tabTitle":"Master Search",
       "charts":{
         "projects_code":{
           "chartType":"count",
@@ -89,6 +89,14 @@
               "was_this_specimen_sequence_v2",
               "if_yes_result_date_v2"
             ]            
+          },
+          {
+            "title":"CDPH",
+            "fields":[
+              "cdph_reason_for_submission",
+              "outbreak_type",
+              "sequencing_status"
+            ]            
           }
         ]
       },
@@ -114,7 +122,14 @@
           "pangolin_v2",
           "ambiguity_score_v2",
           "mmwr_week",
-          "mmwr_year"
+          "mmwr_year",
+          "cdph_reason_for_submission",
+          "inedss_id",
+          "ordering_facility_name",
+          "ors",
+          "other_outbreak",
+          "outbreak_type",
+          "sequencing_status"
         ]
       },
       "buttons":[ 
@@ -158,7 +173,7 @@
       }
     },
     {
-      "tabTitle":"Cases",
+      "tabTitle":"Case PHI",
       "charts":{
         "projects_code":{
           "chartType":"count",
@@ -234,7 +249,7 @@
       }
     },
     {
-      "tabTitle":"Labs",
+      "tabTitle":"Lab",
       "charts":{
         "partner":{
           "chartType":"count",
@@ -324,7 +339,7 @@
       }
     },
     {
-      "tabTitle":"CDPHs",
+      "tabTitle":"CDPH",
       "charts":{
         "partner":{
           "chartType":"count",
