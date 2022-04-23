@@ -58,7 +58,7 @@
           "chartType": "bar",
           "title": "Submission Type"
         },
-        "was_this_specimen_sequence_v2": {
+        "WGS_Obtained": {
           "chartType": "pie",
           "title": "Sequenced"
         }
@@ -68,23 +68,23 @@
           {
             "title":"Lab",
             "fields":[
-              "date_specimen_received_by",
-              "mmwr_year",
-              "mmwr_week",
-              "voc_v2",
-              "pangolin_v2",
-              "nextstrain_clade_v2",
-              "mutations_of_note_v2",
-              "gisaid_id_v2",
-              "was_this_specimen_sequence_v2",
-              "if_yes_result_date_v2"
+              "Date_Specimen_Recieved",
+              "Collection_MMWR_Year",
+              "Collection_MMWR_Week",
+              "Variant_of_Concern",
+              "Pango_Lineage",
+              "Nextstrain_Clade",
+              "Mutations_of_Note",
+              "GISAID_ID",
+              "WGS_Obtained",
+              "Result_Date"
             ]            
           },
           {
             "title":"Case No-PHI",
             "fields":[
               "partner",
-              "riphl_run",
+              "RIPHL_Run",
               "submitter_id",
               "Submission_Type",
               "Collection_Date"
@@ -102,19 +102,19 @@
           "Original_Specimen_Type",
           "Transport_Media",
           "Transport_Other",
-          "date_specimen_received_by",
-          "ct_value_by_riphl",
-          "was_this_specimen_sequence_v2",
-          "if_yes_result_date_v2",
-          "gisaid_id_v2",
-          "riphl_run",
-          "nextstrain_clade_v2",
-          "mutations_of_note_v2",
-          "voc_v2",
-          "pangolin_v2",
-          "ambiguity_score_v2",
-          "mmwr_week",
-          "mmwr_year"
+          "Date_Specimen_Recieved",
+          "Ct_RIPHL",
+          "WGS_Obtained",
+          "Result_Date",
+          "GISAID_ID",
+          "RIPHL_Run",
+          "Nextstrain_Clade",
+          "Mutations_of_Note",
+          "Variant_of_Concern",
+          "Pango_Lineage",
+          "Ambiguity_Score",
+          "Collection_MMWR_Week",
+          "Collection_MMWR_Year"
         ]
       },
       "buttons":[ 
@@ -132,26 +132,8 @@
         "nodeCountTitle":"Cases",
         "fieldMapping": [
           { "field": "partner", "name": "Partner" },
-          { "field": "submitter_id", "name": "RIPHL ID" },
-          { "field": "Submission_Type", "name": "Submission Type" },
-          { "field": "Collection_Date", "name": "Collection Date" },
-          { "field": "Original_Specimen_Type", "name": "Original Specimen Type" },
-          { "field": "Transport_Media", "name": "Transport Media" },
-          { "field": "Transport_Other", "name": "Transport Other" },
-          { "field": "date_specimen_received_by", "name": "Date Specimen Receieved" },
-          { "field": "ct_value_by_riphl", "name": "CT Value by RIPHL" },
-          { "field": "was_this_specimen_sequence_v2", "name": "Was this specimen sequenced?" },
-          { "field": "if_yes_result_date_v2", "name": "If yes, result date" },
-          { "field": "gisaid_id_v2", "name": "GISAID ID" },
-          { "field": "riphl_run", "name": "RIPHL Run" },
-          { "field": "nextstrain_clade_v2", "name": "Nextstrain Clade" },
-          { "field": "mutations_of_note_v2", "name": "Mutations of Note" },
-          { "field": "voc_v2", "name": "Variant of Concern" },
-          { "field": "pangolin_v2", "name": "Pangolin Lineage" },
-          { "field": "ambiguity_score_v2", "name": "Ambiguity Score" },
-          { "field": "mmwr_week", "name": "MMWR Week" },
-          { "field": "mmwr_year", "name": "MMWR Year" }
-        ],
+          { "field": "submitter_id", "name": "RIPHL ID" }
+      ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "_case_nophi_id"
         }
@@ -172,7 +154,7 @@
           "chartType": "bar",
           "title": "Submission Type"
         },
-        "was_this_specimen_sequence_v2": {
+        "WGS_Obtained": {
           "chartType": "pie",
           "title": "Sequenced"
         }
@@ -182,23 +164,23 @@
           {
             "title":"Lab",
             "fields":[
-              "date_specimen_received_by",
-              "mmwr_year",
-              "mmwr_week",
-              "voc_v2",
-              "pangolin_v2",
-              "nextstrain_clade_v2",
-              "mutations_of_note_v2",
-              "gisaid_id_v2",
-              "was_this_specimen_sequence_v2",
-              "if_yes_result_date_v2"
+              "Date_Specimen_Recieved",
+              "Collection_MMWR_Year",
+              "Collection_MMWR_Week",
+              "Variant_of_Concern",
+              "Pango_Lineage",
+              "Nextstrain_Clade",
+              "Mutations_of_Note",
+              "GISAID_ID",
+              "WGS_Obtained",
+              "Result_Date"
             ]            
           },
           {
             "title":"Case No-PHI",
             "fields":[
               "partner",
-              "riphl_run",
+              "RIPHL_Run",
               "submitter_id",
               "Submission_Type",
               "Collection_Date"
@@ -207,9 +189,9 @@
           {
             "title":"CDPH",
             "fields":[
-              "cdph_reason_for_submission",
-              "outbreak_type",
-              "sequencing_status"
+              "CDPH_Reason_for_Submission",
+              "Outbreak_Type",
+              "Sequencing_Status"
             ]            
           }
         ]
@@ -224,26 +206,26 @@
           "Original_Specimen_Type",
           "Transport_Media",
           "Transport_Other",
-          "date_specimen_received_by",
-          "ct_value_by_riphl",
-          "was_this_specimen_sequence_v2",
-          "if_yes_result_date_v2",
-          "gisaid_id_v2",
-          "riphl_run",
-          "nextstrain_clade_v2",
-          "mutations_of_note_v2",
-          "voc_v2",
-          "pangolin_v2",
-          "ambiguity_score_v2",
-          "mmwr_week",
-          "mmwr_year",
-          "cdph_reason_for_submission",
-          "inedss_id",
-          "ordering_facility_name",
-          "ors",
-          "other_outbreak",
-          "outbreak_type",
-          "sequencing_status"
+          "Date_Specimen_Recieved",
+          "Ct_RIPHL",
+          "WGS_Obtained",
+          "Result_Date",
+          "GISAID_ID",
+          "RIPHL_Run",
+          "Nextstrain_Clade",
+          "Mutations_of_Note",
+          "Variant_of_Concern",
+          "Pango_Lineage",
+          "Ambiguity_Score",
+          "Collection_MMWR_Week",
+          "Collection_MMWR_Year",
+          "CDPH_Reason_for_Submission",
+          "INEDSS_ID",
+          "Ordering_Facility_Name",
+          "ORS",
+          "Other_Outbreak",
+          "Outbreak_Type",
+          "Sequencing_Status"
         ]
       },
       "buttons":[ 
@@ -261,25 +243,7 @@
         "nodeCountTitle":"Cases",
         "fieldMapping": [
           { "field": "partner", "name": "Partner" },
-          { "field": "submitter_id", "name": "RIPHL ID" },
-          { "field": "Submission_Type", "name": "Submission Type" },
-          { "field": "Collection_Date", "name": "Collection Date" },
-          { "field": "Original_Specimen_Type", "name": "Original Specimen Type" },
-          { "field": "Transport_Media", "name": "Transport Media" },
-          { "field": "Transport_Other", "name": "Transport Other" },
-          { "field": "date_specimen_received_by", "name": "Date Specimen Receieved" },
-          { "field": "ct_value_by_riphl", "name": "CT Value by RIPHL" },
-          { "field": "was_this_specimen_sequence_v2", "name": "Was this specimen sequenced?" },
-          { "field": "if_yes_result_date_v2", "name": "If yes, result date" },
-          { "field": "gisaid_id_v2", "name": "GISAID ID" },
-          { "field": "riphl_run", "name": "RIPHL Run" },
-          { "field": "nextstrain_clade_v2", "name": "Nextstrain Clade" },
-          { "field": "mutations_of_note_v2", "name": "Mutations of Note" },
-          { "field": "voc_v2", "name": "Variant of Concern" },
-          { "field": "pangolin_v2", "name": "Pangolin Lineage" },
-          { "field": "ambiguity_score_v2", "name": "Ambiguity Score" },
-          { "field": "mmwr_week", "name": "MMWR Week" },
-          { "field": "mmwr_year", "name": "MMWR Year" }
+          { "field": "submitter_id", "name": "RIPHL ID" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "_case_nophi_id"
@@ -345,17 +309,8 @@
         "dataType":"case",
         "nodeCountTitle":"Cases",
         "fieldMapping": [
-          { "field": "project_id", "name": "Project" },
-          { "field": "submitter_id", "name": "RIPHL ID" },
           { "field": "projects_code", "name": "Partner" },
-          { "field": "Collection_Date", "name": "Collection Date" },
-          { "field": "First_Name", "name": "First Name" },
-          { "field": "Last_Name", "name": "Last Name" },
-          { "field": "DOB", "name": "DOB" },
-          { "field": "Original_Specimen_Type", "name": "Original Specimen Type" },
-          { "field": "Submission_Type", "name": "Submission Type" },
-          { "field": "Transport_Media", "name": "Transport Media" },
-          { "field": "Transport_Other", "name": "Transport Other" }
+          { "field": "submitter_id", "name": "RIPHL ID" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "_case_id"
@@ -377,7 +332,7 @@
           "chartType": "bar",
           "title": "Submission Type"
         },
-        "was_this_specimen_sequence_v2": {
+        "WGS_Obtained": {
           "chartType": "pie",
           "title": "Sequenced"
         }
@@ -387,23 +342,23 @@
           {
             "title":"Lab",
             "fields":[
-              "date_specimen_received_by",
-              "mmwr_year",
-              "mmwr_week",
-              "voc_v2",
-              "pangolin_v2",
-              "nextstrain_clade_v2",
-              "mutations_of_note_v2",
-              "gisaid_id_v2",
-              "was_this_specimen_sequence_v2",
-              "if_yes_result_date_v2"
+              "Date_Specimen_Recieved",
+              "Collection_MMWR_Year",
+              "Collection_MMWR_Week",
+              "Variant_of_Concern",
+              "Pango_Lineage",
+              "Nextstrain_Clade",
+              "Mutations_of_Note",
+              "GISAID_ID",
+              "WGS_Obtained",
+              "Result_Date"
             ]            
           },
           {
             "title":"Case No-PHI",
             "fields":[
               "partner",
-              "riphl_run",
+              "RIPHL_Run",
               "submitter_id",
               "Submission_Type",
               "Collection_Date"
@@ -412,9 +367,9 @@
           {
             "title":"CDPH",
             "fields":[
-              "cdph_reason_for_submission",
-              "outbreak_type",
-              "sequencing_status"
+              "CDPH_Reason_for_Submission",
+              "Outbreak_Type",
+              "Sequencing_Status"
             ]            
           }
         ]
@@ -429,26 +384,26 @@
           "Original_Specimen_Type",
           "Transport_Media",
           "Transport_Other",
-          "date_specimen_received_by",
-          "ct_value_by_riphl",
-          "was_this_specimen_sequence_v2",
-          "if_yes_result_date_v2",
-          "gisaid_id_v2",
-          "riphl_run",
-          "nextstrain_clade_v2",
-          "mutations_of_note_v2",
-          "voc_v2",
-          "pangolin_v2",
-          "ambiguity_score_v2",
-          "mmwr_week",
-          "mmwr_year",
-          "cdph_reason_for_submission",
-          "inedss_id",
-          "ordering_facility_name",
-          "ors",
-          "other_outbreak",
-          "outbreak_type",
-          "sequencing_status"
+          "Date_Specimen_Recieved",
+          "Ct_RIPHL",
+          "WGS_Obtained",
+          "Result_Date",
+          "GISAID_ID",
+          "RIPHL_Run",
+          "Nextstrain_Clade",
+          "Mutations_of_Note",
+          "Variant_of_Concern",
+          "Pango_Lineage",
+          "Ambiguity_Score",
+          "Collection_MMWR_Week",
+          "Collection_MMWR_Year",
+          "CDPH_Reason_for_Submission",
+          "INEDSS_ID",
+          "Ordering_Facility_Name",
+          "ORS",
+          "Other_Outbreak",
+          "Outbreak_Type",
+          "Sequencing_Status"
         ]
       },
       "buttons":[ 
@@ -466,25 +421,7 @@
         "nodeCountTitle":"Cases",
         "fieldMapping": [
           { "field": "partner", "name": "Partner" },
-          { "field": "submitter_id", "name": "RIPHL ID" },
-          { "field": "Submission_Type", "name": "Submission Type" },
-          { "field": "Collection_Date", "name": "Collection Date" },
-          { "field": "Original_Specimen_Type", "name": "Original Specimen Type" },
-          { "field": "Transport_Media", "name": "Transport Media" },
-          { "field": "Transport_Other", "name": "Transport Other" },
-          { "field": "date_specimen_received_by", "name": "Date Specimen Receieved" },
-          { "field": "ct_value_by_riphl", "name": "CT Value by RIPHL" },
-          { "field": "was_this_specimen_sequence_v2", "name": "Was this specimen sequenced?" },
-          { "field": "if_yes_result_date_v2", "name": "If yes, result date" },
-          { "field": "gisaid_id_v2", "name": "GISAID ID" },
-          { "field": "riphl_run", "name": "RIPHL Run" },
-          { "field": "nextstrain_clade_v2", "name": "Nextstrain Clade" },
-          { "field": "mutations_of_note_v2", "name": "Mutations of Note" },
-          { "field": "voc_v2", "name": "Variant of Concern" },
-          { "field": "pangolin_v2", "name": "Pangolin Lineage" },
-          { "field": "ambiguity_score_v2", "name": "Ambiguity Score" },
-          { "field": "mmwr_week", "name": "MMWR Week" },
-          { "field": "mmwr_year", "name": "MMWR Year" }
+          { "field": "submitter_id", "name": "RIPHL ID" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "_case_nophi_id"
