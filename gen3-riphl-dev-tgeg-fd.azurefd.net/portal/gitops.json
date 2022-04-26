@@ -427,6 +427,45 @@
           "referenceIdFieldInResourceIndex": "_case_nophi_id"
         }
       }
+    },
+    {
+      "tabTitle":"PangoData",
+      "charts":{
+        "Collection_Date":{
+          "chartType":"stackedDateBar",
+          "title":"Stacked Pango Data",
+          "primaryKey": "Collection_Date",
+          "secondaryKey": "Latest_Pango_Lineage"
+        }
+      },
+      "filters":{
+        "tabs":[
+          {
+            "title":"Lab",
+            "fields":[
+              "Collection_Date",
+              "Latest_Pango_Lineage"
+            ]
+          }
+        ]
+      },
+      "table":{
+        "enabled":true,
+        "fields":[
+          "Collection_Date",
+          "Latest_Pango_Lineage"]
+      },
+      "guppyConfig":{
+        "dataType":"case_nophi",
+        "nodeCountTitle":"Cases",
+        "fieldMapping":[
+          { "field": "Collection_Date", "name": "Date" },
+          { "field": "Latest_Pango_Lineage", "name": "Lineage" }
+        ],
+        "manifestMapping": {
+          "referenceIdFieldInResourceIndex": "_case_nophi_id"
+        }
+      }
     }
   ],
   "showArboristAuthzOnProfile":true,
