@@ -429,11 +429,11 @@
       }
     },
     {
-      "tabTitle":"PangoData",
+      "tabTitle":"Reports",
       "charts":{
         "Collection_Date":{
           "chartType":"stackedDateBar",
-          "title":"Stacked Pango Data",
+          "title":"Pango Lineage by Collection Date",
           "primaryKey": "Collection_Date",
           "secondaryKey": "Latest_Pango_Lineage"
         }
@@ -459,8 +459,8 @@
         "dataType":"case_nophi",
         "nodeCountTitle":"Cases",
         "fieldMapping":[
-          { "field": "Collection_Date", "name": "Date" },
-          { "field": "Latest_Pango_Lineage", "name": "Lineage" }
+          { "field": "Collection_Date", "name": "Collection Date" },
+          { "field": "Latest_Pango_Lineage", "name": "Pangolin Lineage" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "_case_nophi_id"
