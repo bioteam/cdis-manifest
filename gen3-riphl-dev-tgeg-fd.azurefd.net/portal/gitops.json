@@ -443,17 +443,42 @@
           {
             "title":"Lab",
             "fields":[
-              "Collection_Date",
-              "Latest_Pango_Lineage"
+              "Date_Specimen_Recieved",
+              "Collection_MMWR_Year",
+              "Collection_MMWR_Week",
+              "Variant_of_Concern",
+              "Pango_Lineage",
+              "Nextstrain_Clade",
+              "Mutations_of_Note",
+              "GISAID_ID",
+              "WGS_Obtained",
+              "Result_Date"
+            ]            
+          },
+          {
+            "title":"Case No-PHI",
+            "fields":[
+              "partner",
+              "RIPHL_Run",
+              "submitter_id",
+              "Submission_Type",
+              "Collection_Date"
             ]
+          },
+          {
+            "title":"CDPH",
+            "fields":[
+              "CDPH_Reason_for_Submission",
+              "Outbreak_Type",
+              "Sequencing_Status"
+            ]            
           }
         ]
       },
       "table":{
-        "enabled":true,
+        "enabled":false,
         "fields":[
-          "Collection_Date",
-          "Latest_Pango_Lineage"]
+        ]
       },
       "guppyConfig":{
         "dataType":"case_nophi",
