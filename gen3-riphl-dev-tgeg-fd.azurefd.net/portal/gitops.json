@@ -434,7 +434,6 @@
         "Collection_MMWR_Week":{
           "chartType":"stackedDateBar",
           "title":"Pango Lineage by Collection Date",
-          "primaryKey": "Collection_MMWR_Week",
           "secondaryKey": "Latest_Pango_Lineage"
         }
       },
