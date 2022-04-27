@@ -431,10 +431,10 @@
     {
       "tabTitle":"Reports",
       "charts":{
-        "Collection_Date":{
+        "Collection_MMWR_Week":{
           "chartType":"stackedDateBar",
           "title":"Pango Lineage by Collection Date",
-          "primaryKey": "Collection_Date",
+          "primaryKey": "Collection_MMWR_Week",
           "secondaryKey": "Latest_Pango_Lineage"
         }
       },
@@ -484,7 +484,7 @@
         "dataType":"case_nophi",
         "nodeCountTitle":"Cases",
         "fieldMapping":[
-          { "field": "Collection_Date", "name": "Collection Date" },
+          { "field": "Collection_MMWR_Week", "name": "Collection MMWR Week" },
           { "field": "Latest_Pango_Lineage", "name": "Pangolin Lineage" }
         ],
         "manifestMapping": {
