@@ -431,7 +431,7 @@
     {
       "tabTitle":"Reports",
       "charts":{
-        "Collection_MMWR_Week":{
+        "Collection_Date":{
           "chartType":"stackedDateBar",
           "title":"Pango Lineage by Collection Date",
           "secondaryKey": "Latest_Pango_Lineage"
