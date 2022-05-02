@@ -72,7 +72,7 @@
               "Collection_MMWR_Year",
               "Collection_MMWR_Week",
               "Variant_of_Concern",
-              "Pango_Lineage",
+              "Latest_Pango_Lineage",
               "Nextstrain_Clade",
               "Mutations_of_Note",
               "GISAID_ID",
@@ -111,7 +111,7 @@
           "Nextstrain_Clade",
           "Mutations_of_Note",
           "Variant_of_Concern",
-          "Pango_Lineage",
+          "Latest_Pango_Lineage",
           "Ambiguity_Score",
           "Collection_MMWR_Week",
           "Collection_MMWR_Year"
@@ -168,7 +168,7 @@
               "Collection_MMWR_Year",
               "Collection_MMWR_Week",
               "Variant_of_Concern",
-              "Pango_Lineage",
+              "Latest_Pango_Lineage",
               "Nextstrain_Clade",
               "Mutations_of_Note",
               "GISAID_ID",
@@ -215,7 +215,7 @@
           "Nextstrain_Clade",
           "Mutations_of_Note",
           "Variant_of_Concern",
-          "Pango_Lineage",
+          "Latest_Pango_Lineage",
           "Ambiguity_Score",
           "Collection_MMWR_Week",
           "Collection_MMWR_Year",
@@ -346,7 +346,7 @@
               "Collection_MMWR_Year",
               "Collection_MMWR_Week",
               "Variant_of_Concern",
-              "Pango_Lineage",
+              "Latest_Pango_Lineage",
               "Nextstrain_Clade",
               "Mutations_of_Note",
               "GISAID_ID",
@@ -403,7 +403,18 @@
           "ORS",
           "Other_Outbreak",
           "Outbreak_Type",
-          "Sequencing_Status"
+          "Sequencing_Status",
+          "Patient_Age",
+          "Unsuccessful_WGS_Note",
+          "Latest_Pango_Date",
+          "Latest_Pango_Lineage",
+          "Variant_PCR_Result",
+          "Notes",
+          "RIPHL_Accession",
+          "Missing_Nucleotides",
+          "Scorpio_Support",
+          "Pango_Notes",
+          "Pango_QC_Notes"
         ]
       },
       "buttons":[ 
@@ -447,7 +458,7 @@
               "Collection_MMWR_Year",
               "Collection_MMWR_Week",
               "Variant_of_Concern",
-              "Pango_Lineage",
+              "Latest_Pango_Lineage",
               "Nextstrain_Clade",
               "Mutations_of_Note",
               "GISAID_ID",
@@ -484,8 +495,6 @@
         "dataType":"case_nophi",
         "nodeCountTitle":"Cases",
         "fieldMapping":[
-          { "field": "Collection_MMWR_Week", "name": "Collection MMWR Week" },
-          { "field": "Latest_Pango_Lineage", "name": "Pangolin Lineage" }
         ],
         "manifestMapping": {
           "referenceIdFieldInResourceIndex": "_case_nophi_id"
