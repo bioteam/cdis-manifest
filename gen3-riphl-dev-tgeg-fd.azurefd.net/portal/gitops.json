@@ -442,11 +442,15 @@
     {
       "tabTitle":"Reports",
       "charts":{
-        "Collection_Date":{
+        "Latest_Pango_Lineage":{
           "chartType":"stackedDateBar",
-          "title":"Pango Lineage by Collection Date",
-          "primaryKey": "Collection_MMWR_Week",
-          "secondaryKey": "Latest_Pango_Lineage"
+          "title":"Pango Lineage by Week",
+          "secondaryKey": "Collection_MMWR_Week_Year"
+        },
+        "Variant_of_Concern":{
+          "chartType":"stackedDateBar",
+          "title":"Variant of Concern by Week",
+          "secondaryKey": "Collection_MMWR_Week_Year"
         }
       },
       "filters":{
