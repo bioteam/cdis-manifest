@@ -445,12 +445,14 @@
         "Latest_Pango_Lineage":{
           "chartType":"stackedDateBar",
           "title":"Pango Lineage by Week",
-          "secondaryKey": "Collection_MMWR_Week_Year"
+          "primaryKey": "Collection_MMWR_Year_Week",
+          "secondaryKey": "Latest_Pango_Lineage"
         },
         "Variant_of_Concern":{
           "chartType":"stackedDateBar",
           "title":"Variant of Concern by Week",
-          "secondaryKey": "Collection_MMWR_Week_Year"
+          "primaryKey": "Collection_MMWR_Year_Week",
+          "secondaryKey": "Variant_of_Concern"
         }
       },
       "filters":{
